@@ -1,0 +1,778 @@
+{
+ "city": "mersin",
+ "date": "2026-10-25",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-26T11:06:21+00:00",
+ "items": [
+  {
+   "raw": "ALIÇ",
+   "product": "alic",
+   "variety": "",
+   "unit": "kg",
+   "min": 403.0,
+   "max": 403.0,
+   "avg": 403.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "ANANAS",
+   "product": "ananas",
+   "variety": "",
+   "unit": "kg",
+   "min": 90.83,
+   "max": 100.0,
+   "avg": 91.04,
+   "category": "meyve"
+  },
+  {
+   "raw": "ARMUT",
+   "product": "armut",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 37.0,
+   "avg": 32.45,
+   "category": "meyve"
+  },
+  {
+   "raw": "ARMUT (DEVECİ)",
+   "product": "armut",
+   "variety": "Deveci",
+   "unit": "kg",
+   "min": 62.0,
+   "max": 62.0,
+   "avg": 62.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "ARMUT (SANTAMARİ)",
+   "product": "armut",
+   "variety": "Santamari",
+   "unit": "kg",
+   "min": 48.0,
+   "max": 62.0,
+   "avg": 51.48,
+   "category": "meyve"
+  },
+  {
+   "raw": "AVOKADO",
+   "product": "avokado",
+   "variety": "",
+   "unit": "adet",
+   "min": 22.0,
+   "max": 42.0,
+   "avg": 23.84,
+   "category": "meyve"
+  },
+  {
+   "raw": "AYVA",
+   "product": "ayva",
+   "variety": "",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 26.0,
+   "avg": 25.9,
+   "category": "meyve"
+  },
+  {
+   "raw": "ELMA",
+   "product": "elma",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 45.0,
+   "avg": 39.13,
+   "category": "meyve"
+  },
+  {
+   "raw": "ELMA GOLDEN",
+   "product": "elma",
+   "variety": "Golden",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 10.0,
+   "avg": 10.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "ELMA GRANNY SMITH",
+   "product": "elma",
+   "variety": "Granny smıth",
+   "unit": "kg",
+   "min": 48.0,
+   "max": 48.0,
+   "avg": 48.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "ERİK (KIRMIZI)",
+   "product": "erik",
+   "variety": "Kırmızı",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 10.0,
+   "avg": 10.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "GREYFURT",
+   "product": "greyfurt",
+   "variety": "",
+   "unit": "kg",
+   "min": 4.0,
+   "max": 10.0,
+   "avg": 5.2,
+   "category": "meyve"
+  },
+  {
+   "raw": "HAVUÇ",
+   "product": "havuc",
+   "variety": "",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 18.0,
+   "avg": 10.71,
+   "category": "meyve"
+  },
+  {
+   "raw": "HİNDİSTAN CEVİZİ",
+   "product": "hindistan-cevizi",
+   "variety": "",
+   "unit": "adet",
+   "min": 57.0,
+   "max": 125.0,
+   "avg": 58.25,
+   "category": "meyve"
+  },
+  {
+   "raw": "KAVUN",
+   "product": "kavun",
+   "variety": "",
+   "unit": "kg",
+   "min": 7.0,
+   "max": 7.0,
+   "avg": 7.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "KAVUN (KIRKAĞAÇ)",
+   "product": "kavun",
+   "variety": "Kırkağaç",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 5.0,
+   "avg": 5.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "KİVİ",
+   "product": "kivi",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 80.0,
+   "avg": 34.74,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 4.0,
+   "max": 26.0,
+   "avg": 18.43,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON (LEMAS)",
+   "product": "limon",
+   "variety": "Lemas",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 20.0,
+   "avg": 16.58,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON (MAYER)",
+   "product": "limon",
+   "variety": "Mayer",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 22.0,
+   "avg": 15.09,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANDALİNA",
+   "product": "mandalina",
+   "variety": "",
+   "unit": "kg",
+   "min": 4.0,
+   "max": 23.0,
+   "avg": 14.31,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANDALİNA (RİZE)",
+   "product": "mandalina",
+   "variety": "Rize",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 15.0,
+   "avg": 15.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANGO",
+   "product": "mango",
+   "variety": "",
+   "unit": "adet",
+   "min": 50.0,
+   "max": 50.0,
+   "avg": 50.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ",
+   "product": "muz",
+   "variety": "",
+   "unit": "kg",
+   "min": 70.2,
+   "max": 116.0,
+   "avg": 93.25,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 21.0,
+   "max": 80.0,
+   "avg": 54.27,
+   "category": "meyve"
+  },
+  {
+   "raw": "NAR",
+   "product": "nar",
+   "variety": "",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 56.0,
+   "avg": 11.33,
+   "category": "meyve"
+  },
+  {
+   "raw": "NEKTARİN",
+   "product": "nektarin",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 45.0,
+   "avg": 39.56,
+   "category": "meyve"
+  },
+  {
+   "raw": "PASSIONFRUIT",
+   "product": "passionfruit",
+   "variety": "",
+   "unit": "kg",
+   "min": 600.0,
+   "max": 600.0,
+   "avg": 600.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "PİTAHAYA",
+   "product": "pitahaya",
+   "variety": "",
+   "unit": "adet",
+   "min": 32.0,
+   "max": 40.0,
+   "avg": 32.45,
+   "category": "meyve"
+  },
+  {
+   "raw": "PORTAKAL",
+   "product": "portakal",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 35.0,
+   "avg": 28.07,
+   "category": "meyve"
+  },
+  {
+   "raw": "ŞEFTALİ",
+   "product": "seftali",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": 40.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "TRABZON HURMASI(CENNET ELMASI)",
+   "product": "trabzon-hurmasi",
+   "variety": "Cennet elması",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 80.0,
+   "avg": 30.76,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM BEYAZ",
+   "product": "uzum",
+   "variety": "Beyaz",
+   "unit": "kg",
+   "min": 57.0,
+   "max": 57.0,
+   "avg": 57.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM BEYAZ (SİYAH)",
+   "product": "uzum",
+   "variety": "Beyaz siyah",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 25.0,
+   "avg": 25.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MERSİN(YABAN MERSİNİ)",
+   "product": "yaban-mersini",
+   "variety": "Yaban mersini",
+   "unit": "kg",
+   "min": 696.0,
+   "max": 770.0,
+   "avg": 697.35,
+   "category": "meyve"
+  },
+  {
+   "raw": "BARBUNYA TAZE",
+   "product": "barbunya",
+   "variety": "Taze",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 80.0,
+   "avg": 80.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER DOLMALIK",
+   "product": "biber",
+   "variety": "Dolmalık",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 40.0,
+   "avg": 21.54,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SALÇALIK (KAPYA)",
+   "product": "biber",
+   "variety": "Salçalık kapya",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": 40.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SİVRİ",
+   "product": "biber",
+   "variety": "Sivri",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 300.0,
+   "avg": 41.59,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SİVRİ (KALİFORNİA)",
+   "product": "biber",
+   "variety": "Sivri kalifornia",
+   "unit": "kg",
+   "min": 135.0,
+   "max": 135.0,
+   "avg": 135.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SİVRİ (KÖYBİBERİ)",
+   "product": "biber",
+   "variety": "Sivri köybiberi",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 85.0,
+   "avg": 50.13,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER ÇARLİSTON",
+   "product": "biber",
+   "variety": "Çarliston",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 85.0,
+   "avg": 44.24,
+   "category": "sebze"
+  },
+  {
+   "raw": "BROKOLİ",
+   "product": "brokoli",
+   "variety": "",
+   "unit": "kg",
+   "min": 7.0,
+   "max": 35.0,
+   "avg": 20.44,
+   "category": "sebze"
+  },
+  {
+   "raw": "DENİZ BÖRÜLCESİ(DENİZ OTU EGE OTU)",
+   "product": "deniz-borulcesi",
+   "variety": "Deniz otu ege otu",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 35.0,
+   "avg": 35.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "DEREOTU (YAŞ-TAZE)",
+   "product": "dereotu",
+   "variety": "Yaş taze",
+   "unit": "bağ",
+   "min": 9.0,
+   "max": 20.0,
+   "avg": 15.75,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 65.0,
+   "avg": 45.46,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (KOKTEYL)",
+   "product": "domates",
+   "variety": "Kokteyl",
+   "unit": "kg",
+   "min": 80.2,
+   "max": 107.0,
+   "avg": 103.64,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES SALÇALIK",
+   "product": "domates",
+   "variety": "Salçalık",
+   "unit": "kg",
+   "min": 3.0,
+   "max": 3.0,
+   "avg": 3.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "ENGİNAR",
+   "product": "enginar",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "FASULYE TAZE",
+   "product": "fasulye",
+   "variety": "Taze",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 10.0,
+   "avg": 10.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "ISPANAK",
+   "product": "ispanak",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 70.0,
+   "avg": 23.5,
+   "category": "sebze"
+  },
+  {
+   "raw": "KABAK",
+   "product": "kabak",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 10.0,
+   "avg": 7.82,
+   "category": "sebze"
+  },
+  {
+   "raw": "KABAK (AMPUL)",
+   "product": "kabak",
+   "variety": "Ampul",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 10.0,
+   "avg": 10.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "KARALAHANA",
+   "product": "kara-lahana",
+   "variety": "",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 5.0,
+   "avg": 5.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "KARNABAHAR",
+   "product": "karnabahar",
+   "variety": "",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 22.0,
+   "avg": 10.24,
+   "category": "sebze"
+  },
+  {
+   "raw": "BEYAZ LAHANA",
+   "product": "lahana",
+   "variety": "Beyaz",
+   "unit": "kg",
+   "min": 3.0,
+   "max": 12.0,
+   "avg": 5.35,
+   "category": "sebze"
+  },
+  {
+   "raw": "KIRMIZI LAHANA",
+   "product": "lahana",
+   "variety": "Kırmızı",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 16.0,
+   "avg": 11.71,
+   "category": "sebze"
+  },
+  {
+   "raw": "MARUL GÖBEKLİ (MARUL GÖBEKLİ( YAĞLI-KOP SALAT))",
+   "product": "marul",
+   "variety": "Göbekli marul göbekli yağlı kop salat",
+   "unit": "adet",
+   "min": 15.0,
+   "max": 33.33,
+   "avg": 22.51,
+   "category": "sebze"
+  },
+  {
+   "raw": "MARUL ICEBERG",
+   "product": "marul",
+   "variety": "Iceberg",
+   "unit": "adet",
+   "min": 7.0,
+   "max": 25.0,
+   "avg": 21.54,
+   "category": "sebze"
+  },
+  {
+   "raw": "MARUL KIVIRCIK",
+   "product": "marul",
+   "variety": "Kıvırcık",
+   "unit": "adet",
+   "min": 5.0,
+   "max": 9.0,
+   "avg": 5.93,
+   "category": "sebze"
+  },
+  {
+   "raw": "MARUL KIVIRCIK (KIVIRCIK (LOLOROSSO Y.))",
+   "product": "marul",
+   "variety": "Kıvırcık kıvırcık lolorosso y",
+   "unit": "adet",
+   "min": 15.0,
+   "max": 15.0,
+   "avg": 15.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "MAYDANOZ",
+   "product": "maydanoz",
+   "variety": "",
+   "unit": "bağ",
+   "min": 3.0,
+   "max": 12.0,
+   "avg": 7.5,
+   "category": "sebze"
+  },
+  {
+   "raw": "NANE",
+   "product": "nane",
+   "variety": "",
+   "unit": "bağ",
+   "min": 8.0,
+   "max": 18.0,
+   "avg": 14.15,
+   "category": "sebze"
+  },
+  {
+   "raw": "PANCAR",
+   "product": "pancar",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 10.0,
+   "avg": 9.69,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATATES",
+   "product": "patates",
+   "variety": "",
+   "unit": "kg",
+   "min": 8.2,
+   "max": 8.2,
+   "avg": 8.2,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 7.0,
+   "max": 17.0,
+   "avg": 14.77,
+   "category": "sebze"
+  },
+  {
+   "raw": "PIRASA",
+   "product": "pirasa",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "ROKA",
+   "product": "roka",
+   "variety": "",
+   "unit": "bağ",
+   "min": 8.0,
+   "max": 18.0,
+   "avg": 14.06,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 9.1,
+   "max": 27.1,
+   "avg": 12.7,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK TURŞULUK (SALATALIK TURŞULUK (KORNİŞON))",
+   "product": "salatalik",
+   "variety": "Turşuluk salatalık turşuluk kornişon",
+   "unit": "kg",
+   "min": 13.0,
+   "max": 50.0,
+   "avg": 40.52,
+   "category": "sebze"
+  },
+  {
+   "raw": "SEMİZOTU",
+   "product": "semizotu",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "SOĞAN KURU",
+   "product": "sogan",
+   "variety": "Kuru",
+   "unit": "kg",
+   "min": 15.2,
+   "max": 25.0,
+   "avg": 24.88,
+   "category": "sebze"
+  },
+  {
+   "raw": "SOĞAN KURU (BEYAZ(GÜMÜŞ))",
+   "product": "sogan",
+   "variety": "Kuru beyaz gümüş",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": 40.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "SOĞAN KURU (MOR)",
+   "product": "sogan",
+   "variety": "Kuru mor",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": 40.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "YEŞİL SOĞAN",
+   "product": "sogan",
+   "variety": "Yeşil",
+   "unit": "kg",
+   "min": 7.0,
+   "max": 50.0,
+   "avg": 33.99,
+   "category": "sebze"
+  },
+  {
+   "raw": "TURP (KIRMIZI)",
+   "product": "turp",
+   "variety": "Kırmızı",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 18.0,
+   "avg": 10.81,
+   "category": "sebze"
+  },
+  {
+   "raw": "ZENCEFİL",
+   "product": "zencefil",
+   "variety": "",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 150.0,
+   "avg": 150.0,
+   "category": "sebze"
+  }
+ ]
+}
