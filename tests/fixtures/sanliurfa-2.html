@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hal Fiyatları - Şanlıurfa Büyükşehir Belediyesi</title>
+    <link rel="stylesheet" href="https://halfiyatlari.sanliurfa.bel.tr/css/app.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4b6f44; /* Kurumsal Yeşil */
+            --navy-blue: #36553f;    /* Kurumsal Koyu Yeşil/Gri */
+            --background: #f4f7f6;
+            --white: #ffffff;
+            --border-color: #dee2e6;
+            --text-light: #6c757d;
+        }
+        
+        /* Pagination Styling - Force Horizontal & Hide Bullets */
+        .pagination-container {
+            margin-top: 3rem;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1rem !important;
+            width: 100% !important;
+        }
+
+        .pagination {
+            display: flex !important;
+            flex-direction: row !important;
+            list-style: none !important;
+            list-style-type: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            gap: 0.5rem !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        .pagination li {
+            margin: 0 !important;
+            padding: 0 !important;
+            display: flex !important;
+            list-style: none !important;
+            list-style-type: none !important;
+        }
+
+        .pagination li::before {
+            content: none !important;
+        }
+
+        .pagination li a, .pagination li span {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            min-width: 44px !important;
+            height: 44px !important;
+            padding: 0 0.75rem !important;
+            border-radius: 0.75rem !important;
+            text-decoration: none !important;
+            color: var(--navy-blue) !important;
+            background: var(--white) !important;
+            border: 1px solid var(--border-color) !important;
+            font-weight: 600 !important;
+            font-family: 'Inter', sans-serif !important;
+            transition: all 0.2s ease !important;
+            cursor: pointer !important;
+        }
+
+        .pagination li.active span {
+            background: var(--navy-blue) !important;
+            color: var(--white) !important;
+            border-color: var(--navy-blue) !important;
+            box-shadow: 0 4px 10px rgba(54, 85, 63, 0.3) !important;
+        }
+
+        .pagination li.disabled span {
+            opacity: 0.4 !important;
+            cursor: not-allowed !important;
+            background: #f8f9fa !important;
+            color: var(--text-light) !important;
+        }
+
+        .pagination li a:hover {
+            background: #f8f9fa !important;
+            border-color: var(--navy-blue) !important;
+            color: var(--navy-blue) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        .pagination-info {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>30 Ekim 2026 Cuma</span>
+                <span><i class="fas fa-cloud-sun"></i> 17°C Parçalı Bulutlu</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navbar">
+        <div class="navbar-content">
+            <div class="brand-section">
+                <a href="https://www.sanliurfa.bel.tr/">
+                    <img src="https://halfiyatlari.sanliurfa.bel.tr/images/logo-dark.png" alt="Şanlıurfa BB Logo" class="navbar-logo">
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="https://www.sanliurfa.bel.tr/icerik/17628/1/baskan" class="nav-link">Başkan</a>
+                <a href="#" class="nav-link">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title Bar -->
+    <div class="page-title-bar">
+        <div class="page-title-content">
+            <h1 class="page-title">HAL FİYATLARI</h1>
+            <div class="breadcrumb-nav">
+                <a href="https://halfiyatlari.sanliurfa.bel.tr">Anasayfa</a>
+                <span class="separator">/</span>
+                <span>Hal Fiyatları</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <form method="GET" action="https://halfiyatlari.sanliurfa.bel.tr" id="searchForm" autocomplete="off">
+                <input type="hidden" name="date_preset" id="datePresetInput" value="ozel">
+                <input type="hidden" name="start_date" id="startDateInput" value="2026-10-28">
+                <input type="hidden" name="end_date" id="endDateInput" value="2026-10-28">
+                <input type="hidden" name="search" value="1">
+
+                <div class="search-box">
+                    <!-- Date Input -->
+                    <div class="search-group" style="flex: 2;">
+                        <label class="search-label">Tarih</label>
+                        <input type="text" class="search-input" id="dateDisplay" placeholder="Tarih Seçiniz" readonly value="28 Ekim 2026">
+                        
+                        <!-- Custom Date Picker Dropdown -->
+                        <div class="date-picker-dropdown" id="datePickerDropdown">
+                            <!-- Left: Presets -->
+                            <div class="date-presets">
+                                <button type="button" class="preset-btn" data-value="bugun">Bugün</button>
+                                <button type="button" class="preset-btn" data-value="dun">Dün</button>
+                                <button type="button" class="preset-btn" data-value="son_7_gun">Son 7 Gün</button>
+                                <button type="button" class="preset-btn" data-value="son_30_gun">Son 30 Gün</button>
+                                <button type="button" class="preset-btn" data-value="bu_ay">Bu Ay</button>
+                                <button type="button" class="preset-btn" data-value="gecen_ay">Geçen Ay</button>
+                                <button type="button" class="preset-btn" data-value="ozel">Özel</button>
+                            </div>
+                            
+                            <!-- Right: Calendar -->
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <button type="button" id="prevMonthBtn" style="border:none; background:none; cursor:pointer;">&lt;</button>
+                                    <span id="currentMonthYear" style="font-weight:600;">Şubat 2026</span>
+                                    <button type="button" id="nextMonthBtn" style="border:none; background:none; cursor:pointer;">&gt;</button>
+                                </div>
+                                <div class="calendar-grid" id="calendarGrid">
+                                    <!-- Days will be populated by JS -->
+                                </div>
+                                <div class="calendar-footer">
+                                    <button type="button" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;" id="clearDateBtn">Temizle</button>
+                                    <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;" id="applyDateBtn">Uygula</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Type -->
+                    <div class="search-group" style="flex: 1.5;">
+                        <label class="search-label">Ürün Türü</label>
+                        <select name="product_type_id" class="search-input" style="appearance: none; -webkit-appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 0 center; background-size: 0.65em auto;">
+                            <option value="">Seçiniz</option>
+                                                            <option value="2" >
+                                    Meyve
+                                </option>
+                                                            <option value="1" >
+                                    Sebze
+                                </option>
+                                                    </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="search-group" style="border: none;">
+                        <button type="submit" class="search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    
+    <!-- Results Section -->
+        <section class="results-section">
+                    <div style="overflow-x: auto; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Ürün Türü</th>
+                            <th>Birim</th>
+                            <th>En Düşük Fiyat (₺)</th>
+                            <th>En Yüksek Fiyat (₺)</th>
+                            <th>Tarih</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                    <tr>
+                                <td style="font-weight: 500;">Marul Göbekli </td>
+                                <td>Sebze</td>
+                                <td>adet</td>
+                                <td>25.00</td>
+                                <td>30.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Marul Kıvırcık</td>
+                                <td>Sebze</td>
+                                <td>adet</td>
+                                <td>15.00</td>
+                                <td>20.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Maydanoz (70-100 gr)</td>
+                                <td>Sebze</td>
+                                <td>bağ</td>
+                                <td>4.00</td>
+                                <td>5.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Muz (Diğer)</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>70.00</td>
+                                <td>80.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Muz (Yerli Anamur)</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>60.00</td>
+                                <td>75.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Nane (70-100 gr)</td>
+                                <td>Sebze</td>
+                                <td>bağ</td>
+                                <td>5.00</td>
+                                <td>7.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Nar</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>15.00</td>
+                                <td>20.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Nektari</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>40.00</td>
+                                <td>60.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Patlıcan</td>
+                                <td>Sebze</td>
+                                <td>kg</td>
+                                <td>20.00</td>
+                                <td>25.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Patlıcan(Kebaplık)</td>
+                                <td>Sebze</td>
+                                <td>kg</td>
+                                <td>30.00</td>
+                                <td>35.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Portakal Diğer</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>25.00</td>
+                                <td>50.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Roka</td>
+                                <td>Sebze</td>
+                                <td>kg</td>
+                                <td>5.00</td>
+                                <td>7.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Salatalık diğer</td>
+                                <td>Sebze</td>
+                                <td>kg</td>
+                                <td>25.00</td>
+                                <td>30.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Sarımsak (Kuru)</td>
+                                <td>Sebze</td>
+                                <td>kg</td>
+                                <td>30.00</td>
+                                <td>40.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Şeftali</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>40.00</td>
+                                <td>60.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Tere</td>
+                                <td>Sebze</td>
+                                <td>bağ</td>
+                                <td>5.00</td>
+                                <td>7.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Üzüm (Beyaz)</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>20.00</td>
+                                <td>30.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Üzüm (Siyah)</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>25.00</td>
+                                <td>35.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Üzüm Çekirdeksiz</td>
+                                <td>Meyve</td>
+                                <td>kg</td>
+                                <td>20.00</td>
+                                <td>30.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                                    <tr>
+                                <td style="font-weight: 500;">Yeşil Soğan </td>
+                                <td>Sebze</td>
+                                <td>kg</td>
+                                <td>25.00</td>
+                                <td>35.00</td>
+                                <td>28.10.2026</td>
+                            </tr>
+                                            </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+                        <div class="pagination-container">
+                <div class="pagination-info">
+                    Toplam <strong>40</strong> sonuçtan 21-40 arası gösteriliyor
+                </div>
+                
+                <nav>
+                    <ul class="pagination">
+                        
+                                                    <li><a href="https://halfiyatlari.sanliurfa.bel.tr?date_preset=ozel&amp;start_date=2026-10-28&amp;end_date=2026-10-28&amp;search=1&amp;page=1" rel="prev" aria-label="Geri">&laquo; Geri</a></li>
+                        
+                        
+                        
+                        
+                                                                                    <li><a href="https://halfiyatlari.sanliurfa.bel.tr?date_preset=ozel&amp;start_date=2026-10-28&amp;end_date=2026-10-28&amp;search=1&amp;page=1">1</a></li>
+                                                                                                                <li class="active"><span>2</span></li>
+                                                    
+                        
+                        
+                                                    <li class="disabled"><span aria-hidden="true">Son &raquo;</span></li>
+                                            </ul>
+                </nav>
+            </div>
+                    
+
+            </section>
+    
+    <!-- Permanent Footer with Social Media -->
+    <footer style="margin-top: 4rem; padding: 2rem 0; background-color: var(--white); border-top: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; justify-content: center;">
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+                <span style="font-weight: 700; color: var(--navy-blue); font-size: 0.9rem; letter-spacing: 1px;">BİZİ TAKİP EDİN</span>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://x.com/sanliurfabld" target="_blank" class="share-btn" title="X" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--background); border-radius: 50%; color: var(--navy-blue); text-decoration: none; transition: all 0.2s;">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sanliurfabld/?locale=tr_TR" target="_blank" class="share-btn" title="Facebook" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--background); border-radius: 50%; color: var(--navy-blue); text-decoration: none; transition: all 0.2s;">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sanliurfabld/" target="_blank" class="share-btn" title="Instagram" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--background); border-radius: 50%; color: var(--navy-blue); text-decoration: none; transition: all 0.2s;">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/sanliurfabld" target="_blank" class="share-btn" title="Youtube" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--background); border-radius: 50%; color: var(--navy-blue); text-decoration: none; transition: all 0.2s;">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="width:100%; display:flex; justify-content:center; align-items:center; text-align:center; padding: 1rem 0;">
+    <p style="margin:0;">&copy; 2026 Şanlıurfa Büyükşehir Belediyesi | Yazılım Şube Müdürlüğü</p>
+</div>
+
+    </footer>
+
+    <!-- JavaScript for Date Picker -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('dateDisplay');
+            const dateGroup = dateInput.closest('.search-group');
+            const dropdown = document.getElementById('datePickerDropdown');
+            const presetBtns = document.querySelectorAll('.preset-btn');
+            const applyBtn = document.getElementById('applyDateBtn');
+            const clearBtn = document.getElementById('clearDateBtn');
+            const datePresetInput = document.getElementById('datePresetInput');
+            const startDateInput = document.getElementById('startDateInput');
+            const endDateInput = document.getElementById('endDateInput');
+            const searchForm = document.getElementById('searchForm');
+            
+            let currentDate = new Date();
+            let selectedDate = null;
+
+            // Initialize display from request or default
+            const initialDate = "28 Ekim 2026";
+            if (initialDate && !dateInput.value) {
+                dateInput.value = initialDate;
+            }
+            
+            // Toggle dropdown - make entire group clickable
+            dateGroup.addEventListener('click', function(e) {
+                // If it's a click in the dropdown itself, don't toggle (handled separately)
+                if (dropdown.contains(e.target)) return;
+                
+                e.stopPropagation();
+                const isActive = dropdown.classList.contains('active');
+                
+                if (!isActive) {
+                    dropdown.classList.add('active');
+                    renderCalendar(currentDate);
+                } else {
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Toggle dropdown for the input as well (keyboard etc)
+            dateInput.addEventListener('click', function(e) {
+                e.preventDefault();
+                // No propagation stop here so it hits the group listener
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target) && !dateGroup.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            // Preset selection
+            presetBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    presetBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const value = this.dataset.value;
+                    datePresetInput.value = value;
+                    startDateInput.value = '';
+                    endDateInput.value = '';
+                    
+                    if (value !== 'ozel') {
+                        dateInput.value = this.innerText;
+                        dropdown.classList.remove('active');
+                    }
+                });
+            });
+
+            // Calendar Logic
+            function renderCalendar(date) {
+                const year = date.getFullYear();
+                const month = date.getMonth();
+                const monthNames = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+                
+                document.getElementById('currentMonthYear').textContent = `${monthNames[month]} ${year}`;
+                
+                const firstDay = new Date(year, month, 1).getDay(); // 0 = Sun
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+                const grid = document.getElementById('calendarGrid');
+                grid.innerHTML = '';
+                
+                ['Pt', 'Sa', 'Çr', 'Pr', 'Cu', 'Ct', 'Pz'].forEach(day => {
+                    const div = document.createElement('div');
+                    div.className = 'calendar-day-header';
+                    div.textContent = day;
+                    grid.appendChild(div);
+                });
+                
+                let startDay = firstDay === 0 ? 6 : firstDay - 1;
+                for (let i = 0; i < startDay; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'calendar-day other-month';
+                    grid.appendChild(div);
+                }
+                
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const div = document.createElement('div');
+                    div.className = 'calendar-day';
+                    div.textContent = d;
+                    
+                    const dDate = new Date(year, month, d);
+                    if (selectedDate && dDate.toDateString() === selectedDate.toDateString()) {
+                        div.classList.add('selected');
+                    }
+                    
+                    div.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        selectedDate = dDate;
+                        renderCalendar(date);
+                        
+                        datePresetInput.value = 'ozel';
+                        const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+                        startDateInput.value = dateStr;
+                        dateInput.value = `${d} ${monthNames[month]} ${year}`;
+                    });
+                    
+                    grid.appendChild(div);
+                }
+            }
+
+            document.getElementById('prevMonthBtn').addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                renderCalendar(currentDate);
+            });
+
+            document.getElementById('nextMonthBtn').addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                renderCalendar(currentDate);
+            });
+
+            applyBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdown.classList.remove('active');
+                searchForm.submit();
+            });
+
+            clearBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                selectedDate = null;
+                datePresetInput.value = '';
+                startDateInput.value = '';
+                endDateInput.value = '';
+                dateInput.value = 'Bugün';
+                presetBtns.forEach(b => b.classList.remove('active'));
+                renderCalendar(currentDate);
+            });
+
+            // Initialize state
+            const currentPreset = "ozel";
+            if (currentPreset && currentPreset !== 'ozel') {
+                const btn = document.querySelector(`.preset-btn[data-value="${currentPreset}"]`);
+                if (btn) btn.classList.add('active');
+            } else if (currentPreset === 'ozel' || "2026-10-28") {
+                const btn = document.querySelector('.preset-btn[data-value="ozel"]');
+                if (btn) btn.classList.add('active');
+            }
+            // Prevent product select from triggering other listeners
+            document.querySelector('select[name="product_type_id"]').addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

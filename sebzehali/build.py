@@ -2,9 +2,9 @@
 
     python3 -m sebzehali.build [--out site] [--base-url https://www.sebzehali.com]
 
-Pages: / (today's overview), /hal/<city>/ (one city's bulletin), /urun/<product>/ (one product
-across cities, with a price chart), /hakkinda/ (sources), /reklam/ (for advertisers), plus
-sitemap.xml and robots.txt (and ads.txt once AdSense is set up).
+Pages: / (today's overview), /hal/ (every market by province), /hal/<city>/ (one city's bulletin),
+/urun/<product>/ (one product across cities, with a price chart), /hakkinda/ (sources), /reklam/ (for
+advertisers), plus sitemap.xml and robots.txt (and ads.txt once AdSense is set up).
 No JavaScript framework; the only scripts are the search filter on the home page and the cookie
 consent bar (static/cerez.js), which loads Google Analytics and AdSense after the visitor accepts.
 """
@@ -28,11 +28,15 @@ STATIC = ROOT / "static"
 
 CITY_NAMES = {m.CITY: m.NAME for m in sources.ALL}
 CITY_URLS = {m.CITY: m.URL for m in sources.ALL}
-CITY_COLORS = {"izmir": "#1f7a4d", "bursa": "#c2410c", "konya": "#1d4ed8", "antalya": "#b45309", "mersin": "#7c3aed"}
+CITY_PUBLISHERS = {m.CITY: m.PUBLISHER for m in sources.ALL}
+CITY_RANK = {m.CITY: i for i, m in enumerate(sources.ALL)}  # largest province first
+CHART_LINES = 6  # series slots c1..c6 in style.css; more cities than this and the chart shows the best covered
+NAV_CITIES = 5
 MONTHS = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
 FEATURED = ["domates", "biber", "patates", "sogan", "salatalik", "patlican", "elma", "limon", "muz", "portakal",
             "mandalina", "uzum", "havuc", "kabak", "fasulye", "marul"]
 RECENT_DAYS = 21  # products not seen in this many days get no page
+MIN_ITEMS = 15  # a market whose latest bulletin is smaller than this gets no pages (too thin to be useful)
 
 e = html.escape
 
@@ -56,6 +60,22 @@ def mid(item):
     return item["avg"] if item.get("avg") else (item["min"] + item["max"]) / 2
 
 
+def by_rank(cities):
+    return sorted(cities, key=lambda c: CITY_RANK.get(c, len(CITY_RANK)))
+
+
+def by_name(cities):
+    return sorted(cities, key=lambda c: normalize.slugify(CITY_NAMES[c]))  # Ç, İ, Ş with C, I, S, not after Z
+
+
+def in_halls(cities, limit=5):
+    """'İzmir, Bursa hallerinde'; past `limit` markets, the largest three and a count of the rest."""
+    cities = by_rank(cities)
+    if len(cities) <= limit:
+        return ", ".join(CITY_NAMES[c] for c in by_name(cities)) + " hallerinde"
+    return ", ".join(CITY_NAMES[c] for c in cities[:3]) + f" ve diğer {len(cities) - 3} halde"
+
+
 # ---------------------------------------------------------------- data
 
 def load():
@@ -71,20 +91,25 @@ class Site:
     def __init__(self, data, base_url):
         self.data = data
         self.base = base_url.rstrip("/")
-        self.latest = {c: max(days) for c, days in data.items() if days}
+        # A market's latest full bulletin: a day when only its fish hall reported isn't its price list.
+        self.latest = {c: max((d for d, items in days.items() if len(items) >= MIN_ITEMS), default=max(days))
+                       for c, days in data.items() if days}
         self.newest = max(self.latest.values())
         cutoff = (dt.date.fromisoformat(self.newest) - dt.timedelta(days=RECENT_DAYS)).isoformat()
-        self.cities = sorted((c for c in self.latest if self.latest[c] >= cutoff), key=lambda c: CITY_NAMES.get(c, c))
+        self.cities = by_name(c for c in self.latest if c in CITY_NAMES and self.latest[c] >= cutoff
+                              and len(data[c][self.latest[c]]) >= MIN_ITEMS)
 
         # product -> {city: [items in that city's latest bulletin]}
         self.products = collections.defaultdict(lambda: collections.defaultdict(list))
         self.raw_names = collections.defaultdict(list)
-        self.category = {}
+        votes = collections.defaultdict(collections.Counter)
         for c in self.cities:
             for it in data[c][self.latest[c]]:
                 self.products[it["product"]][c].append(it)
                 self.raw_names[it["product"]].append(it["raw"])
-                self.category.setdefault(it["product"], it["category"])
+                votes[it["product"]][it["category"]] += 1
+        # Cities file a few products differently (carrots under fruit, cabbage on a fruit list): the majority wins.
+        self.category = {p: v.most_common(1)[0][0] for p, v in votes.items()}
 
     def name(self, product):
         return normalize.product_name(product, self.raw_names.get(product, ()))
@@ -135,7 +160,7 @@ def page(site, path, title, description, body, extra_head=""):
 <body>
 <header class="top"><div class="wrap">
 <a class="logo" href="/"><span class="leaf">🥬</span> sebzehali<span class="tld">.com</span></a>
-<nav>{''.join(f'<a href="/hal/{c}/">{e(CITY_NAMES[c])}</a>' for c in site.cities)}<a href="/haftalik/">Haftalık</a></nav>
+<nav>{''.join(f'<a href="/hal/{c}/">{e(CITY_NAMES[c])}</a>' for c in by_rank(site.cities)[:NAV_CITIES])}<a href="/hal/">Tüm şehirler</a><a href="/haftalik/">Haftalık</a></nav>
 </div></header>
 <main class="wrap">
 {body}
@@ -227,6 +252,27 @@ def price_table(rows, show_product=True, show_city=False, prev=None, city_scope=
     return "".join(out)
 
 
+def product_summary(site):
+    """The home page's product list: one row per product, with how many markets list it and its price range
+    across them in its usual unit (each market's varieties are on the product page)."""
+    out = ['<div class="tablewrap"><table class="prices"><thead><tr><th>Ürün</th><th class="n">Hal</th>'
+           '<th class="u">Birim</th><th class="n">En düşük</th><th class="n">En yüksek</th><th class="n">Ortanca</th>'
+           '</tr></thead><tbody>']
+    for p in sorted(site.products, key=lambda p: normalize.slugify(site.name(p))):
+        items = [it for items in site.products[p].values() for it in items]
+        units = collections.Counter(it["unit"] for it in items)
+        unit = max(units, key=lambda u: (units[u], u == "kg"))
+        same = [it for it in items if it["unit"] == unit]
+        name = site.name(p)
+        q = normalize.slugify(" ".join([name, *sorted({it["variety"] for it in items})])).replace("-", " ")
+        out.append(f'<tr data-q="{e(q)}"><td><a href="/urun/{p}/">{e(name)}</a></td>'
+                   f'<td class="n">{len(site.products[p])}</td><td class="u">{e(unit)}</td>'
+                   f'<td class="n">{money(min(i["min"] for i in same))}</td><td class="n">{money(max(i["max"] for i in same))}</td>'
+                   f'<td class="n">{money(statistics.median(mid(i) for i in same))}</td></tr>')
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
+
 def faq_block(faq):
     html_ = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in faq)
     ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -256,12 +302,11 @@ def home(site, week=None):
         f'<small>{tr_date(site.latest[c], True)} bülteni · {len(site.data[c][site.latest[c]])} ürün</small></a>'
         for c in site.cities)
 
-    all_rows = sorted(((c, it) for p in site.products for c, items in site.products[p].items() for it in items),
-                      key=lambda r: (normalize.slugify(site.name(r[1]["product"])), r[1]["variety"], r[0]))
     body = f"""
 <section class="hero">
 <h1>Bugünkü hal fiyatları</h1>
-<p>{', '.join(CITY_NAMES[c] for c in site.cities)} hallerinde sebze, meyve{' ve balık' if any(site.category.get(p) == 'balik' for p in site.products) else ''} toptan fiyatları.
+<p>{len(site.cities)} halden sebze, meyve{' ve balık' if any(site.category.get(p) == 'balik' for p in site.products) else ''} toptan fiyatları:
+{', '.join(CITY_NAMES[c] for c in site.cities)}.
 Son bülten: <b>{tr_date(site.newest, True)}</b>.</p>
 </section>
 <section><h2>Çok aranan ürünler</h2><div class="cards">{''.join(cards)}</div></section>
@@ -271,7 +316,7 @@ Son bülten: <b>{tr_date(site.newest, True)}</b>.</p>
 <section>
 <h2>Tüm ürünler</h2>
 <input id="q" type="search" placeholder="Ürün ara: domates, elma, hamsi…" autocomplete="off" aria-label="Ürün ara">
-{price_table(all_rows, show_city=True)}
+{product_summary(site)}
 </section>
 <script>
 (function(){{var q=document.getElementById('q'),rows=document.querySelectorAll('table.prices tbody tr');
@@ -279,9 +324,9 @@ var A={{'ç':'c','ğ':'g','ı':'i','i̇':'i','ö':'o','ş':'s','ü':'u'}};
 function n(s){{return s.toLocaleLowerCase('tr').replace(/[çğıöşü]/g,function(c){{return A[c]}}).trim()}}
 q.addEventListener('input',function(){{var v=n(q.value);rows.forEach(function(r){{r.style.display=!v||r.dataset.q.indexOf(v)>=0?'':'none'}})}});}})();
 </script>"""
-    title = f"Hal Fiyatları Bugün – {', '.join(CITY_NAMES[c] for c in site.cities)} Sebze Meyve Fiyatları"
-    desc = (f"Güncel hal fiyatları: {tr_date(site.newest)} tarihli {', '.join(CITY_NAMES[c] for c in site.cities)} "
-            "hal bültenlerinden domates, biber, patates, soğan ve tüm sebze meyve toptan fiyatları.")
+    title = f"Hal Fiyatları Bugün – {len(site.cities)} Halde Sebze Meyve Toptan Fiyatları"
+    desc = (f"Güncel hal fiyatları: {tr_date(site.newest)} tarihli bültenlerle {in_halls(site.cities)} "
+            "domates, biber, patates, soğan ve tüm sebze meyve toptan fiyatları.")
     return page(site, "/", title, desc, body)
 
 
@@ -318,23 +363,58 @@ Değişim, bir önceki bültene ({tr_date(max(d for d in site.data[c] if d < dat
 {sections[0] if sections else ''}
 {ad_slot()}
 {''.join(sections[1:])}
-<p class="src">Kaynak: <a href="{e(CITY_URLS[c])}" rel="nofollow noopener">{e(CITY_NAMES[c])} Büyükşehir Belediyesi</a>.
+<p class="src">Kaynak: <a href="{e(CITY_URLS[c])}" rel="nofollow noopener">{e(CITY_PUBLISHERS[c])}</a>.
 Kayıtlı bültenler: {', '.join(tr_date(d) for d in history)}{' …' if len(site.data[c]) > 10 else ''}</p>"""
     title = f"{CITY_NAMES[c]} Hal Fiyatları Bugün ({tr_date(date)}) – Sebze Meyve Fiyatları"
     desc = f"{CITY_NAMES[c]} hal fiyatları {tr_date(date)}: {len(items)} sebze ve meyvenin en düşük ve en yüksek toptan fiyatı, dünkü fiyatlarla karşılaştırma."
     return page(site, f"/hal/{c}/", title, desc, body)
 
 
+def cities_page(site):
+    """/hal/: every market, grouped by province (a province can have district and fish markets too)."""
+    groups = collections.defaultdict(list)
+    for c in site.cities:
+        groups[sources.PROVINCE.get(c, CITY_NAMES[c])].append(c)
+    when = lambda c: f'<small>{tr_date(site.latest[c], True)} bülteni · {len(site.data[c][site.latest[c]])} ürün</small>'
+    cards = []
+    for prov in sorted(groups, key=normalize.slugify):
+        cs = sorted(groups[prov], key=lambda c: (CITY_NAMES[c] != prov, normalize.slugify(CITY_NAMES[c])))
+        if len(cs) == 1:
+            cards.append(f'<a class="city" href="/hal/{cs[0]}/"><b>{e(CITY_NAMES[cs[0]])} hal fiyatları</b>{when(cs[0])}</a>')
+        else:  # the central market first, then the district and fish markets
+            cards.append(f'<div class="city province"><b>{e(prov)}</b>' + "".join(
+                f'<a href="/hal/{c}/">{e(CITY_NAMES[c])} hal fiyatları</a>{when(c)}' for c in cs) + "</div>")
+    body = f"""
+<nav class="crumbs"><a href="/">Hal fiyatları</a> › Şehirler</nav>
+<h1>Şehir şehir hal fiyatları</h1>
+<p class="lead">{len(groups)} ilde {len(site.cities)} halin günlük toptan sebze ve meyve fiyatları. Bazı illerde merkez
+halinin yanında ilçe halleri ve balık hali de vardır.</p>
+<div class="cities">{''.join(cards)}</div>"""
+    title = f"Şehir Şehir Hal Fiyatları – {len(site.cities)} Hal"
+    desc = (f"{', '.join(sorted(groups, key=normalize.slugify))} hallerinin günlük sebze, meyve ve balık toptan fiyatları; "
+            "ilçe halleri dahil.")
+    return page(site, "/hal/", title, desc, body)
+
+
 def chart(site, product, cities=None):
-    lines, legend, all_pts = [], [], []
+    cutoff = (dt.date.fromisoformat(site.newest) - dt.timedelta(days=90)).isoformat()
+    lines = []
     for c in cities or site.cities:
         unit, pts = site.series(c, product)
-        pts = [p for p in pts if p[0] >= (dt.date.fromisoformat(site.newest) - dt.timedelta(days=90)).isoformat()]
+        pts = [p for p in pts if p[0] >= cutoff]
         if len(pts) >= 2:
             lines.append((c, unit, pts))
-            all_pts += pts
     if not lines:
         return ""
+    shown = len(lines)
+    # Too many markets for one chart: the largest provinces among those with a fair record (weekly and
+    # latest-only markets have few points), in rank order so a market keeps its colour whichever others
+    # share the chart with it.
+    longest = max(len(pts) for _, _, pts in lines)
+    fair = [r for r in lines if len(r[2]) >= longest / 3] or lines
+    lines = sorted(fair, key=lambda r: CITY_RANK.get(r[0], 0))[:CHART_LINES]
+    all_pts = [p for _, _, pts in lines for p in pts]
+    legend = []
     W, H, L, R, T, B = 720, 280, 56, 12, 12, 28
     d0 = min(dt.date.fromisoformat(p[0]) for p in all_pts)
     d1 = max(dt.date.fromisoformat(p[0]) for p in all_pts)
@@ -348,17 +428,16 @@ def chart(site, product, cities=None):
         v = vmin + (vmax - vmin) * i / 4
         svg.append(f'<line x1="{L}" x2="{W - R}" y1="{y(v):.1f}" y2="{y(v):.1f}" class="grid"/>'
                    f'<text x="{L - 6}" y="{y(v) + 4:.1f}" text-anchor="end">{v:.0f}</text>')
-    for d in (d0, d0 + (d1 - d0) / 2, d1):
-        svg.append(f'<text x="{x(d.isoformat()):.1f}" y="{H - 8}" text-anchor="middle">{d.day} {MONTHS[d.month - 1][:3]}</text>')
-    for c, unit, pts in lines:
-        col = CITY_COLORS.get(c, "#555")
+    for d, anchor in ((d0, "start"), (d0 + (d1 - d0) / 2, "middle"), (d1, "end")):
+        svg.append(f'<text x="{x(d.isoformat()):.1f}" y="{H - 8}" text-anchor="{anchor}">{d.day} {MONTHS[d.month - 1][:3]}</text>')
+    for slot, (c, unit, pts) in enumerate(lines, 1):
         poly = " ".join(f"{x(d):.1f},{y(v):.1f}" for d, v in pts)
-        svg.append(f'<polyline points="{poly}" fill="none" stroke="{col}" stroke-width="2.5" stroke-linejoin="round"/>')
         lx, ly = pts[-1]
-        svg.append(f'<circle cx="{x(lx):.1f}" cy="{y(ly):.1f}" r="3.5" fill="{col}"/>')
-        legend.append(f'<span><i style="background:{col}"></i>{e(CITY_NAMES[c])} ({e(unit)})</span>')
+        svg.append(f'<g class="c{slot}"><polyline points="{poly}"/><circle cx="{x(lx):.1f}" cy="{y(ly):.1f}" r="4"/></g>')
+        legend.append(f'<span class="c{slot}"><i></i>{e(CITY_NAMES[c])} ({e(unit)})</span>')
     svg.append("</svg>")
-    return (f'<figure class="chartbox">{"".join(svg)}<figcaption>Tüm çeşitlerin ortanca toptan fiyatı (₺), son 90 gün. '
+    note = f" Grafikte {len(lines)} hal var; {shown} halin tümü tabloda." if shown > len(lines) else ""
+    return (f'<figure class="chartbox">{"".join(svg)}<figcaption>Tüm çeşitlerin ortanca toptan fiyatı (₺), son 90 gün.{note} '
             f'{"".join(legend)}</figcaption></figure>')
 
 
@@ -375,12 +454,12 @@ def product_page(site, product):
     lo, hi = min(i["min"] for i in kg), max(i["max"] for i in kg)
     unit = kg[0]["unit"]
     med = statistics.median(mid(i) for i in kg)
-    cities = sorted({c for c, _ in rows}, key=lambda c: CITY_NAMES[c])
-    city_txt = ", ".join(CITY_NAMES[c] for c in cities)
+    cities = {c for c, _ in rows}
+    halls = in_halls(cities)
     cheapest = min(rows, key=lambda r: r[1]["min"] if r[1]["unit"] == unit else 1e12)
     faq = [
         (f"{name} hal fiyatı ne kadar?",
-         f"{tr_date(site.newest)} itibarıyla {city_txt} hallerinde {name.lower()} {unit} fiyatı {money(lo)} ile {money(hi)} arasında; "
+         f"{tr_date(site.newest)} itibarıyla {halls} {name.lower()} {unit} fiyatı {money(lo)} ile {money(hi)} arasında; "
          f"orta değer yaklaşık {money(med)}."),
         (f"{name} en ucuz hangi halde?",
          f"Son bültenlerde en düşük {name.lower()} fiyatı {CITY_NAMES[cheapest[0]]} halinde: "
@@ -395,7 +474,7 @@ def product_page(site, product):
     body = f"""
 <nav class="crumbs"><a href="/">Hal fiyatları</a> › {e(name)}</nav>
 <h1>{e(name)} hal fiyatı bugün</h1>
-<p class="lead">{e(name)} toptan fiyatı {city_txt} hallerinde <b>{money(lo)} – {money(hi)}</b> / {e(unit)}
+<p class="lead">{e(name)} toptan fiyatı {halls} <b>{money(lo)} – {money(hi)}</b> / {e(unit)}
 ({tr_date(site.newest)}).</p>
 {price_table(rows, show_product=False, show_city=True, prev=prev)}
 {chart(site, product)}
@@ -403,8 +482,9 @@ def product_page(site, product):
 {faq_html}
 <section><h2>Diğer {e(normalize.CATEGORIES.get(site.category.get(product), 'ürün').lower())} fiyatları</h2>
 <p class="tags">{''.join(f'<a href="/urun/{p}/">{e(site.name(p))}</a>' for p in related)}</p></section>"""
-    title = f"{name} Hal Fiyatı Bugün ({tr_date(site.newest)}) – {city_txt}"
-    desc = (f"{name} hal fiyatı: {city_txt} hallerinde {unit} fiyatı {money(lo)} – {money(hi)}. "
+    where = ", ".join(CITY_NAMES[c] for c in by_name(cities)) if len(cities) <= 3 else f"{len(cities)} Hal"
+    title = f"{name} Hal Fiyatı Bugün ({tr_date(site.newest)}) – {where}"
+    desc = (f"{name} hal fiyatı: {halls} {unit} fiyatı {money(lo)} – {money(hi)}. "
             f"Şehir şehir güncel {name.lower()} toptan fiyatları ve 90 günlük fiyat grafiği.")
     return page(site, f"/urun/{product}/", title, desc, body, extra_head=ld)
 
@@ -458,7 +538,7 @@ def city_product_page(site, c, product):
 {faq_html}
 <section><h2>{e(city)} halinde diğer ürünler</h2>
 <p class="tags">{''.join(f'<a href="/hal/{c}/{p}/">{e(site.name(p))}</a>' for p in siblings)}</p></section>
-<p class="src">Kaynak: <a href="{e(CITY_URLS[c])}" rel="nofollow noopener">{e(city)} Büyükşehir Belediyesi</a>.</p>"""
+<p class="src">Kaynak: <a href="{e(CITY_URLS[c])}" rel="nofollow noopener">{e(CITY_PUBLISHERS[c])}</a>.</p>"""
     title = f"{city} Hal {name} Fiyatı Bugün ({tr_date(site.latest[c])})"
     desc = (f"{city} hal {name.lower()} fiyatı: {money(lo)} – {money(hi)} / {unit} ({tr_date(site.latest[c])}). "
             f"Çeşit çeşit {name.lower()} toptan fiyatı, fiyat grafiği ve diğer hallerle karşılaştırma.")
@@ -565,11 +645,11 @@ def weekly_pages(site):
 
 
 def about_page(site):
-    srcs = "".join(f'<li><b>{e(m.NAME)}</b>: <a href="{e(m.URL)}" rel="nofollow noopener">{e(m.URL)}</a></li>'
-                   for m in sources.ALL)
+    srcs = "".join(f'<li><b>{e(m.NAME)}</b> ({e(m.PUBLISHER)}): <a href="{e(m.URL)}" rel="nofollow noopener">{e(m.URL)}</a></li>'
+                   for m in sorted(sources.ALL, key=lambda m: normalize.slugify(m.NAME)))
     body = f"""
 <h1>Kaynaklar ve açıklama</h1>
-<p>sebzehali.com, büyükşehir belediyelerinin her gün yayımladığı hal fiyat bültenlerini tek yerde toplar.
+<p>sebzehali.com, belediyelerin yayımladığı hal fiyat bültenlerini tek yerde toplar.
 Fiyatlar her gün birkaç kez otomatik olarak güncellenir.</p>
 <h2>Kaynaklar</h2><ul>{srcs}</ul>
 <h2>Fiyatlar hakkında</h2>
@@ -735,6 +815,7 @@ def build(out, base_url):
     weekly, this_week = weekly_pages(site)
     pages = {"/": home(site, this_week), "/hakkinda/": about_page(site), "/gizlilik/": privacy_page(site),
              "/iletisim/": contact_page(site), "/reklam/": advertising_page(site), **weekly}
+    pages["/hal/"] = cities_page(site)
     for c in site.cities:
         pages[f"/hal/{c}/"] = city_page(site, c)
     for p in site.products:

@@ -1,0 +1,88 @@
+AFYONKARAHİSAR BELEDİYESİ TOPTANCI HAL MÜDÜRLÜĞÜ
+30.10.2026 SEBZE VE MEYVE GÜNLÜK FİYAT LİSTESİ
+                                  Ürün Cinsi   Minimum Fiyat   Maksimum Fiyat   Birim Ad
+ANANAS              ANANAS İTHAL                  200,00           280,00        Adet
+ARMUT               ARMUT DEVECİ                  100,00           150,00         KG
+ARMUT               ARMUT SANTAMARİA              100,00           150,00         Kg
+BAMYA               NORMAL                          *                *            Kg
+AVOKADO             AVOKADO                        80,00           120,00        Adet
+AYSBERG             NORMAL                         25,00           60,00         Adet
+AYVA                AYVA                            *                *            Kg
+BALKABAĞI           BALKABAĞI                      25,00           50,00          Kg
+BEYAZ LAHANA        AZMAN                          25,00           60,00          Kg
+BİBER               BİBER ÇARLİSTON                60,00           120,00         Kg
+BİBER               BİBER DOLMA                    60,00           100,00         Kg
+BİBER               BİBER KAPYA                    60,00           120,00         Kg
+BİBER               BİBER KÖYBİBERİ                60,00           100,00         Kg
+BİBER               BİBER SİVRİ                    60,00           100,00         Kg
+BROKOLİ             NORMAL                         50,00           100,00         Kg
+ÇİLEK               NORMAL                        200,00           400,00         Kg
+DEREOTU             DEREOTU                        10,00           20,00          KG
+DOMATES             CHERRY                        120,00           200,00         KG
+DOMATES             DOMATES KOKTEYL               120,00           200,00         Kg
+DOMATES             DOMATES SALKIM                 75,00           120,00         Kg
+DOMATES             DOMATES SERA                   75,00           120,00         Kg
+ÇAĞLA                                               *                *            KG
+ERİK                                                *                *            Kg
+ELMA                ARAPKIZI                       50,00           80,00          Kg
+ELMA                ELMA STARKİNG                  30,00           70,00          Kg
+ELMA GOLDEN         ELMA GOLDEN                    30,00           70,00          Kg
+ELMA GRANNY SMITH   ELMA GRANNY SMITH              50,00           80,00          Kg
+ŞEFTALİ             ŞEFTALİ                         *                *            KG
+ERİK                ANJELİK                        40,00           100,00         Kg
+FASULYE             FASULYE AYŞE                   60,00           100,00         Kg
+FASULYE             NORMAL                         60,00           100,00         Kg
+GREYFURT            NORMAL                         60,00           100,00         Kg
+BEZELYE             BEZELYE                         *                *            Kg
+HAVUÇ               BEYPAZARI                      20,00           50,00          KG
+HAVUÇ               İRİ (TAKOZ)                    20,00           50,00          Kg
+ISPANAK             ISPANAK                        50,00           100,00         Kg
+KABAK               NORMAL                         25,00           60,00          Kg
+KİRAZ               KİRAZ                           *                *            Kg
+*                   *                               *                *            Kg
+KARPUZ              NORMAL                         20,00           35,00          Kg
+KAVUN               DİĞER                          20,00           45,00          Kg
+KAYSI               KAYSI                           *                *            Kg
+KESTANE             KESTANE                         *                *            Kg
+KIRMIZI LAHANA      NORMAL                         25,00           60,00          Kg
+NANE                NORMAL                         10,00           20,00         Adet
+KİVİ                NORMAL                        100,00           200,00         Kg
+LAHANA              NORMAL                         35,00           50,00          Kg
+LİMON               MAYER               15,00    45,00    KG
+LİMON               LİMON YATAK           *        *       kg
+İNCİR               DİĞER                 *        *       Kg
+ÜZÜM                                    40,00    80,00     Kg
+ÜZÜM                SİYAH               40,00    80,00     Kg
+Y.DÜNYA                                   *        *       *
+MANDALİNA                               20,00    60,00     Kg
+MANTAR              MANTAR              160,00   220,00    Kg
+MARUL               NORMAL              20,00    45,00    KG
+*                   *                     *        *      Adet
+LOLOROSSO           *                   25,00    50,00    Adet
+MARUL KIVIRCIK      DİĞER               25,00    50,00    Adet
+MAYDANOZ            NORMAL              10,00    15,00    ADET
+MUZ                 MUZ ANAMUR          90,00    130,00    Kg
+MUZ                 MUZ İTHAL           100,00   150,00    Kg
+NAR                 NAR                 40,00    80,00     Kg
+PATATES             ESKİ MAHSÜL           *        *       Kg
+PATATES             YENİ MAHSÜL         30,00    60,00     Kg
+PATLICAN            NORMAL              30,00    60,00     Kg
+PIRASA              NORMAL              40,00    80,00     Kg
+PORTAKAL            FİNİKE                *        *       Kg
+PORTAKAL            YENİ MAHSÜL         40,00    80,00     Kg
+PORTAKAL            KÖYCEĞİZ              *        *       Kg
+PORTAKAL SIKMALIK   PORTAKAL SIKMALIK   40,00    80,00     Kg
+ROKA                NORMAL              10,00    20,00    Bağ
+SALATALIK           NORMAL              35,00    75,00    KG
+SALATALIK           SALATALIK SİLOR     35,00    75,00     Kg
+SARIMSAK            TAZE                  *        *       Kg
+SARIMSAK KURU       SARIMSAK KURU       100,00   160,00    Kg
+SOĞAN               SOĞAN KURU          25,00    50,00     Kg
+TERE                DİĞER               15,00    25,00    ADET
+ERİK                NORMAL                *        *       Kg
+TURP                KIRMIZI             20,00    50,00     Kg
+SOĞAN               YENİ MAHSÜL           *        *      Adet
+K.BAHAR             NORMAL              30,00    60,00     Kg
+YEŞİL SOĞAN         YEŞİL SOĞAN         100,00   150,00    Kg
+BAKLA               BAKLA                 *        *       KG
+

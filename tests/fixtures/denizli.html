@@ -1,0 +1,2081 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script>
+      (function () {
+        try {
+          var t = JSON.parse(localStorage.getItem("db-a11y") || "{}");
+          for (var k in t) {
+            if (t[k]) document.documentElement.setAttribute("data-a11y-" + k, t[k]);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link rel="preconnect" href="https://web1.denizli.bel.tr" crossorigin="" /><link rel="preconnect" href="https://mobil.denizli.bel.tr" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet" /><link rel="icon" href="/assets/brand/DBB-logo-compact.png" type="image/png" sizes="any" /><link rel="apple-touch-icon" href="/assets/brand/DBB-logo-compact.png" /><link rel="stylesheet" href="/css/main.css?v=20261028g" /><link rel="stylesheet" href="/css/arama.css?v=20261002a" /><link rel="stylesheet" href="/css/old-design.css?v-2" /><title>
+	Hal Fiyatları - T.C. DENİZLİ BÜYÜKŞEHİR BELEDİYESİ
+</title>
+
+
+    <script src="https://www2.denizli.bel.tr/lib/js/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://www2.denizli.bel.tr/js/magnific-popup/dist/magnific-popup.css" />
+<script src="https://www2.denizli.bel.tr/js/magnific-popup/dist/jquery.magnific-popup.js?"></script>
+
+
+     </head>
+<body id="pageBody" class="db-inner-page is-ic-sayfa">
+    
+
+
+    
+        <div id="areaHeaderContent">
+            
+        
+      <!-- Skip link -->
+    <a class="db-skip" href="#main">Ana içeriğe atla</a>
+
+    
+    <button
+      class="db-a11y-tetik"
+      type="button"
+      id="a11y-open-btn"
+      aria-label="Erişilebilirlik ayarları"
+      aria-haspopup="dialog"
+      aria-expanded="false"
+      aria-controls="a11y-panel"
+    >
+      <svg class="db-icon" aria-hidden="true" focusable="false">
+        <use href="/assets/icons/sprite.svg#icon-accessibility"></use>
+      </svg>
+    </button>
+
+    <!-- ◆ .NET INCLUDE → SiteHeader.ascx · chrome + header · 4 sayfada birebir identik (MasterPage'e taşı) -->
+    <div class="chrome-wrap" id="site-chrome">
+      <!-- HEADER -->
+      <header class="db-header">
+        <a
+          href="/"
+          class="brand-lockup"
+          aria-label="T.C. Denizli Büyükşehir Belediyesi - Ana sayfa"
+        >
+          <span class="brand-id">
+            <img
+              id="brand-logo"
+              class="brand-emblem"
+              src="/assets/brand/DBB-logo.webp"
+              data-logo-default="/assets/brand/DBB-logo.webp"
+              data-logo-scrolled="/assets/brand/DBB-logo-compact.webp"
+              alt="T.C. Denizli Büyükşehir Belediyesi"
+              fetchpriority="high"
+            />
+            <span class="brand-tc" aria-hidden="true"></span>
+          </span>
+          <span class="brand-sep" aria-hidden="true"></span>
+          <img
+            class="brand-mutlu"
+            src="/assets/brand/mutlu-insan-white.webp"
+            alt="Mutlu İnsanların Şehri Denizli"
+          />
+        </a>
+        <div class="header-nav">
+          <!-- .NET: ana menü — üst öğeler (Başkan/Kurumsal/Gündem dropdown + Ana Sayfa/İletişim/Hızlı Erişim) ve dropdown __list içindeki <li><a> öğeleri CMS menü hiyerarşisinden render edilir. -->
+          <nav class="nav-items" aria-label="Ana menü" data-cms="main-nav">
+            <a href="/" class="nav-home" aria-label="Ana Sayfa">
+              <svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-house"></use>
+              </svg>
+            </a>
+            <div class="db-navdrop" data-navdrop>
+              <button
+                type="button"
+                class="db-navdrop__trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="navdrop-baskan"
+              >
+                <span>Başkan</span>
+                <svg class="db-icon db-nav-chev" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <div class="db-navdrop__panel" id="navdrop-baskan" hidden>
+                <ul class="db-navdrop__list" data-cms="nav-dropdown">
+                  <li>
+                    <a
+                      class="db-navdrop__link"
+                      href="/baskan/ozgecmisi"
+                      >Başkan'ın Özgeçmişi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="db-navdrop__link"
+                      href="/baskan/baskan-a-mesaj"
+                      >Başkan'a Mesaj</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="db-navdrop__link"
+                      href="/baskan/baskan-foto-galeri"
+                      >Fotoğraf Galerisi</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="db-navdrop" data-navdrop>
+              <button
+                type="button"
+                class="db-navdrop__trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="navdrop-kurumsal"
+              >
+                <span>Kurumsal</span>
+                <svg class="db-icon db-nav-chev" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <div class="db-navdrop__panel" id="navdrop-kurumsal" hidden>
+                <ul
+                  class="db-navdrop__list db-navdrop__list--groups"
+                  data-cms="nav-dropdown"
+                >
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Yönetim
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/yonetim/genel-sekreter">Genel Sekreter</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/yonetim/genel-sekreter-yardimcilari">Genel Sekreter Yardımcıları</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/yonetim/daire-baskanliklari">Daire Başkanlıkları</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/yonetim/belediye-meclisi">Belediye Meclisi</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/yonetim/encumen">Encümen</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" target="_blank" href="https://www.denizli.bel.tr/organizasyonsemasi/">Organizasyon Şeması</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Politikalar
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/politikalar/misyon-vizyon-ve-temel-degerler">Misyon, Vizyon ve Temel Değerler</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/politikalar/yonetim-sistemleri-politikamiz">Yönetim Sistemleri Politikamız</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/politikalar/bilgi-guvenligi-politikasi">Bilgi Güvenliği Politikası</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Belgeler
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                        <li>
+                          <a class="db-navdrop__link" href="/kurumsal/belgeler/faaliyet-bilgileri">Faaliyet Bilgileri</a>
+                        </li>
+
+                      <li>
+                        <a class="db-navdrop__link" target="_blank" href="https://www.turkiye.gov.tr/icisleri-belediye-ebys">Elektronik Evrak Doğrulama</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/belgeler/basvuru-evraklari">Başvuru Evrakları</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/belgeler/meclis-kararlari">Meclis Kararları</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/belgeler/kurumsal-mevzuat">Kurumsal Mevzuat</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Komisyonlar
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/komisyonlar/arabuluculuk-komisyonu">Arabuluculuk Komisyonu</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/komisyonlar/etik-komisyonu">Etik Komisyonu</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/komisyonlar/kamu-hizmet-standartlari">Kamu Hizmet Standartları</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      KVKK
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kvkk/aydinlatma-metni">KVKK Aydınlatma Metni</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kvkk/web-siteleri-ve-mobil-uygulamalar-gizlilik-politikasi">Gizlilik Politikası</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kvkk/cerez-politikasi">Çerez Politikası</a>
+                      </li>
+
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kvkk/guvenlik-kameralari-hakkinda-aydinlatma-metni">Güvenlik Kameraları Hakkında Aydınlatma Metni</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kvkk/acik-riza-beyan-formu">Açık Rıza Beyan Formu</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kvkk/kvkk-kisisel-verilerin-korunmasi-kanunu-basvuru-formu">Başvuru Formu</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Kurumsal Kimlik
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                          <a class="db-navdrop__link" href="/kurumsal/kurumsal-kimlik/kurumsal-kimlik-tarihce">Tarihçe</a>
+                        </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kurumsal-kimlik/eski-baskanlar">Eski Başkanlar</a>
+                      </li>
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kurumsal-kimlik/kurumsal-linklerimiz">Kurumsal Linklerimiz</a>
+                      </li>
+
+                      <li>
+                        <a class="db-navdrop__link" href="/kurumsal/kurumsal-kimlik/kurumsal-logolar">Kurumsal Logolar</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="db-navdrop" data-navdrop>
+              <button
+                type="button"
+                class="db-navdrop__trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="navdrop-gundem"
+              >
+                <span>Gündem</span>
+                <svg class="db-icon db-nav-chev" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <div class="db-navdrop__panel" id="navdrop-gundem" hidden>
+                <ul class="db-navdrop__list" data-cms="nav-dropdown">
+                  <li>
+                    <a class="db-navdrop__link" href="/haberler">Haberler</a>
+                  </li>
+                  <li>
+                    <a class="db-navdrop__link" href="/duyurular">Duyurular</a>
+                  </li>
+                  <li>
+                    <a class="db-navdrop__link" href="/duyurular#ihaleler">İhaleler</a>
+                  </li>
+                  
+                  <li>
+                    <a class="db-navdrop__link" href="/projelerimiz">Projeler</a>
+                  </li>
+                  
+                  <li>
+                    <a class="db-navdrop__link" href="/etkinlikler">Etkinlikler</a>
+                  </li>
+                  
+                  <li>
+                    <a
+                      class="db-navdrop__link"
+                      target="_blank"
+                      rel="noopener"
+                      href="https://ebilet.denizli.bel.tr/"
+                      >E-Bilet</a
+                    >
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            
+            <div class="db-navdrop" data-navdrop>
+              <button
+                type="button"
+                class="db-navdrop__trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="navdrop-denizli-yasam"
+              >
+                <span>Denizli ve Yaşam</span>
+                <svg class="db-icon db-nav-chev" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <div class="db-navdrop__panel" id="navdrop-denizli-yasam" hidden>
+                <ul
+                  class="db-navdrop__list db-navdrop__list--groups"
+                  data-cms="nav-dropdown"
+                >
+                  
+                  <li>
+                    <a
+                      class="db-navdrop__link"
+                      href="/denizli-yasam#denizli-tarihi"
+                      >Denizli Tarihi</a
+                    >
+                  </li>
+                  <li>
+                   <a
+                     class="db-navdrop__link"
+                     href="/denizli-yasam/kent-hafizasi-belgeseli/2-200-yillik-denizli-tasviri-kime-aitti-bolum-1"
+                     >Kent Hafızası Belgeseli</a
+                   >
+                 </li>
+
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Gezilecek Yerler ve Turizm
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#gezi/hierapolis"
+                          >Hierapolis Antik Kenti</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#gezi/pamukkale-2"
+                          >Pamukkale Travertenleri</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#gezi/laodikya-2"
+                          >Laodikya Antik Kenti</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#gezi/kefe-yaylasi"
+                          >Kefe Yaylası</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#gezi/teleferik"
+                          >Teleferik</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#gezi/kayak-merkezi"
+                          >Kayak Merkezi</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="db-navdrop__group-item">
+                    <button class="db-navdrop__group-btn" type="button">
+                      Hizmetler ve Tesisler
+                      <svg class="db-icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/icons/sprite.svg#icon-chevron-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="db-navdrop__sub-list">
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#kent-marketler"
+                          >Kent Marketler</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#kent-lokantalari"
+                          >Kent Lokantaları</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#kutuphane"
+                          >Kütüphaneler ve Bilgi Evleri</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#kultur-sanat"
+                          >Kültür ve Sanat Merkezleri</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#sosyal-tesisler"
+                          >Sosyal Tesisler</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#spor"
+                          >Spor Tesisleri ve Yüzme Havuzları</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#sosyal"
+                          >Sosyal Hizmetler ve Gençlik Merkezleri</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="db-navdrop__link"
+                          href="/denizli-yasam#cocuk-gelisim-ve-oyun-merkezleri"
+                          >Çocuk Gelişim ve Oyun Merkezleri</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="/iletisim/belediye-irtibat">İletişim</a>
+            <a
+              href="#"
+              class="db-hizli-erisim-btn"
+              id="hizli-erisim-btn"
+              >Hızlı Erişim</a
+            >
+            <button
+              class="header-search-btn"
+              type="button"
+              id="search-open-btn"
+              data-search-open
+              aria-label="Arama"
+              aria-haspopup="dialog"
+            >
+              <svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+            
+          </nav>
+        </div>
+        <div class="header-chrome-end">
+          <button
+            class="db-nav-toggle"
+            type="button"
+            data-drawer-toggle
+            aria-expanded="false"
+            aria-controls="drawer"
+            aria-label="Menüyü aç"
+          >
+            <svg
+              class="db-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+          <img
+            src="/assets/brand/mustafa-kemal-ataturk-transparent.webp"
+            alt="Mustafa Kemal Atatürk"
+            class="ataturk-header"
+          />
+          
+          <div class="db-navdrop db-lang" data-lang-switch>
+            <button
+              type="button"
+              class="db-navdrop__trigger db-lang__trigger"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="navdrop-dil"
+              
+              aria-label="Dil seçimi: TR"
+            >
+              
+              <span class="db-lang__sep" aria-hidden="true"></span>
+              <span class="db-lang__label">TR</span>
+            </button>
+            <div class="db-navdrop__panel db-lang__panel" id="navdrop-dil" hidden>
+              
+              
+              <ul class="db-lang__list" aria-label="Dil seçimi">
+                <li>
+                  <a
+                    class="db-lang__link"
+                    href="#"
+                    lang="tr"
+                    hreflang="tr"
+                    data-lang="tr"
+                    data-lang-kisa="TR"
+                    aria-label="TR (Türkçe)"
+                    aria-current="true"
+                    >TR</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="db-lang__link"
+                    href="#"
+                    lang="en"
+                    hreflang="en"
+                    data-lang="en"
+                    data-lang-kisa="EN"
+                    aria-label="EN (English)"
+                    >EN</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- ◆ .NET INCLUDE → MobileDrawer.ascx · mobil menü · 4 sayfada birebir identik -->
+    <div
+      class="db-drawer"
+      id="drawer"
+      data-open="false"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobil menü"
+    >
+      <div class="db-drawer__backdrop"></div>
+      <div class="db-drawer__panel">
+        <div class="db-drawer__head">
+          <img
+            class="db-drawer__logo"
+            src="/assets/brand/DBB-logo-compact.webp"
+            alt="T.C. Denizli Büyükşehir Belediyesi"
+            width="64"
+            height="64"
+          />
+          <button
+            class="db-drawer__close"
+            type="button"
+            data-drawer-close
+            aria-label="Menüyü kapat"
+          >
+            <svg
+              class="db-drawer__close-icon db-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <button
+          class="db-drawer__search"
+          type="button"
+          data-search-open
+          aria-label="Arama"
+          aria-haspopup="dialog"
+        >
+          <svg class="db-icon" aria-hidden="true" focusable="false">
+            <use href="/assets/icons/sprite.svg#icon-search"></use>
+          </svg>
+          <span>Ara</span>
+        </button>
+        <!-- .NET: drawer menü — JS navbar'dan klonluyor; .NET server-render edebilir -->
+        <nav
+          class="db-drawer__nav"
+          aria-label="Mobil menü navigasyonu"
+          data-cms="drawer-nav"
+        >
+          <ul class="db-drawer__list"></ul>
+        </nav>
+        <div class="db-drawer__footer">
+          <p class="db-drawer__footer-label">
+            <svg class="db-icon" aria-hidden="true" focusable="false">
+              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+            </svg>
+            Çözüm Merkezi
+          </p>
+          <a href="tel:153" class="db-drawer__footer-tel">
+            <svg class="db-icon" aria-hidden="true" focusable="false">
+              <use href="/assets/icons/sprite.svg#icon-headset"></use>
+            </svg>
+            ALO 153
+          </a>
+        </div>
+      </div>
+    </div></div>
+
+
+        
+        <!-- MAIN CONTENT -->
+
+        <div id="areaIcsayfaContent">
+            
+        
+	<script>
+        $(function () {
+
+            $(function () {
+                $("td").hover(function () {
+                    $("td", $(this).closest("tr.fiyat")).addClass("hover_row");
+                }, function () {
+                    $("td", $(this).closest("tr.fiyat")).removeClass("hover_row");
+                });
+            });
+        });
+    </script>
+ <style>
+
+
+
+  .highlight { background-color: #f4f9f9; border-bottom:1px solid #c3e0ea; border-top: 1px solid #c3e0ea;}
+  .item { border-bottom:1px solid #fff; border-top: 1px solid #fff; }
+  
+  select, input
+  {
+      border: 1px solid gray;
+      border-color: Gray !important;
+     
+      font-size:18px;
+  }
+  .hover_row 
+  {
+      background-color:#eefff0
+  }
+  .inputtarih {width: 90px; color: #000; font-weight:normal; font-size:14px;}
+</style>
+<!-- İÇ SAYFA ANA İÇERİK -->
+<main id="main" class="db-inner">
+
+
+  <div class="db-inner__grid">
+      	  <aside class="db-sidebar" aria-label="Bölüm menüsü">
+          <!-- Mobil accordion toggle (desktop'ta hidden attr ile gizlenir JS tarafından) -->
+          <button type="button" class="db-sidebar__toggle" aria-expanded="false" aria-controls="ic-nav" hidden="">
+            <span id="areaSolMenuTitleMobil" class="db-sidebar__toggle-eyebrow" data-cms="sidebar-title">Hızlı Erişim</span>
+            <span class="db-sidebar__toggle-current" data-cms="sidebar-active-label"></span>
+            <svg class="db-icon db-sidebar__chev" aria-hidden="true" focusable="false">
+              <use href="/assets/icons/sprite.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+          <!-- Desktop başlık (mobilde hidden) -->
+          <p id="areaSolMenuTitleDesktop" class="db-sidebar__title" data-cms="sidebar-title">Hızlı Erişim</p>
+          <nav id="ic-nav" aria-label="Bölüm alt menüsü">
+            <!-- .NET: bilgi hizmetleri dış servis linkleri Repeater'dan basılır -->
+            <ul id="leftmenu" class="db-sidebar__list" data-nav-list="">
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/ulasim-rayic-bedelleri">
+        Ulaşım Rayi&#231; Bedelleri
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/pazar-yerleri">
+        Pazar Yerleri
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/etkinlikler">
+        Etkinlikler
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/nobetci-eczaneler">
+        N&#246;bet&#231;i Eczaneler
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/son-depremler">
+        Son Depremler
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/su-kesintileri">
+        Su Kesintileri
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/trafige-kapali-yollar">
+        Trafiğe Kapalı Yollar
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/sokak-hayvanlari-takip">
+        Sokak Hayvanları Takip
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/bugun-defnedilenler">
+        Bug&#252;n Defnedilenler
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://denizlikart.denizli.bel.tr/" target="_blank" rel="noopener">
+        Denizli Kart TL Y&#252;kle
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/e-belediye">
+        B&#252;y&#252;kşehir &#214;deme
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://online.deski.gov.tr/sube/" target="_blank" rel="noopener">
+        DESKİ Su Borcu &#214;deme
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://ebelediye.merkezefendi.bel.tr/webportal/index.php?wwsayfa=25" target="_blank" rel="noopener">
+        İl&#231;e Belediyeleri &#214;deme - Merkezefendi
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://ebelediye.pamukkale.bel.tr/webportal/index.php?wwsayfa=25" target="_blank" rel="noopener">
+        İl&#231;e Belediyeleri &#214;deme - Pamukkale
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://www.deski.gov.tr/vezneler" target="_blank" rel="noopener">
+        DESKİ Vezneler
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/basvurular">
+        Başvurular
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/e-belediye">
+        e-Belediye
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://apps.denizli.bel.tr/ulasimrandevu/" target="_blank" rel="noopener">
+        Ticari Ara&#231; Randevu
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://ulasim.denizli.bel.tr/" target="_blank" rel="noopener">
+        Ulaşım Portalı
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://kentrehberi.denizli.bel.tr/" target="_blank" rel="noopener">
+        Kent Rehberi
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://kentrehberi.denizli.bel.tr/?s=1" target="_blank" rel="noopener">
+        B&#252;y&#252;kşehir Yetki Alanları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/istek-ve-sikayet">
+        İstek ve Şikayet
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://mezarlik.denizli.bel.tr/" target="_blank" rel="noopener">
+        Mezarlık Bilgi Sistemi
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/faaliyet-bilgileri">
+        Faaliyet Bilgileri
+    </a>
+</li>
+<li class="db-sidebar__item db-sidebar__item--active">
+    <a class="db-sidebar__link" href="/hizli-erisim/hal-fiyatlari">
+        Hal Fiyatları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/yayinlar">
+        Yayınlarımız
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://www2.denizli.bel.tr/kentarsivleri/" target="_blank" rel="noopener">
+        Kent Arşivleri
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/ilce-belediyelerimiz">
+        İl&#231;e Belediyelerimiz
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/imar-plani-ilanlari">
+        İmar Planı İlanları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://keos.merkezefendi.bel.tr/imardurumu/index.aspx" target="_blank" rel="noopener">
+        e-İmar Sorgulama - Merkezefendi
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://keos.pamukkale.bel.tr/imardurumu/index.aspx" target="_blank" rel="noopener">
+        e-İmar Sorgulama - Pamukkale
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/18-madde-ilanlari">
+        18. Madde İlanları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="/hizli-erisim/ukome-kararlari">
+        UKOME Kararları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://adres.denizli.bel.tr/afetbilgisistemi/" target="_blank" rel="noopener">
+        Afet Bilgi Sistemi
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://www2.denizli.bel.tr/userfiles/file/2026%20Y%C4%B1l%C4%B1%20%C3%9Ccret%20Tarife.pdf?v10" target="_blank" rel="noopener">
+        2026 &#220;cret Tarifesi
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://denizlikultur.com/" target="_blank" rel="noopener">
+        Denizli K&#252;lt&#252;r A.Ş.
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://tiyatro.denizli.bel.tr/" target="_blank" rel="noopener">
+        Denizli Şehir Tiyatroları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://www.devtiyatro.gov.tr/#gameListSection" target="_blank" rel="noopener">
+        Denizli Devlet Tiyatroları
+    </a>
+</li>
+<li class="db-sidebar__item">
+    <a class="db-sidebar__link" href="https://kongrekultur.denizli.bel.tr/" target="_blank" rel="noopener">
+        Kongre ve K&#252;lt&#252;r Merkezi
+    </a>
+</li></ul>
+          </nav>
+        </aside>
+
+
+      <section class="db-inner__content">
+                
+                    
+                    <div id="areaBreadCrump" data-breadcrumb=""><nav class="db-breadcrumb" aria-label="Site yolu"><ol class="db-breadcrumb__list"><li class="db-breadcrumb__item"><a href="/">Ana Sayfa</a></li><li class="db-breadcrumb__item"><a href="/hizli-erisim">Hızlı Erişim</a></li><li class="db-breadcrumb__item">Hal Fiyatları</li></ol></nav></div>
+                    
+                    <h1 id="areaBaslik" class="contentbaslik">Hal Fiyatları <br /><b style="font-size:14px; color:green">28.10.2026</b></h1>
+
+
+
+         <div id="rightcontent" class="rightcontent row"><div class="col-lg-6"><table border='1' cellpadding='8' cellspacing='0' class="noresponsive" align='center'> <tbody><tr style='font-weight:bold; background-color:#2E5F75; color:#fff' align='center' class='trhead'><td>Ürün Adı</td><td>Asgari<br />(TL)</td> <td>Orta<br />(TL)</td> <td>Ekstra<br />(TL)</td></tr><tr  class="fiyat"><td><b style="color: ">A.MARUL </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ACUR </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">25,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ANANAS </b></td><td data-label="Asgari : ">130,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">140,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">150,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ANJELİKA MÜRDÜM  </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ARMUT DEVECİ </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ARMUT SANTAMİRA </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">AVAKADO </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">AYVA </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">BAL KABAĞI </b></td><td data-label="Asgari : ">17,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">23,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">BAMYA </b></td><td data-label="Asgari : ">60,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">90,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">BARBUNYA </b></td><td data-label="Asgari : ">70,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">75,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">85,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">BİBER ÇARLİ </b></td><td data-label="Asgari : ">60,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">85,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">BİBER DOLMALIK </b></td><td data-label="Asgari : ">70,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">90,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">BİBER KIRMIZI </b></td><td data-label="Asgari : ">40,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">80,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">BİBER SİVRİ </b></td><td data-label="Asgari : ">60,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">100,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">BROKOLİ </b></td><td data-label="Asgari : ">60,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">65,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">CENNET ELMASI </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ÇİLEK KĞ </b></td><td data-label="Asgari : ">160,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">180,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">200,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">DERE OTU </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">25,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">DOMATES II </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">25,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">30,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">DOMATES KÖY YERLİ </b></td><td data-label="Asgari : ">40,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">50,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">60,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">DOMATES SALÇALIK </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">DOMATES SERA </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">E.KULAK </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">25,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">EJDER MEYVESİ KĞ </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">70,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">100,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ELMA GOLDEN </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ELMA KOLİ EXTRA </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ELMA STARKİN </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ELMA YEŞİL </b></td><td data-label="Asgari : ">40,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ERİK (KIRMIZI) </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">60,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">FASÜLYE (AYŞEKADIN) </b></td><td data-label="Asgari : ">80,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">90,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">100,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">FASÜLYE (SIRIK) </b></td><td data-label="Asgari : ">70,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">90,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">FİNİ BİBER </b></td><td data-label="Asgari : ">70,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">100,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">FRENK  İNCİR </b></td><td data-label="Asgari : ">40,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">80,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">GREYFURT </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">HAVUÇ </b></td><td data-label="Asgari : ">25,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">HÜNNAP </b></td><td data-label="Asgari : ">80,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">90,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">100,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ISPANAK </b></td><td data-label="Asgari : ">60,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">70,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">80,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">İNCİR YAŞ </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">80,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">K.BAHAR  </b></td><td data-label="Asgari : ">25,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">KABAK </b></td><td data-label="Asgari : ">40,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">45,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">KARPUZ </b></td><td data-label="Asgari : ">10,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">15,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">20,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">KAVUN </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">25,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">KEREVİZ </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">55,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">60,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">KIR. PANCAR </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">KIR. SOĞAN </b></td><td data-label="Asgari : ">60,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">70,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">80,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">KIRMIZI MARUL </b></td><td data-label="Asgari : ">40,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">45,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">KIV. MARUL </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">KİVİ </b></td><td data-label="Asgari : ">90,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">95,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">120,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">KİVİ İTHAL </b></td><td data-label="Asgari : ">100,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">120,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">150,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">KOKTY DOMATES (ÇERİ) </b></td><td data-label="Asgari : ">90,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">100,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">130,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">LAHANA BEYAZ  </b></td><td data-label="Asgari : ">25,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">LAHANA KIRMIZI </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">LİMON (KG) YENİ </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">25,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">LİMON (YATAK) </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr></tbody></table></div><div class="col-lg-6"><table border='1' cellpadding='8' cellspacing='0'  class="noresponsive" align='center'> <tbody><tr style='font-weight:bold; background-color:#2E5F75; color:#fff' align='center' class='trhead'><td>Ürün Adı</td><td>Asgari<br />(TL)</td> <td>Orta<br />(TL)</td> <td>Ekstra<br />(TL)</td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">MANDALİNA </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">MANGO </b></td><td data-label="Asgari : ">70,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">120,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">MANTAR </b></td><td data-label="Asgari : ">160,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">170,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">180,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">MARUL </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">MAYDONOZ </b></td><td data-label="Asgari : ">10,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">15,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">20,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">MISIR </b></td><td data-label="Asgari : ">10,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">12,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">15,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">MUZ YERLİ </b></td><td data-label="Asgari : ">80,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">85,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">90,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">NANE TAZE </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">25,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">NAR </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">30,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">NEKTARİN </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">PAPATES YENİ </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">PATATES 2.KALİTE </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">22,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">25,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">PATATES AGİRA </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">37,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">PATATES ÇALMA </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">37,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">PATLICAN </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">PATLICAN TOPAN </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">60,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">70,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">PIRASA </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">PORTAKAL </b></td><td data-label="Asgari : ">25,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">50,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">80,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">PORTAKAL SIKMA </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">60,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ROKA </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">20,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">25,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">SALATALIK </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">45,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">SALATALIK BADEM </b></td><td data-label="Asgari : ">35,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">45,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">SALATALIK TURŞU </b></td><td data-label="Asgari : ">70,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">80,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">100,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">SALK. DOMATES </b></td><td data-label="Asgari : ">65,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">70,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">75,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">SARIMSAK KURU </b></td><td data-label="Asgari : ">100,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">130,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">200,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">SEMİZOTU BAĞ </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">25,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">30,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">SOĞAN KURU </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">35,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">40,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">SOĞAN TAZE BAĞ </b></td><td data-label="Asgari : ">50,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">55,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">60,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ŞEFTALİ </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">60,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">TERE </b></td><td data-label="Asgari : ">20,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">25,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">30,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">TURP </b></td><td data-label="Asgari : ">30,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">40,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">50,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ÜZÜM AŞIKARA </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ÜZÜM ÇEKİRDEKSİZ </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr  class="fiyat"><td><b style="color: ">ÜZÜM REZAKİ </b></td><td data-label="Asgari : ">15,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">30,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">35,00 <span class="tlicon">TL</span></td></tr><tr style='background-color:#e3eff7' class="fiyat"><td><b style="color: ">ZENCEFİL </b></td><td data-label="Asgari : ">240,00 <span class="tlicon">TL</span> </td><td data-label="Orta : ">250,00 <span class="tlicon">TL</span></td><td data-label="Ekstra : ">260,00 <span class="tlicon">TL</span></td></tr></tbody></table></div><div style="clear: both"><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+
+      </section>
+  </div>
+</main>
+
+
+
+
+<script src="/js/ic-sayfa.js?v=20261006c"  type="module"></script>
+<script src="/js/ic-sayfa-hizli-erisim.js?v=20261008a"  type="module"></script>
+
+<script>
+
+</script></div>
+
+
+
+    <div id="areaFooterContent">
+    
+
+    <footer class="db-footer" id="footer" data-cms="footer">
+      <div class="db-container">
+        <div class="db-footer__grid">
+          <div class="db-footer__brand">
+            <div class="db-footer__idstrip">
+              <img
+                src="/assets/brand/kadin-dostu.webp"
+                alt="Kadın Dostu Kent — Denizli"
+                class="db-footer__idstrip-kdk"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="db-footer__idstrip-sep" aria-hidden="true"></span>
+              <img
+                src="/assets/brand/DBB-logo.webp"
+                alt="Denizli Büyükşehir Belediyesi"
+                class="db-footer__idstrip-dbb"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="db-footer__tagline">Denizli — Mutlu insanların şehri.</p>
+            <div class="db-footer__app-cta">
+              <p class="db-footer__app-cta-label">Mobil Uygulamamızı İndirin</p>
+              <div class="db-footer__app-links">
+                <a
+                  href="https://apps.apple.com/tr/app/denizli-b%C3%BCy%C3%BCk%C5%9Fehir-belediyesi/id1503692632"
+                  target="_blank"
+                  rel="noopener"
+                  class="db-footer__app-link"
+                  aria-label="App Store'dan indir"
+                >
+                  <svg class="db-icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/icons/sprite.svg#icon-apple"></use>
+                  </svg>
+                  <span>App Store</span>
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.dbb"
+                  target="_blank"
+                  rel="noopener"
+                  class="db-footer__app-link"
+                  aria-label="Google Play'den indir"
+                >
+                  <svg class="db-icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/icons/sprite.svg#icon-google-play"></use>
+                  </svg>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+            <div class="db-footer__social">
+              <a
+                href="https://twitter.com/tcdenizlibld"
+                target="_blank"
+                rel="noopener"
+                aria-label="Denizli Büyükşehir Belediyesi X (Twitter) hesabı"
+                ><svg class="db-icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-x-twitter"></use></svg
+              ></a>
+              <a
+                href="https://www.instagram.com/denizlibbld/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Denizli Büyükşehir Belediyesi Instagram hesabı"
+                ><svg class="db-icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-instagram"></use></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/tcdenizlibuyuksehirbld/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Denizli Büyükşehir Belediyesi Facebook hesabı"
+                ><svg class="db-icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-facebook"></use></svg
+              ></a>
+              <a
+                href="https://www.youtube.com/c/DenizliBüyükşehirBelediyesi"
+                target="_blank"
+                rel="noopener"
+                aria-label="Denizli Büyükşehir Belediyesi YouTube kanalı"
+                ><svg class="db-icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-youtube"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div class="db-footer__col" data-cms="footer-col">
+            
+            <h2>Kurumsal</h2>
+            <a href="/baskan/ozgecmisi">Başkan</a><a href="/kurumsal/yonetim/belediye-meclisi">Meclis</a><a href="/kurumsal/yonetim/daire-baskanliklari">Birimler</a>
+            <a href="/hizli-erisim/faaliyet-bilgileri">Stratejik Plan</a><a href="/hizli-erisim/faaliyet-bilgileri">Faaliyet Raporu</a>
+          </div>
+          <div class="db-footer__col db-footer__col--hizmetler" data-cms="footer-col">
+            <h2>Hizmetler</h2>
+              <a href="https://ulasim.denizli.bel.tr/" target="_blank">Ulaşım Portalı</a>
+            <a href="/e-belediye">e-Belediye</a><a href="https://deski.gov.tr/" target="_blank">DESKİ</a>
+            <a href="https://denizlikart.denizli.bel.tr" target="_blank">Denizli Kart</a><a href="/iletisim/istek-sikayet-oneri">İstek ve Şikayet</a>
+          </div>
+          <div class="db-footer__col db-footer__col--iletisim" data-cms="footer-col">
+            <h2>İletişim</h2>
+            <a href="tel:+904448520">444 85 20</a
+            ><a href="https://api.whatsapp.com/send?phone=904448520&amp;text=Merhaba" target="_blank" rel="noopener noreferrer"><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-whatsapp"></use></svg><span class="sr-only">WhatsApp İletişim Hattı: </span>444 85 20</a
+            ><a href="mailto:bilgi@denizli.bel.tr">bilgi@denizli.bel.tr</a>
+            <address class="db-footer__address">
+              Denizli Büyükşehir Belediyesi, Altıntop Mah. Lise Cad. No:2 PK:20010
+              Merkezefendi / DENİZLİ
+            </address>
+          </div>
+          <div class="db-footer__certs">
+            <span class="db-footer__certs-chip">
+              <img
+                src="/data/brand/kalite_9.png"
+                alt="TSE-ISO-EN 9000, TS ISO 45001, TSE-ISO-EN 14000, TSE ISO 10002, TSE ISO-EN 50004 kalite yönetim belgeleri"
+                class="db-footer__certs-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="db-footer__bottom">
+          <span
+            >© 2026 T.C. Denizli Büyükşehir Belediyesi Bilgi İşlem Dairesi Başkanlığı — Tüm
+            hakları saklıdır.</span
+          >
+          <div class="db-footer__legal-links">
+            <a href="/kurumsal/kvkk/aydinlatma-metni">KVKK Aydınlatma Metni</a>
+            <a href="/kurumsal/kvkk/web-siteleri-ve-mobil-uygulamalar-gizlilik-politikasi">Gizlilik Politikası</a>
+            <a href="/kurumsal/kvkk/cerez-politikasi">Çerez Politikası</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+    <!-- Service Modal (quickbar TÜMÜ dialog) — body root seviyesinde olmalı -->
+    <dialog
+      class="db-service-modal"
+      id="service-modal"
+      aria-labelledby="service-modal-title"
+    >
+      <div class="db-service-modal__inner">
+        <button
+          type="button"
+          class="db-service-modal__close"
+          id="service-modal-close"
+          aria-label="Kapat"
+        >
+          <svg class="db-icon" aria-hidden="true" focusable="false">
+            <use href="/assets/icons/sprite.svg#icon-x"></use>
+          </svg>
+        </button>
+        <div class="db-service-modal__header">
+          <h2 class="db-service-modal__title" id="service-modal-title">Hızlı Erişim</h2>
+          
+          <form
+            class="db-search-modal__form db-panel-search__form"
+            method="dialog"
+            role="search"
+          >
+            <label for="panel-search-input" class="sr-only">Arama metni</label>
+            <div class="db-search-modal__row">
+              <svg
+                class="db-icon db-search-modal__icon"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="/assets/icons/sprite.svg#icon-search"></use>
+              </svg>
+              <input
+                id="panel-search-input"
+                class="db-search-modal__input"
+                type="search"
+                name="q"
+                placeholder="Hizmet, haber, duyuru ara…"
+                autocomplete="off"
+              />
+              <button type="submit" class="db-search-modal__submit" aria-label="Ara">
+                <svg class="db-icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/icons/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <div
+          class="db-service-modal__body"
+          id="service-modal-body"
+          data-cms="quickbar-services"
+        >
+          <h3 class="db-service-modal__group">Anlık Takip</h3>
+          <a
+            class="db-service-modal__row"
+            href="/etkinlikler"
+            data-cat="anlik"
+            data-label="etkinlikler"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-calendar-dots"
+                ></use></svg></span
+            ><span class="db-service-modal__row-label">Etkinlikler</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/nobetci-eczaneler"
+            data-cat="anlik"
+            data-label="nöbetçi eczaneler"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-pill"></use></svg></span
+            ><span class="db-service-modal__row-label">Nöbetçi Eczaneler</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/son-depremler"
+            data-cat="anlik"
+            data-label="son depremler"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-wave"></use></svg></span
+            ><span class="db-service-modal__row-label">Son Depremler</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/su-kesintileri"
+            data-cat="anlik"
+            data-label="su kesintileri"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-drop-slash"></use></svg></span
+            ><span class="db-service-modal__row-label">Su Kesintileri</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/trafige-kapali-yollar"
+            data-cat="anlik"
+            data-label="trafiğe kapalı yollar"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-barricade"></use></svg></span
+            ><span class="db-service-modal__row-label">Trafiğe Kapalı Yollar</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/sokak-hayvanlari-takip"
+            data-cat="anlik"
+            data-label="sokak hayvanları takip"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-paw-print"></use></svg></span
+            ><span class="db-service-modal__row-label">Sokak Hayvanları Takip</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/bugun-defnedilenler"
+            data-cat="anlik"
+            data-label="bugün defnedilenler"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-flower-lotus"></use></svg></span
+            ><span class="db-service-modal__row-label">Bugün Defnedilenler</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          <h3 class="db-service-modal__group">Ödeme ve Borç</h3>
+          <a
+            class="db-service-modal__row"
+            href="https://denizlikart.denizli.bel.tr/"
+            data-cat="odeme"
+            data-label="denizli kart tl yükle"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-credit-card"></use></svg></span
+            ><span class="db-service-modal__row-label">Denizli Kart TL Yükle</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/e-belediye"
+            data-cat="odeme"
+            data-label="büyükşehir ödeme"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-bank"></use></svg></span
+            ><span class="db-service-modal__row-label">Büyükşehir Ödeme</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://online.deski.gov.tr/sube/"
+            data-cat="odeme"
+            data-label="deski su borcu ödeme"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-drop"></use></svg></span
+            ><span class="db-service-modal__row-label">DESKİ Su Borcu Ödeme</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://ebelediye.merkezefendi.bel.tr/webportal/index.php?wwsayfa=25"
+            data-cat="odeme"
+            data-label="ilçe belediyeleri ödeme — merkezefendi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-coins"></use></svg></span
+            ><span class="db-service-modal__row-label"
+              >İlçe Belediyeleri Ödeme — Merkezefendi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://ebelediye.pamukkale.bel.tr/webportal/index.php?wwsayfa=25"
+            data-cat="odeme"
+            data-label="ilçe belediyeleri ödeme — pamukkale"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-coins"></use></svg></span
+            ><span class="db-service-modal__row-label"
+              >İlçe Belediyeleri Ödeme — Pamukkale</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://www.deski.gov.tr/vezneler"
+            data-cat="odeme"
+            data-label="deski vezneler"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-receipt"></use></svg></span
+            ><span class="db-service-modal__row-label">DESKİ Vezneler</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          <h3 class="db-service-modal__group">e-Belediye ve İşlemler</h3>
+          <a
+            class="db-service-modal__row"
+            href="/basvurular"
+            data-cat="ebelediye"
+            data-label="başvurular"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-scroll"></use></svg></span
+            ><span class="db-service-modal__row-label">Başvurular</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/e-belediye"
+            data-cat="ebelediye"
+            data-label="e-belediye"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-desktop"></use></svg></span
+            ><span class="db-service-modal__row-label">e-Belediye</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://apps.denizli.bel.tr/ulasimrandevu/"
+            data-cat="ebelediye"
+            data-label="ticari araç randevu"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-calendar-check"></use></svg></span
+            ><span class="db-service-modal__row-label">Ticari Araç Randevu</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          <h3 class="db-service-modal__group">Ulaşım ve Konum</h3>
+          <a
+            class="db-service-modal__row"
+            href="https://ulasim.denizli.bel.tr/"
+            data-cat="ulasim"
+            data-label="ulaşım portalı"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-bus"></use></svg></span
+            ><span class="db-service-modal__row-label">Ulaşım Portalı</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://kentrehberi.denizli.bel.tr/"
+            data-cat="ulasim"
+            data-label="kent rehberi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-map-pin"></use></svg></span
+            ><span class="db-service-modal__row-label">Kent Rehberi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://kentrehberi.denizli.bel.tr/?s=1"
+            data-cat="ulasim"
+            data-label="büyükşehir yetki alanları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-map"></use></svg></span
+            ><span class="db-service-modal__row-label">Büyükşehir Yetki Alanları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/ulasim-rayic-bedelleri"
+            data-cat="ulasim"
+            data-label="ulaşım rayiç bedelleri"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-bridge"></use></svg></span
+            ><span class="db-service-modal__row-label">Ulaşım Rayiç Bedelleri</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          <h3 class="db-service-modal__group">Sosyal ve Yaşam</h3>
+          <a
+            class="db-service-modal__row"
+            href="/iletisim/istek-sikayet-oneri"
+            data-cat="sosyal"
+            data-label="istek ve şikâyet"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chat-dots"></use></svg></span
+            ><span class="db-service-modal__row-label">İstek ve Şikâyet</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="http://mezarlik.denizli.bel.tr/"
+            data-cat="sosyal"
+            data-label="mezarlık bilgi sistemi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-flower-tulip"></use></svg></span
+            ><span class="db-service-modal__row-label">Mezarlık Bilgi Sistemi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/faaliyet-bilgileri"
+            data-cat="sosyal"
+            data-label="faaliyet bilgileri"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-calendar-dots"></use></svg></span
+            ><span class="db-service-modal__row-label">Faaliyet Bilgileri</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/hal-fiyatlari"
+            data-cat="sosyal"
+            data-label="hal fiyatları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-basket"></use></svg></span
+            ><span class="db-service-modal__row-label">Hal Fiyatları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/pazar-yerleri"
+            data-cat="sosyal"
+            data-label="pazar yerleri"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-storefront"></use></svg></span
+            ><span class="db-service-modal__row-label">Pazar Yerleri</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/yayinlar"
+            data-cat="sosyal"
+            data-label="yayınlarımız"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-book-open"></use></svg></span
+            ><span class="db-service-modal__row-label">Yayınlarımız</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://www2.denizli.bel.tr/kentarsivleri/"
+            data-cat="sosyal"
+            data-label="kent arşivleri"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-camera"></use></svg></span
+            ><span class="db-service-modal__row-label">Kent Arşivleri</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/ilce-belediyelerimiz"
+            data-cat="sosyal"
+            data-label="ilçe belediyelerimiz"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-buildings"></use></svg></span
+            ><span class="db-service-modal__row-label">İlçe Belediyelerimiz</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          <h3 class="db-service-modal__group">Kentsel Planlama</h3>
+          <a
+            class="db-service-modal__row"
+            href="/hizli-erisim/imar-plani-ilanlari"
+            data-cat="planlama"
+            data-label="imar planı ilanları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-scroll"></use></svg></span
+            ><span class="db-service-modal__row-label">İmar Planı İlanları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://keos.merkezefendi.bel.tr/imardurumu/index.aspx"
+            target="_blank"
+            rel="noopener"
+            data-cat="planlama"
+            data-label="e-imar sorgulama — merkezefendi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-file-search"></use></svg></span
+            ><span class="db-service-modal__row-label"
+              >e-İmar Sorgulama — Merkezefendi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          <a
+            class="db-service-modal__row"
+            href="https://keos.pamukkale.bel.tr/imardurumu/index.aspx"
+            target="_blank"
+            rel="noopener"
+            data-cat="planlama"
+            data-label="e-imar sorgulama — pamukkale"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-file-search"></use></svg></span
+            ><span class="db-service-modal__row-label">e-İmar Sorgulama — Pamukkale</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/18-madde-ilanlari"
+            data-cat="planlama"
+            data-label="18. madde ilanları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-megaphone"></use></svg></span
+            ><span class="db-service-modal__row-label">18. Madde İlanları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="/hizli-erisim/ukome-kararlari"
+            data-cat="planlama"
+            data-label="ukome kararları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-gavel"></use></svg></span
+            ><span class="db-service-modal__row-label">UKOME Kararları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://adres.denizli.bel.tr/afetbilgisistemi/"
+            data-cat="planlama"
+            data-label="afet bilgi sistemi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-siren"></use></svg></span
+            ><span class="db-service-modal__row-label">Afet Bilgi Sistemi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://www2.denizli.bel.tr/userfiles/file/2026%20Y%C4%B1l%C4%B1%20%C3%9Ccret%20Tarife.pdf?v10"
+            data-cat="planlama"
+            data-label="2026 ücret tarifesi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-receipt"></use></svg></span
+            ><span class="db-service-modal__row-label">2026 Ücret Tarifesi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+          
+          <h3 class="db-service-modal__group">Harici Linkler</h3>
+          <a
+            class="db-service-modal__row"
+            href="https://denizlikultur.com"
+            data-cat="harici"
+            data-label="denizli kültür a.ş"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-link"></use></svg></span
+            ><span class="db-service-modal__row-label">Denizli Kültür A.Ş</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="http://tiyatro.denizli.bel.tr"
+            data-cat="harici"
+            data-label="denizli şehir tiyatroları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-link"></use></svg></span
+            ><span class="db-service-modal__row-label">Denizli Şehir Tiyatroları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="http://www.devtiyatro.gov.tr/DevletTiyatro/bolgeler/20#gameListSection"
+            data-cat="harici"
+            data-label="denizli devlet tiyatroları"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-link"></use></svg></span
+            ><span class="db-service-modal__row-label">Denizli Devlet Tiyatroları</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#icon-chevron-right"
+                ></use></svg></span></a
+          ><a
+            class="db-service-modal__row"
+            href="https://kongrekultur.denizli.bel.tr/"
+            data-cat="harici"
+            data-label="büyükşehir belediyesi kongre ve kültür merkezi"
+            ><span class="db-service-modal__row-icon" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-link"></use></svg></span
+            ><span class="db-service-modal__row-label"
+              > Kongre ve Kültür Merkezi</span
+            ><span class="db-service-modal__row-arrow" aria-hidden="true"
+              ><svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span
+          ></a>
+        </div>
+        <!-- Panel arama sonuçları — hizmet ızgarasının KARDEŞİ (içine değil:
+             #service-modal-body data-cms taşır, Repeater sınırı). İkisinden yalnız
+             biri görünür; geçiş js/arama.js render()'ında hidden ile yapılır. -->
+        <div
+          class="db-search-modal__results db-search-modal__results--panel"
+          id="panel-search-results"
+          hidden
+          aria-live="polite"
+        ></div>
+      </div>
+    </dialog>
+
+    <!-- ◆ .NET INCLUDE → SearchModal.ascx · 4 sayfada birebir identik -->
+    <!-- Arama Modalı — opak beyaz, body root seviyesinde -->
+    <dialog
+      class="db-search-modal"
+      id="search-modal"
+      aria-labelledby="search-modal-title"
+    >
+      <div class="db-search-modal__inner">
+        <form class="db-search-modal__form" method="dialog" role="search">
+          <label for="search-input" id="search-modal-title" class="db-search-modal__label"
+            >Nasıl yardımcı olabiliriz?</label
+          >
+          <div class="db-search-modal__row">
+            <svg
+              class="db-icon db-search-modal__icon"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use href="/assets/icons/sprite.svg#icon-search"></use>
+            </svg>
+            <input
+              id="search-input"
+              class="db-search-modal__input"
+              type="search"
+              name="q"
+              placeholder="Arama yapın — haber, hizmet, proje…"
+              autocomplete="off"
+              aria-label="Arama metni"
+            />
+            <button type="submit" class="db-search-modal__submit" aria-label="Ara">
+              <svg class="db-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div
+          class="db-search-modal__results"
+          id="search-results"
+          hidden
+          aria-live="polite"
+        ></div>
+        <button
+          class="db-search-modal__close"
+          type="button"
+          id="search-close-btn"
+          aria-label="Aramayı kapat"
+        >
+          <svg class="db-icon" aria-hidden="true" focusable="false">
+            <use href="/assets/icons/sprite.svg#icon-x"></use>
+          </svg>
+        </button>
+      </div>
+    </dialog>
+
+    <!-- ◆ .NET INCLUDE → A11yPanel.ascx · erişilebilirlik kızağı · her sayfada -->
+    
+
+    <!-- Sağ kızak. Görsel iş tamamen main.css token override'larında; bu modül
+         yalnız <html>'e data-a11y-* yazar. Kutucuklar BİLDİRİMSEL: kendi kademe
+         döngülerini data-a11y-cycle/-vals/-etiketler ile taşır, JS'te liste yok. -->
+    <dialog class="db-a11y" id="a11y-panel" aria-labelledby="a11y-panel-title">
+      <div class="db-a11y__inner">
+        <div class="db-a11y__head">
+          <h2 class="db-a11y__title" id="a11y-panel-title">
+            <svg class="db-icon" aria-hidden="true" focusable="false">
+              <use href="/assets/icons/sprite.svg#icon-accessibility"></use>
+            </svg>
+            Erişilebilirlik
+          </h2>
+          <button
+            class="db-a11y__close"
+            type="button"
+            id="a11y-close-btn"
+            aria-label="Paneli kapat"
+          >
+            <svg class="db-icon" aria-hidden="true" focusable="false">
+              <use href="/assets/icons/sprite.svg#icon-x"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="db-a11y__body">
+          <p class="sr-only" id="a11y-durum" role="status" aria-live="polite"></p>
+
+          
+          <h3 class="db-a11y-bolum__t">Erişilebilirlik Profili</h3>
+          <div class="db-a11y-izgara db-a11y-izgara--profil">
+            <button class="db-a11y-profil" type="button" aria-pressed="false" data-a11y-profil="disleksi"
+                    data-ipucu="Okurken satır kaybediyor veya harfleri karıştırıyorsanız">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <svg class="db-icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#icon-book-open"></use></svg>
+              <span class="db-a11y-profil__ad">Disleksi</span>
+              <span class="sr-only">Okurken satır kaybediyor veya harfleri karıştırıyorsanız</span>
+            </button>
+            <button class="db-a11y-profil" type="button" aria-pressed="false" data-a11y-profil="gorme-bozuklugu"
+                    data-ipucu="Küçük yazıları ve soluk renkleri zor seçiyorsanız">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <svg class="db-icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#icon-search"></use></svg>
+              <span class="db-a11y-profil__ad">Görme Bozukluğu</span>
+              <span class="sr-only">Küçük yazıları ve soluk renkleri zor seçiyorsanız</span>
+            </button>
+            <button class="db-a11y-profil" type="button" aria-pressed="false" data-a11y-profil="renk-korlugu"
+                    data-ipucu="Renkleri birbirinden ayırmakta zorlanıyorsanız">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <svg class="db-icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#icon-drop"></use></svg>
+              <span class="db-a11y-profil__ad">Renk Körlüğü</span>
+              <span class="sr-only">Renkleri birbirinden ayırmakta zorlanıyorsanız</span>
+            </button>
+            <button class="db-a11y-profil" type="button" aria-pressed="false" data-a11y-profil="dehb"
+                    data-ipucu="Dikkatinizi toplamakta ve okuduğunuz yeri takipte zorlanıyorsanız">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <svg class="db-icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#icon-compass"></use></svg>
+              <span class="db-a11y-profil__ad">DEHB</span>
+              <span class="sr-only">Dikkatinizi toplamakta ve okuduğunuz yeri takipte zorlanıyorsanız</span>
+            </button>
+            <button class="db-a11y-profil" type="button" aria-pressed="false" data-a11y-profil="epilepsi"
+                    data-ipucu="Hareketli görüntü ve canlı renkler rahatsız ediyorsa">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <svg class="db-icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#icon-siren"></use></svg>
+              <span class="db-a11y-profil__ad">Epilepsi</span>
+              <span class="sr-only">Hareketli görüntü ve canlı renkler rahatsız ediyorsa</span>
+            </button>
+            <button class="db-a11y-profil" type="button" aria-pressed="false" data-a11y-profil="motor"
+                    data-ipucu="Fareyi hedefe götürmekte veya küçük düğmelere basmakta zorlanıyorsanız">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <svg class="db-icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#icon-hand-pointing"></use></svg>
+              <span class="db-a11y-profil__ad">Motor Beceri</span>
+              <span class="sr-only">Fareyi hedefe götürmekte veya küçük düğmelere basmakta zorlanıyorsanız</span>
+            </button>
+          </div>
+
+          
+          <h3 class="db-a11y-bolum__t">İçerik Ayarları</h3>
+          <div class="db-a11y-izgara">
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="fs" data-a11y-kademe="0"
+                    data-a11y-vals="|110|120|130|140"
+                    data-a11y-etiketler="Varsayılan|%110|%120|%130|%140">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-ornek">A</span></span>
+              <span class="db-a11y-arac__ad">Yazı Boyutu</span>
+              <span class="db-a11y-arac__deger">Varsayılan</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="lh" data-a11y-kademe="0"
+                    data-a11y-vals="|genis|cok-genis"
+                    data-a11y-etiketler="Normal|Geniş|Çok geniş">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-cizgi"><i></i><i></i><i></i></span></span>
+              <span class="db-a11y-arac__ad">Satır Aralığı</span>
+              <span class="db-a11y-arac__deger">Normal</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="ls" data-a11y-kademe="0"
+                    data-a11y-vals="|orta|genis"
+                    data-a11y-etiketler="Normal|Orta|Geniş">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-harf">abc</span></span>
+              <span class="db-a11y-arac__ad">Harf Aralığı</span>
+              <span class="db-a11y-arac__deger">Normal</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="ws" data-a11y-kademe="0"
+                    data-a11y-vals="|orta|genis"
+                    data-a11y-etiketler="Normal|Orta|Geniş">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-kelime">bir iki</span></span>
+              <span class="db-a11y-arac__ad">Kelime Aralığı</span>
+              <span class="db-a11y-arac__deger">Normal</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="font" data-a11y-kademe="0"
+                    data-a11y-vals="|sans|serif|disleksi"
+                    data-a11y-etiketler="Varsayılan|Sans|Serif|Disleksi">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-ornek">Aa</span></span>
+              <span class="db-a11y-arac__ad">Yazı Tipi</span>
+              <span class="db-a11y-arac__deger">Varsayılan</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="ta" data-a11y-kademe="0"
+                    data-a11y-vals="|sol|orta|sag"
+                    data-a11y-etiketler="Varsayılan|Sola|Ortala|Sağa">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-cizgi"><i></i><i></i><i></i></span></span>
+              <span class="db-a11y-arac__ad">Metin Hizalama</span>
+              <span class="db-a11y-arac__deger">Varsayılan</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="contrast" data-a11y-kademe="0"
+                    data-a11y-vals="|yuksek|acik"
+                    data-a11y-etiketler="Varsayılan|Yüksek|Açık">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-kutu">Aa</span></span>
+              <span class="db-a11y-arac__ad">Kontrast</span>
+              <span class="db-a11y-arac__deger">Varsayılan</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="sat" data-a11y-kademe="0"
+                    data-a11y-vals="|dusuk|gri"
+                    data-a11y-etiketler="Varsayılan|Düşük|Gri ton">
+              <span class="db-a11y-arac__on" aria-hidden="true"><span class="db-a11y-doy"></span></span>
+              <span class="db-a11y-arac__ad">Doygunluk</span>
+              <span class="db-a11y-arac__deger">Varsayılan</span>
+              <span class="db-a11y-arac__kademe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+
+            
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="links" data-a11y-kademe="0"
+                    data-a11y-vals="|acik" data-a11y-etiketler="Kapalı|Açık">
+              <span class="db-a11y-arac__on" aria-hidden="true"><svg class="db-icon" focusable="false"><use href="/assets/icons/sprite.svg#icon-link"></use></svg></span>
+              <span class="db-a11y-arac__ad">Bağlantılar</span>
+              <span class="db-a11y-arac__deger">Kapalı</span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="focus" data-a11y-kademe="0"
+                    data-a11y-vals="|acik" data-a11y-etiketler="Kapalı|Açık"
+                    data-ipucu="Klavyeyle (Tab) gezinirken bulunduğunuz yeri kalın turuncu çerçeveyle işaretler">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <span class="db-a11y-arac__on" aria-hidden="true"><svg class="db-icon" focusable="false"><use href="/assets/icons/sprite.svg#icon-focus"></use></svg></span>
+              <span class="db-a11y-arac__ad">Odak Vurgusu</span>
+              <span class="db-a11y-arac__deger">Kapalı</span>
+              <span class="sr-only">Klavyeyle (Tab) gezinirken bulunduğunuz yeri kalın turuncu çerçeveyle işaretler</span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="motion" data-a11y-kademe="0"
+                    data-a11y-vals="|kapali" data-a11y-etiketler="Açık|Durduruldu">
+              <span class="db-a11y-arac__on" aria-hidden="true"><svg class="db-icon" focusable="false"><use href="/assets/icons/sprite.svg#icon-motion-off"></use></svg></span>
+              <span class="db-a11y-arac__ad">Animasyonlar</span>
+              <span class="db-a11y-arac__deger">Açık</span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="cursor" data-a11y-kademe="0"
+                    data-a11y-vals="|buyuk" data-a11y-etiketler="Normal|Büyük">
+              <span class="db-a11y-arac__on" aria-hidden="true"><svg class="db-icon" focusable="false"><use href="/assets/icons/sprite.svg#icon-navigation"></use></svg></span>
+              <span class="db-a11y-arac__ad">İmleç</span>
+              <span class="db-a11y-arac__deger">Normal</span>
+            </button>
+
+            <button class="db-a11y-arac" type="button" aria-pressed="false"
+                    data-a11y-cycle="kilavuz" data-a11y-kademe="0"
+                    data-a11y-vals="|acik" data-a11y-etiketler="Kapalı|Açık"
+                    data-ipucu="Fare veya klavye odağının bulunduğu satırı yatay bir bantla vurgular">
+              <span class="db-a11y-i" aria-hidden="true">i</span>
+              <span class="db-a11y-arac__on" aria-hidden="true"><svg class="db-icon" focusable="false"><use href="/assets/icons/sprite.svg#icon-ruler"></use></svg></span>
+              <span class="db-a11y-arac__ad">Okuma Kılavuzu</span>
+              <span class="db-a11y-arac__deger">Kapalı</span>
+              <span class="sr-only">Fare veya klavye odağının bulunduğu satırı yatay bir bantla vurgular</span>
+            </button>
+
+            
+            <button class="db-a11y-arac db-a11y-arac--eylem" type="button"
+                    id="a11y-yapi-btn" aria-haspopup="dialog" aria-controls="a11y-yapi-modal">
+              <span class="db-a11y-arac__on" aria-hidden="true"><svg class="db-icon" focusable="false"><use href="/assets/icons/sprite.svg#icon-file-search"></use></svg></span>
+              <span class="db-a11y-arac__ad">Sayfa Yapısı</span>
+              <span class="db-a11y-arac__deger">Başlıklarda gezin</span>
+            </button>
+          </div>
+
+          <p class="db-a11y-bildirim">
+            Seçimleriniz yalnız bu tarayıcıda saklanır, sunucuya gönderilmez.
+          </p>
+          <!-- Geri bildirim kanalı: 2025/10 Genelge ve EN 301 549 erişilebilirlik
+               bildiriminde ZORUNLU tutuyor. Belediyenin mevcut kanalına bağlanır;
+               ayrı bir form açılmaz. -->
+          <p class="db-a11y-bildirim">
+            <a href="/iletisim/istek-sikayet-oneri">Erişilebilirlik sorunu bildirin</a>.
+          </p>
+        </div>
+
+        <!-- "Bitti" KALDIRILDI: panel modalsız, ayarlar anında uygulanıyor ve
+             kalıcı olarak saklanıyor — onaylanacak bir şey yok. Kapatma zaten
+             üstteki çarpıda (ve Esc'te). İki eylemli alt bar, olmayan bir
+             "kaydet" adımı varmış izlenimi veriyordu. -->
+        <div class="db-a11y__foot">
+          <button class="db-a11y-aksiyon db-a11y-aksiyon--ikincil" type="button" id="a11y-reset-btn">Sıfırla</button>
+        </div>
+      </div>
+    </dialog>
+
+    
+    <dialog class="db-a11y-yapi-modal" id="a11y-yapi-modal" aria-labelledby="a11y-yapi-baslik">
+      <div class="db-a11y-yapi-modal__head">
+        <h2 class="db-a11y-yapi-modal__t" id="a11y-yapi-baslik">Sayfa Yapısı</h2>
+        <button class="db-a11y__close" type="button" id="a11y-yapi-kapat" aria-label="Sayfa yapısını kapat">
+          <svg class="db-icon" aria-hidden="true" focusable="false">
+            <use href="/assets/icons/sprite.svg#icon-x"></use>
+          </svg>
+        </button>
+      </div>
+      <p class="db-a11y-not">Başlığa dokununca sayfa oraya kayar ve odak da oraya geçer.</p>
+      <ol class="db-a11y-yapi" id="a11y-yapi"></ol>
+    </dialog>
+
+    <!-- Global arama modalı denetleyicisi — footer her sayfada → arama site geneli.
+         chrome.js modalı açar/kapar; arama.js fetch + sonuç render eder. -->
+    <script src="/js/arama.js?v=20261027c" type="module"></script>
+    <script src="/js/erisilebilirlik.js?v=20261007" type="module"></script></div>
+
+
+   
+
+
+    <style>
+
+
+
+</style>
+   
+
+
+    <script>
+
+        $(function () {
+            $('.haberThumbs').each(function () { // the containers for all your galleries
+                $(this).magnificPopup({
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            });
+            $('.popupimage').magnificPopup({ type: 'image' });
+
+
+
+
+
+        });
+
+
+    </script>
+    <script src="/js/readynew.js"></script>
+     
+
+
+</body>
+</html>

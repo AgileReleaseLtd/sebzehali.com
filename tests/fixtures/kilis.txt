@@ -1,0 +1,54 @@
+TARİH      : 30 EKİM 2026
+
+           ÜRÜN ADI         AS.FİYAT      AZ. FİYAT      BİRİM
+DOMATES (TARLA)                   30,00         40,00       KG
+DOMATES (SALKIM)                  50,00         60,00       KG
+BİBER (KAPYA)                     30,00         35,00       KG
+BİBER (YERLİ YEŞİL)               20,00         25,00       KG
+BİBER (SALÇALIK)                  20,00         25,00       KG
+BİBER (DOLMALIK)                  20,00         30,00       KG
+PATLICAN (DOLMALIK)               15,00         20,00       KG
+SIYIRMA KABAK                     20,00         25,00       KG
+KÖSE SEFER KABAK                  20,00         30,00       KG
+FASULYE                           35,00         40,00       KG
+TURP                              20,00         25,00       KG
+YEŞİL SOĞAN                       40,00         50,00       KG
+SOĞAN (KURU)                      30,00         35,00       KG
+SARIMSAK (KURU)                   40,00         50,00       KG
+PATATES                           20,00         30,00       KG
+MAYDANOZ                          70,00         80,00   10 DEMET
+NANE                              50,00         60,00   10 DEMET
+KIVIRCIK                         250,00        300,00    8 ADET
+DEREOTU                          150,00        200,00   10 DEMET
+GÖBEK                            400,00        500,00    12 ADET
+MARUL                            250,00        270,00    8 ADET
+ROKA                              50,00         70,00   10 DEMET
+ARMUT                             60,00         70,00       KG
+AVOKADO                          100,00        125,00       KG
+ELMA (YEŞİL)                      40,00         50,00       KG
+PIRASA                            20,00         25,00       KG
+KARNABAHAR                        20,00         25,00       KG
+PANCAR                            10,00         15,00       KG
+ISPANAK                           20,00         25,00       KG
+LİMON                             15,00         20,00       KG
+MUZ                               85,00         90,00       KG
+NEKTARİ                           55,00         60,00       KG
+SALATALIK                         55,00         60,00       KG
+TRABZON HURMA                     60,00         70,00       KG
+ŞEFTALİ                           50,00         60,00       KG
+ERİK                              40,00         45,00       KG
+MISIR                              7,00         10,00      ADET
+KARA LAHANA                       20,00         25,00       KG
+HAVUÇ                            250,00        300,00     TORBA
+KIŞ KABAĞI                         8,00         12,00       KG
+MANTAR                           160,00        170,00       KG
+ÜZÜM (SOFRALIK)                   40,00         50,00       KG
+PANCAR                            15,00         20,00       KG
+SİYAH ÜZÜM                        30,00         35,00       KG
+MANDALİNA                         15,00         20,00       KG
+NAR                               25,00         30,00       KG
+KİVİ                              70,00         75,00       KG
+PORTAKAL                          30,00         35,00       KG
+AYVA                              80,00         85,00       KG
+GREYFURT                          20,00         25,00       KG
+

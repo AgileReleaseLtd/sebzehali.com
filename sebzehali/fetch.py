@@ -51,8 +51,26 @@ def fetch_one(city_mod, date, force=False):
     bulletin, rows = got
     if bulletin != date and not force and path_for(bulletin, city_mod.CITY).exists():
         return f"exists ({bulletin})"
+    if getattr(city_mod, "REPEATS_LAST", False):
+        same = repeat_of(city_mod.CITY, bulletin, rows)
+        if same:
+            return f"same as {same}, not a new bulletin"
     p, n = save(city_mod, bulletin, rows)
     return f"{n} items -> {p.relative_to(ROOT)}"
+
+
+def repeat_of(city, date, rows):
+    """For sources that answer a day without a bulletin with the last one (and put no date on it):
+    the date of the stored bulletin from the week before that has exactly these prices, if any."""
+    key = lambda items: sorted((i["product"], i["variety"], i["unit"], i["min"], i["max"], i["avg"]) for i in items)
+    new = key(r for r in (normalize.normalize_row(*row) for row in rows) if r)
+    day = dt.date.fromisoformat(date)
+    for back in range(1, 8):
+        d = (day - dt.timedelta(days=back)).isoformat()
+        p = path_for(d, city)
+        if p.exists():
+            return d if key(json.loads(p.read_text(encoding="utf-8"))["items"]) == new else None
+    return None
 
 
 def renormalize():
@@ -71,7 +89,7 @@ def renormalize():
 
 def dates_for(city_mod, today, backfill):
     if backfill and getattr(city_mod, "HISTORY", False):
-        if hasattr(city_mod, "available_dates"):
+        if getattr(city_mod, "available_dates", None):
             cutoff = (today - dt.timedelta(days=backfill)).isoformat()
             return [d for d in city_mod.available_dates() if d >= cutoff]
         return [(today - dt.timedelta(days=i)).isoformat() for i in range(backfill + 1)]
@@ -94,12 +112,20 @@ def main(argv=None):
     failed = 0
     for m in mods:
         try:
-            for d in dates_for(m, today, a.backfill):
-                print(f"{m.CITY} {d}: {fetch_one(m, d, a.force)}", flush=True)
+            dates = dates_for(m, today, a.backfill)
         except Exception:
-            failed += 1
-            print(f"{m.CITY}: FAILED", file=sys.stderr)
+            dates = None
+            print(f"{m.CITY}: FAILED listing dates", file=sys.stderr)
             traceback.print_exc()
+        ok = dates is not None
+        for d in sorted(dates or []):  # oldest first, so repeat_of() can compare a day with the one before it
+            try:  # one bad day doesn't abandon the city's other days
+                print(f"{m.CITY} {d}: {fetch_one(m, d, a.force)}", flush=True)
+            except Exception:
+                ok = False
+                print(f"{m.CITY} {d}: FAILED", file=sys.stderr)
+                traceback.print_exc()
+        failed += not ok
     return 1 if failed == len(mods) else 0
 
 

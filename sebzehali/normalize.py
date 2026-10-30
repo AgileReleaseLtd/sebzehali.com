@@ -11,7 +11,14 @@ import re
 _ASCII = str.maketrans("çğıöşüÇĞİÖŞÜâîûÂÎÛ", "cgiosuCGIOSUaiuAIU")
 
 # Words that come before the product name ("Kuru soğan", "Taze fasulye").
-_LEADING_QUALIFIERS = {"kuru", "taze", "yesil", "kirmizi", "beyaz", "siyah", "sari", "ithal", "yerli"}
+_LEADING_QUALIFIERS = {"kuru", "taze", "yesil", "kirmizi", "beyaz", "siyah", "sari", "ithal", "yerli",
+                       "donuk", "yabani", "japon",  # fish: "Donuk panga", "Yabani kalamar", "Japon hamsi"
+                       "koy", "sus", "salcalik", "frigo", "jumbo", "cekirdeksiz", "organik", "salkim", "kil",
+                       "kis", "siyirma", "hitta", "ampul"}  # "Köy biberi", "Kış kabağı", "Hıtta acur"
+
+# Varieties some bulletins list without their product ("AYSBERG" for iceberg lettuce): the whole name becomes
+# the variety.
+_VARIETY_OF = {"aysberg": "marul", "iceberg": "marul", "kivircik": "marul", "gobek": "marul", "kapya": "biber"}
 
 # Products whose name is two words; matched before the first-word rule.
 _TWO_WORD_PRODUCTS = {
@@ -37,6 +44,23 @@ _TWO_WORD_PRODUCTS = {
     "tatli patates": "tatli-patates",
     "trabzon hurmasi": "trabzon-hurmasi",
     "yeni dunya": "yeni-dunya",
+    "malta erigi": "yeni-dunya",
+    "trabzon hurma": "trabzon-hurmasi",
+    "hurma trabzon": "trabzon-hurmasi",
+    "hurma cennet": "trabzon-hurmasi",
+    "cennet elmasi": "trabzon-hurmasi",
+    "frenk inciri": "frenk-inciri",
+    "frenk incir": "frenk-inciri",
+    "frenk uzumu": "frenk-uzumu",
+    "lahana kara": "kara-lahana",
+    "lahana siyah": "kara-lahana",
+    "lahana bruksel": "bruksel-lahanasi",
+    "lahana buruksel": "bruksel-lahanasi",
+    "seftali nektarin": "nektarin",
+    "seftali nektar": "nektarin",
+    "hindiba endivyen": "endivyen",
+    "fasulye barbunya": "barbunya",
+    "asma yapragi": "asma-yapragi",
 }
 
 # Misspellings and alternative names seen in the bulletins, keyed by slug.
@@ -74,6 +98,26 @@ _ALIASES = {
     "karalahana": "kara-lahana",
     "mersin": "yaban-mersini",
     "rozmerin": "biberiye",
+    "bakalyar": "bakalyaro",
+    "nektari": "nektarin",
+    "port": "portakal",  # "Port Washington (Dal)"
+    "rozmari": "biberiye",
+    "karadut": "dut",
+    "kupa": "kupez",
+    "cupra": "cipura",
+    "biberi": "biber",  # "Köy biberi", "Süs biberi" once the qualifier is taken off
+    "domatesi": "domates",
+    "kabagi": "kabak",  # "Kış kabağı"
+    "kavunu": "kavun",  # "Kış kavunu"
+    "kelem": "lahana",  # Amasya's word for cabbage
+    "kose": "kabak",  # "Köse sefer kabak"
+    "bibr": "biber",
+    "havvuc": "havuc",
+    "karnibhar": "karnabahar",
+    "kumkuat": "kamkat",
+    "araka": "bezelye",  # the Aegean name
+    "dongel": "musmula",
+    "amme": "trabzon-hurmasi",  # "Amme (Trabzon hurması)"
 }
 
 # Display names for products whose bulletin spelling is often all-caps or lacks Turkish letters.
@@ -102,6 +146,9 @@ PRODUCT_NAMES = {
     "pancar": "Pancar", "nektarin": "Nektarin", "mango": "Mango", "dut": "Dut", "salgam": "Şalgam",
     "bogurtlen": "Böğürtlen", "kizilcik": "Kızılcık", "hunnap": "Hünnap", "uskumru": "Uskumru",
     "cinekop": "Çinekop", "kefal": "Kefal", "alic": "Alıç", "kekik": "Kekik", "endivyen": "Endivyen",
+    "frenk-inciri": "Frenk inciri", "frenk-uzumu": "Frenk üzümü", "ispari": "İspari", "kornison": "Kornişon",
+    "nektarin": "Nektarin", "barbunya": "Barbunya", "kelek": "Kelek", "asma-yapragi": "Asma yaprağı",
+    "musmula": "Muşmula", "kamkat": "Kamkat",
 }
 
 _UNITS = {
@@ -109,9 +156,31 @@ _UNITS = {
     "adet": "adet", "ad": "adet",
     "bag": "bağ", "demet": "bağ",
     "koli": "koli", "kasa": "kasa", "paket": "paket", "kutu": "kutu", "ton": "ton",
+    "tane": "adet", "adt": "adet",
+}
+
+# The usual unit of products not sold by the kilo, for sources whose bulletin gives no unit (they pass None).
+# Taken from the cities that do give one; products the cities disagree on (mısır, papaya) are left as kg.
+DEFAULT_UNITS = {
+    **dict.fromkeys(["dereotu", "maydanoz", "nane", "roka", "tere", "feslegen", "pazi", "semizotu",
+                     "karadeniz-yapragi", "eksi-ot"], "bağ"),
+    **dict.fromkeys(["marul", "lolorosso", "endivyen", "ananas", "avokado", "mango", "hindistan-cevizi",
+                     "ejder-meyvesi", "pitahaya"], "adet"),
 }
 
 CATEGORIES = {"sebze": "Sebze", "meyve": "Meyve", "ithal": "İthal", "balik": "Balık ve deniz ürünleri"}
+
+# Products filed as fruit, for sources whose bulletin doesn't say (they pass category None). Taken from
+# how the categorising cities file them; everything else is treated as a vegetable.
+FRUITS = {
+    "ahududu", "alic", "altin-cilek", "ananas", "armut", "avokado", "ayva", "badem", "bogurtlen", "cagla",
+    "ceviz", "cilek", "dut", "ejder-meyvesi", "elma", "erik", "findik", "frenk", "granadilla", "greyfurt",
+    "hindistan-cevizi", "hunnap", "hurma", "incir", "kamkat", "karambola", "karpuz", "kavun", "kayisi",
+    "kestane", "kiraz", "kivi", "kizilcik", "lime", "limon", "mandalina", "mango", "mangostan", "musmula",
+    "muz", "nar", "nektarin", "papaya", "passionfruit", "pepino", "pitahaya", "pomelo", "portakal",
+    "pshalis", "rambotan", "seftali", "tamarind", "trabzon-hurmasi", "uzum", "visne", "yaban-mersini",
+    "yeni-dunya", "zerdali", "frenk-inciri", "frenk-uzumu", "kelek",
+}
 
 
 def tr_lower(s):
@@ -166,6 +235,8 @@ def split_name(raw):
             return _TWO_WORD_PRODUCTS[key], _variety(words[n:])
 
     first = re.sub(r"[^a-z0-9]", "", lowered[0])
+    if first in _VARIETY_OF:
+        return _VARIETY_OF[first], _variety(words)
     rest = words[1:]
     if first in _LEADING_QUALIFIERS and len(words) > 1:
         second = re.sub(r"[^a-z0-9]", "", lowered[1])
@@ -181,7 +252,8 @@ def _variety(words):
     text = re.sub(r"\s+", " ", text).strip(" .,-")
     if slugify(text) in ("muhtelif", "diger", ""):
         return ""  # "various" / "other": the generic row for the product
-    return tr_upper_first(tr_lower(text)) if text else ""
+    words = [w if re.fullmatch(r"I{1,3}V?\.?|IV\.?|V\.?", w) else tr_lower(w) for w in text.split(" ")]
+    return tr_upper_first(" ".join(words))
 
 
 def product_name(slug, raw_samples=()):
@@ -194,8 +266,8 @@ def product_name(slug, raw_samples=()):
 
 def normalize_row(raw_name, unit, low, high, avg, category):
     product, variety = split_name(raw_name)
-    if not product:
-        return None
+    if len(product) < 2 or not re.search("[a-z]", product):
+        return None  # an abbreviation nobody can read ("E.KULAK"), or a stray number
     low, high, avg = parse_price(low), parse_price(high), parse_price(avg)
     if low is None and high is None:
         return None
@@ -205,11 +277,13 @@ def normalize_row(raw_name, unit, low, high, avg, category):
         high = low
     if low > high:
         low, high = high, low
+    if category is None:
+        category = "meyve" if product in FRUITS else "sebze"
     return {
         "raw": raw_name.strip(),
         "product": product,
         "variety": variety,
-        "unit": normalize_unit(unit),
+        "unit": normalize_unit(unit) if unit else DEFAULT_UNITS.get(product, "kg"),
         "min": round(low, 2),
         "max": round(high, 2),
         "avg": round(avg, 2) if avg else None,

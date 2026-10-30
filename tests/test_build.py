@@ -21,6 +21,12 @@ class Build(unittest.TestCase):
             self.assertIn("/hal/izmir/", (out / "sitemap.xml").read_text())
             self.assertTrue((out / "hal/izmir/domates/index.html").exists())
             self.assertTrue((out / "haftalik/index.html").exists())
+            # Every market by province, credited to whoever publishes it; charts use the palette slots.
+            cities = (out / "hal/index.html").read_text(encoding="utf-8")
+            self.assertIn('href="/hal/izmir/"', cities)
+            self.assertIn('href="/hal/"', home)
+            self.assertIn("İzmir Büyükşehir Belediyesi</a>", (out / "hal/izmir/index.html").read_text(encoding="utf-8"))
+            self.assertIn('class="c1"', (out / "urun/domates/index.html").read_text(encoding="utf-8"))
             for p in ("gizlilik", "iletisim"):
                 self.assertIn("info@agilerelease.co.uk", (out / p / "index.html").read_text(encoding="utf-8"))
             # Google Analytics only after consent: pages carry the hidden bar, never the Google tag itself.
@@ -43,6 +49,12 @@ class Build(unittest.TestCase):
             self.assertIn("mailto:info@agilerelease.co.uk?subject=sebzehali.com%20reklam", ad)
             self.assertNotIn("wa.me", ad)
             self.assertIn("/reklam/", (out / "sitemap.xml").read_text())
+
+    def test_naming_many_markets(self):
+        with mock.patch.dict(build.CITY_NAMES, {f"x{i}": f"Şehir {i}" for i in range(8)}), \
+                mock.patch.dict(build.CITY_RANK, {f"x{i}": i for i in range(8)}):
+            self.assertEqual(build.in_halls(["x1", "x0"]), "Şehir 0, Şehir 1 hallerinde")
+            self.assertEqual(build.in_halls([f"x{i}" for i in range(8)]), "Şehir 0, Şehir 1, Şehir 2 ve diğer 5 halde")
 
     def test_adsense_review_step_shows_no_ads(self):
         with tempfile.TemporaryDirectory() as d, mock.patch.multiple(

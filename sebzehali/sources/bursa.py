@@ -1,4 +1,5 @@
-"""Bursa Büyükşehir Belediyesi hal page: today's bulletin only, fruit/veg and fish tabs."""
+"""Bursa Büyükşehir Belediyesi hal page, fruit/veg and fish tabs; ?tarih=YYYY-MM-DD gives past bulletins
+(seen back to 2020), or the last one before a day without a bulletin."""
 
 import re
 
@@ -7,15 +8,16 @@ from .http import get
 
 CITY = "bursa"
 NAME = "Bursa"
+PUBLISHER = "Bursa Büyükşehir Belediyesi"
 URL = "https://www.bursa.bel.tr/hal_fiyatlari"
-HISTORY = False
+HISTORY = True
 
 # Tab order on the page: Meyve, Sebze, İthal, then six seafood tabs.
 _TAB_CATEGORY = ["meyve", "sebze", "ithal", "balik", "balik", "balik", "balik", "balik", "balik"]
 
 
 def fetch(date):
-    page = get(URL)
+    page = get(f"{URL}?tarih={date}")
     m = re.search(r"(\d{2})\.(\d{2})\.(\d{4})\s*Tarihli", page)
     if not m:
         return None

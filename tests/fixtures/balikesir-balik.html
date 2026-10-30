@@ -1,0 +1,216 @@
+
+            <div class="col-lg-12">
+                <table id="Fiyatlar" class="table table-striped  reponsive dataTable dtr-inline" style="background-color: rgb(196, 235, 247);border-radius:5px;" cellspacing="0">
+                    <thead>
+                        <tr class="filter">
+                            <th class="combo">Ürün/Tür</th>
+                            <th class="combo">Birimi</th>
+                            <th class="combo">Hal/Pazar</th>
+                            <th class="search">En Düşük Fiyatı (₺)</th>
+                            <th class="search">En Yüksek Fiyatı (₺)</th>
+                            <th class="search">Başlangıç Tarihi</th>
+                            <th class="search">Bitiş Tarihi</th>
+                        </tr>
+                        <tr>
+                            <th>Ürün</th>
+                            <th>Birimi</th>
+                            <th>Hal/Pazar</th>
+                            <th>En Düşük Fiyatı (₺)</th>
+                            <th>En Yüksek Fiyatı (₺)</th>
+                            <th>Başlangıç Tarihi</th>
+                            <th>Bitiş Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>Bako</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>600,00</td>
+                                <td>800,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Dil</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>600,00</td>
+                                <td>600,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Hamsi</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>1000,00</td>
+                                <td>1000,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>İstavrit</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>1500,00</td>
+                                <td>1500,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Karides</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>1500,00</td>
+                                <td>2000,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Kolyoz</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>1500,00</td>
+                                <td>1500,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>L&#252;fer</td>
+                                <td>Adet</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>300,00</td>
+                                <td>400,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Palamut</td>
+                                <td>&#199;ift</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>100,00</td>
+                                <td>100,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Sardalya</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>1000,00</td>
+                                <td>1000,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Tekir</td>
+                                <td>Kasa</td>
+                                <td>BANDIRMA BALIK HALİ</td>
+                                <td>1500,00</td>
+                                <td>1500,00</td>
+                                <td>22.10.2026</td>
+                                <td>22.10.2026</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    <script type="text/javascript">
+        function dataTables_dateFormat(data, type, row) {
+            var rowvalue = row["EventDate"];
+            return ($.format.date(rowvalue, "E dd/MM/yyyy"));
+        }
+
+        $('#Fiyatlar tbody tr').on("click.dt", function (e) {
+            var ele = $(this);
+            //stop Propagation if clicked outside sortMask
+            //becasue we want to sort locally here
+            if (!$(e.target).hasClass('sortMask')) {
+                e.stopImmediatePropagation();
+                if (ele.hasClass('sorting')) {
+                    ele.removeClass().addClass('sorting_asc');
+                } else if (ele.hasClass('sorting_asc')) {
+                    ele.removeClass().addClass('sorting_desc');
+                } else if (ele.hasClass('sorting_desc')) {
+                    ele.removeClass().addClass('sorting_asc');
+                }
+            }
+        });
+        jQuery.fn.DataTable.ext.type.search.string = function (sVal) {
+            var letters = { "İ": "i", "I": "ı", "i": "İ", "ı": "I" };
+            return sVal.replace(/(([İI]))/g, function (letter) { return letters[letter]; });
+        };
+        var oTable = $('#Fiyatlar').DataTable({
+            language: {
+                "decimal": ",",
+                "emptyTable": "Tabloda veri yok",
+                "info": "  _TOTAL_ Kayıttan _START_ - _END_ Arası Kayıtlar",
+                "infoEmpty": "",
+                "infoFiltered": "( _MAX_ Kayıt İçerisinden Bulunan)",
+                "infoPostFix": "",
+                "thousands": ".",
+                "lengthMenu": "Sayfada _MENU_ Kayıt Göster",
+                "loadingRecords": "Yükleniyor...",
+                "processing": "İşleniyor...",
+                "search": "Bul:",
+                "zeroRecords": "Eşleşen Kayıt Bulunmadı",
+                "paginate": {
+                    "first": "İlk",
+                    "last": "Son",
+                    "next": "Sonraki",
+                    "previous": "Önceki"
+                },
+                "aria": {
+                    "sortAscending": ": Sütunu A'dan Z'ye sırala",
+                    "sortDescending": ": Sütunu Z'den A'ya sırala"
+                }
+            },
+            processing: true,
+            responsive: false,
+            autoWidth: false,
+            "iDisplayLength": 25,
+            dom: '<Hp>t<ip>',
+            initComplete: function () {
+                this.api().columns().every(function () {
+                    var column = this;
+                    var columnIndex = this.index();
+                    switch ($(".filter th:eq(" + columnIndex + ")").attr('class')) {
+                        case 'combo':
+                            var select = $('<select style="width:100%;"><option value="">Tümü</option></select>')
+                                .appendTo($(".filter th:eq(" + columnIndex + ")").empty())
+                                .on('change', function () {
+                                    var val = $.fn.dataTable.util.escapeRegex(
+                                        $(this).val()
+                                    );
+                                    var letters = { "İ": "i", "I": "ı", "i": "İ", "ı": "I" };
+                                    val = val.replace(/(([İI]))/g, function (letter) { return letters[letter]; });
+                                    column
+                                        .search(val ? '^' + val + '$' : '', true, false)
+                                        .draw();
+
+                                });
+
+                            column.data().unique().sort().each(function (d, j) {
+                                select.append('<option value="' + d + '">' + d + '</option>')
+                            });
+                            break;
+                        case 'search':
+                            $(".filter th:eq(" + columnIndex + ")").html('<input type="text" />');
+
+                            $('input', $(".filter th:eq(" + columnIndex + ")")).on('keyup change', function () {
+                                if (column.search() !== this.value) {
+                                    column.search(this.value)
+                                        .draw();
+                                }
+                            });
+                            break;
+
+                    }
+                });
+            }
+        });
+
+
+        $("#Fiyatlar select").chosen({ inherit_select_classes: true });
+    </script>

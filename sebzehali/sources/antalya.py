@@ -11,10 +11,12 @@ from .http import get
 
 CITY = "antalya"
 NAME = "Antalya"
+PUBLISHER = "Antalya Büyükşehir Belediyesi"
 URL = "https://www.antalya.bel.tr/tr/halden-gunluk-fiyatlar"
 HISTORY = True
 _BASE = "https://gezipanel.antalya.bel.tr"
-_ROW = re.compile(r"\b\d{1,3}\s+(\S.*?)\s{2,}(Kg|Bağ|Adet|Demet|Kasa|Koli|Paket)\s+([\d.,]+)\s+([\d.,]+)", re.I)
+# Row number, name (never starting with a digit: a price left over from the other column isn't a name), unit, prices.
+_ROW = re.compile(r"\b\d{1,3}\s+([^\d\s].*?)\s{2,}(Kg|Bağ|Adet|Demet|Kasa|Koli|Paket)\s+([\d.,]+)\s+([\d.,]+)", re.I)
 
 
 def fetch(date):

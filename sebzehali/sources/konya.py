@@ -7,6 +7,7 @@ from .http import get
 
 CITY = "konya"
 NAME = "Konya"
+PUBLISHER = "Konya Büyükşehir Belediyesi"
 URL = "https://www.konya.bel.tr/hal-fiyatlari"
 HISTORY = True
 

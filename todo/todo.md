@@ -23,3 +23,5 @@ its status to `done` in both places.
 | [s-014](items/s-014.md) | GitHub's schedule is unreliable | open | P1 |
 | [s-015](items/s-015.md) | Antalya bulletins published as scans | open | P2 |
 | [s-016](items/s-016.md) | Check Google Analytics is receiving visits | open | P2 |
+| [s-017](items/s-017.md) | Provinces that refuse connections from outside Turkey | open | P2 |
+| [s-018](items/s-018.md) | Hal sources that need more work | open | P3 |
