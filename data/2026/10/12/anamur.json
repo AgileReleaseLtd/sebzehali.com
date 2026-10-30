@@ -1,0 +1,28 @@
+{
+ "city": "anamur",
+ "date": "2026-10-12",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:28+00:00",
+ "items": [
+  {
+   "raw": "MUZ",
+   "product": "muz",
+   "variety": "",
+   "unit": "kg",
+   "min": 92.0,
+   "max": 92.0,
+   "avg": 92.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 92.0,
+   "max": 92.0,
+   "avg": 92.0,
+   "category": "meyve"
+  }
+ ]
+}

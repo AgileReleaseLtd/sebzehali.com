@@ -1,0 +1,18 @@
+{
+ "city": "erdemli",
+ "date": "2026-09-05",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:27+00:00",
+ "items": [
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 42.0,
+   "max": 42.0,
+   "avg": 42.0,
+   "category": "meyve"
+  }
+ ]
+}

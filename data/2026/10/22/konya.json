@@ -235,16 +235,6 @@
    "category": "meyve"
   },
   {
-   "raw": "HURMA (CENNET)",
-   "product": "hurma",
-   "variety": "Cennet",
-   "unit": "kg",
-   "min": 50.0,
-   "max": 200.0,
-   "avg": null,
-   "category": "meyve"
-  },
-  {
    "raw": "İNCİR (BEYAZ)",
    "product": "incir",
    "variety": "Beyaz",
@@ -475,6 +465,16 @@
    "category": "meyve"
   },
   {
+   "raw": "HURMA (CENNET)",
+   "product": "trabzon-hurmasi",
+   "variety": "",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 200.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
    "raw": "ÜZÜM (MUHTELİF)",
    "product": "uzum",
    "variety": "",
@@ -651,6 +651,16 @@
    "unit": "kg",
    "min": 40.0,
    "max": 70.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "LAHANA (BRÜKSEL)",
+   "product": "bruksel-lahanasi",
+   "variety": "",
+   "unit": "paket",
+   "min": 70.0,
+   "max": 90.0,
    "avg": null,
    "category": "sebze"
   },
@@ -871,16 +881,6 @@
    "unit": "kg",
    "min": 10.0,
    "max": 30.0,
-   "avg": null,
-   "category": "sebze"
-  },
-  {
-   "raw": "LAHANA (BRÜKSEL)",
-   "product": "lahana",
-   "variety": "Brüksel",
-   "unit": "paket",
-   "min": 70.0,
-   "max": 90.0,
    "avg": null,
    "category": "sebze"
   },

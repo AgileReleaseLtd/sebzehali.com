@@ -2,8 +2,768 @@
  "city": "izmir",
  "date": "2026-10-19",
  "source": "https://acikveri.bizizmir.com/",
- "fetched_at": "2026-10-19T10:44:59+00:00",
+ "fetched_at": "2026-10-30T11:04:20+00:00",
  "items": [
+  {
+   "raw": "AHTAPOT(DONUK)",
+   "product": "ahtapot",
+   "variety": "Donuk",
+   "unit": "kg",
+   "min": 250.0,
+   "max": 850.0,
+   "avg": 550.0,
+   "category": "balik"
+  },
+  {
+   "raw": "AKYA (DENİZ)",
+   "product": "akya",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 600.0,
+   "avg": 375.0,
+   "category": "balik"
+  },
+  {
+   "raw": "BAKALYAR(BÜYÜKBOY)",
+   "product": "bakalyaro",
+   "variety": "Büyükboy",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 600.0,
+   "avg": 400.0,
+   "category": "balik"
+  },
+  {
+   "raw": "BAKALYARO(KÜÇÜKBOY)",
+   "product": "bakalyaro",
+   "variety": "Küçükboy",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 180.0,
+   "avg": 120.0,
+   "category": "balik"
+  },
+  {
+   "raw": "BARBUN(KAYA)",
+   "product": "barbun",
+   "variety": "Kaya",
+   "unit": "kg",
+   "min": 700.0,
+   "max": 2500.0,
+   "avg": 1600.0,
+   "category": "balik"
+  },
+  {
+   "raw": "BARBUN (TEKİR)",
+   "product": "barbun",
+   "variety": "Tekir",
+   "unit": "kg",
+   "min": 120.0,
+   "max": 1200.0,
+   "avg": 660.0,
+   "category": "balik"
+  },
+  {
+   "raw": "BÜLBÜL (DENİZ )",
+   "product": "bulbul",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 200.0,
+   "avg": 200.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ÇİMÇİM (DENİZ)",
+   "product": "cimcim",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 300.0,
+   "avg": 190.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ÇİMÇİM (DONUK)",
+   "product": "cimcim",
+   "variety": "Donuk",
+   "unit": "kg",
+   "min": 250.0,
+   "max": 500.0,
+   "avg": 375.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ÇIPURA (DENİZ)",
+   "product": "cipura",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 600.0,
+   "max": 1000.0,
+   "avg": 800.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ÇİPURA ( KÜLTÜR )",
+   "product": "cipura",
+   "variety": "Kültür",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 500.0,
+   "avg": 350.0,
+   "category": "balik"
+  },
+  {
+   "raw": "DIL",
+   "product": "dil",
+   "variety": "",
+   "unit": "kg",
+   "min": 400.0,
+   "max": 1500.0,
+   "avg": 950.0,
+   "category": "balik"
+  },
+  {
+   "raw": "DİL(CANGIDEZ)",
+   "product": "dil",
+   "variety": "Cangıdez",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "balik"
+  },
+  {
+   "raw": "EŞKİNA(DENİZ)",
+   "product": "eskina",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 400.0,
+   "max": 400.0,
+   "avg": 400.0,
+   "category": "balik"
+  },
+  {
+   "raw": "FANGRI (DENİZ)",
+   "product": "fangri",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 2000.0,
+   "max": 2000.0,
+   "avg": 2000.0,
+   "category": "balik"
+  },
+  {
+   "raw": "FENER (DENİZ)",
+   "product": "fener",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 600.0,
+   "avg": 325.0,
+   "category": "balik"
+  },
+  {
+   "raw": "GRANYOZ (DENİZ)",
+   "product": "granyoz",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 500.0,
+   "avg": 275.0,
+   "category": "balik"
+  },
+  {
+   "raw": "HAMSI (DENİZ)",
+   "product": "hamsi",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 100.0,
+   "avg": 70.0,
+   "category": "balik"
+  },
+  {
+   "raw": "JAPON HAMSİ",
+   "product": "hamsi",
+   "variety": "Japon",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 66.67,
+   "avg": 58.34,
+   "category": "balik"
+  },
+  {
+   "raw": "HAMSİ (YEM)",
+   "product": "hamsi",
+   "variety": "Yem",
+   "unit": "kg",
+   "min": 26.67,
+   "max": 33.33,
+   "avg": 30.0,
+   "category": "balik"
+  },
+  {
+   "raw": "HANOS ( DENİZ )",
+   "product": "hanos",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 100.0,
+   "avg": 70.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ISKORPIT (DENİZ)",
+   "product": "iskorpit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 400.0,
+   "max": 1500.0,
+   "avg": 950.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ISPAROZ (DENİZ)",
+   "product": "isparoz",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 100.0,
+   "avg": 90.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ISTAVRIT (DENİZ)",
+   "product": "istavrit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 16.67,
+   "max": 83.33,
+   "avg": 50.0,
+   "category": "balik"
+  },
+  {
+   "raw": "İSTAVRİT(SARI KANAT)",
+   "product": "istavrit",
+   "variety": "Sarı kanat",
+   "unit": "kg",
+   "min": 100.0,
+   "max": 583.33,
+   "avg": 341.67,
+   "category": "balik"
+  },
+  {
+   "raw": "IZMARIT (DENİZ)",
+   "product": "izmarit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 100.0,
+   "avg": 80.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KALAMAR (DENİZ)",
+   "product": "kalamar",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 600.0,
+   "max": 1200.0,
+   "avg": 900.0,
+   "category": "balik"
+  },
+  {
+   "raw": "DONUK(KALAMAR)",
+   "product": "kalamar",
+   "variety": "Donuk",
+   "unit": "kg",
+   "min": 400.0,
+   "max": 400.0,
+   "avg": 400.0,
+   "category": "balik"
+  },
+  {
+   "raw": "YABANİ KALAMAR",
+   "product": "kalamar",
+   "variety": "Yabani",
+   "unit": "kg",
+   "min": 70.0,
+   "max": 300.0,
+   "avg": 185.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KALKAN (DENİZ)",
+   "product": "kalkan",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 1000.0,
+   "max": 1000.0,
+   "avg": 1000.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KAMİT(DENİZ)",
+   "product": "kamit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 66.67,
+   "max": 83.33,
+   "avg": 75.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KARAGÖZ (DENİZ)",
+   "product": "karagoz",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 400.0,
+   "avg": 230.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KARİDES (DENİZ)",
+   "product": "karides",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 500.0,
+   "max": 1000.0,
+   "avg": 750.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KEFAL (DENİZ)",
+   "product": "kefal",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 150.0,
+   "avg": 100.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KIRLANGIÇ (DENİZ)",
+   "product": "kirlangic",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 1000.0,
+   "avg": 512.5,
+   "category": "balik"
+  },
+  {
+   "raw": "KOFANA ( DENİZ )",
+   "product": "kofana",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 1200.0,
+   "max": 1900.0,
+   "avg": 1550.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KOLORİT(DENİZ)",
+   "product": "kolorit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 58.33,
+   "max": 66.67,
+   "avg": 62.5,
+   "category": "balik"
+  },
+  {
+   "raw": "KOLYOZ (DENİZ)",
+   "product": "kolyoz",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 58.33,
+   "max": 166.67,
+   "avg": 112.5,
+   "category": "balik"
+  },
+  {
+   "raw": "KÖPEK (DENİZ)",
+   "product": "kopek",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 70.0,
+   "max": 90.0,
+   "avg": 80.0,
+   "category": "balik"
+  },
+  {
+   "raw": "KRAÇA ( DENİZ )",
+   "product": "kraca",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 66.67,
+   "max": 125.0,
+   "avg": 95.84,
+   "category": "balik"
+  },
+  {
+   "raw": "KUPEZ (DENİZ)",
+   "product": "kupez",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 12.5,
+   "max": 160.0,
+   "avg": 86.25,
+   "category": "balik"
+  },
+  {
+   "raw": "LAHOZ (DENİZ)",
+   "product": "lahoz",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 1200.0,
+   "max": 2000.0,
+   "avg": 1600.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LEVREK (DENİZ)",
+   "product": "levrek",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 400.0,
+   "max": 1500.0,
+   "avg": 950.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LEVREK ( KÜLTÜR )",
+   "product": "levrek",
+   "variety": "Kültür",
+   "unit": "kg",
+   "min": 300.0,
+   "max": 650.0,
+   "avg": 475.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LİDAKİ (DENİZ)",
+   "product": "lidaki",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 600.0,
+   "avg": 320.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LOKUM(DENİZ)",
+   "product": "lokum",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 160.0,
+   "avg": 120.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LÜFER ( DENİZ)",
+   "product": "lufer",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 1000.0,
+   "max": 2000.0,
+   "avg": 1500.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LÜFER (KÜÇÜK )",
+   "product": "lufer",
+   "variety": "Küçük",
+   "unit": "kg",
+   "min": 500.0,
+   "max": 500.0,
+   "avg": 500.0,
+   "category": "balik"
+  },
+  {
+   "raw": "LÜFER(İRİ BOY)",
+   "product": "lufer",
+   "variety": "İri boy",
+   "unit": "kg",
+   "min": 400.0,
+   "max": 900.0,
+   "avg": 650.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MARİNE SALATA(DONUK)",
+   "product": "marine",
+   "variety": "Salata donuk",
+   "unit": "kg",
+   "min": 250.0,
+   "max": 600.0,
+   "avg": 425.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MASKO DENİZ",
+   "product": "masko",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 320.0,
+   "avg": 260.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MELANUR (DENİZ)",
+   "product": "melanur",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 200.0,
+   "avg": 200.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MERCAN (BÜYÜKBOY)",
+   "product": "mercan",
+   "variety": "Büyükboy",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 1600.0,
+   "avg": 875.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MERCAN(KÜÇÜK BOY)",
+   "product": "mercan",
+   "variety": "Küçük boy",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 180.0,
+   "avg": 110.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MEZGİT (DENİZ)",
+   "product": "mezgit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 160.0,
+   "max": 200.0,
+   "avg": 180.0,
+   "category": "balik"
+  },
+  {
+   "raw": "MIRMIR (DENİZ)",
+   "product": "mirmir",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 700.0,
+   "avg": 425.0,
+   "category": "balik"
+  },
+  {
+   "raw": "PALAMUT-TORİK (DENİZ",
+   "product": "palamut",
+   "variety": "Torik deniz",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 120.0,
+   "avg": 85.0,
+   "category": "balik"
+  },
+  {
+   "raw": "DONUK PANGA",
+   "product": "panga",
+   "variety": "Donuk",
+   "unit": "kg",
+   "min": 250.0,
+   "max": 250.0,
+   "avg": 250.0,
+   "category": "balik"
+  },
+  {
+   "raw": "PAPAĞAN ( DENİZ )",
+   "product": "papagan",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 300.0,
+   "avg": 225.0,
+   "category": "balik"
+  },
+  {
+   "raw": "PEYGAMBER (DENİZ)",
+   "product": "peygamber",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 300.0,
+   "max": 1100.0,
+   "avg": 700.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SARDALYA (DENİZ)",
+   "product": "sardalya",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 133.33,
+   "avg": 86.67,
+   "category": "balik"
+  },
+  {
+   "raw": "SARDALYA (YEM)",
+   "product": "sardalya",
+   "variety": "Yem",
+   "unit": "kg",
+   "min": 26.67,
+   "max": 33.33,
+   "avg": 30.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SARGOZ(DENİZ)",
+   "product": "sargoz",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 600.0,
+   "max": 600.0,
+   "avg": 600.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SARPA (DENİZ)",
+   "product": "sarpa",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 120.0,
+   "avg": 90.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SİNARİT (DENİZ)",
+   "product": "sinarit",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 1700.0,
+   "max": 2100.0,
+   "avg": 1900.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SOKKAN(DENİZ)",
+   "product": "sokkan",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 200.0,
+   "avg": 200.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SOMON ( TATLI )",
+   "product": "somon",
+   "variety": "Tatlı",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 250.0,
+   "avg": 225.0,
+   "category": "balik"
+  },
+  {
+   "raw": "İTHAL SOMON(TATLI)",
+   "product": "somon",
+   "variety": "İthal tatlı",
+   "unit": "kg",
+   "min": 470.0,
+   "max": 470.0,
+   "avg": 470.0,
+   "category": "balik"
+  },
+  {
+   "raw": "SÜBYE (DENİZ)",
+   "product": "subye",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 200.0,
+   "max": 320.0,
+   "avg": 260.0,
+   "category": "balik"
+  },
+  {
+   "raw": "TIRSI (DENİZ)",
+   "product": "tirsi",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 58.33,
+   "max": 125.0,
+   "avg": 91.67,
+   "category": "balik"
+  },
+  {
+   "raw": "TOMBIK(DENİZ)",
+   "product": "tombik",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 120.0,
+   "avg": 85.0,
+   "category": "balik"
+  },
+  {
+   "raw": "TRANÇA (DENİZ)",
+   "product": "tranca",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 1300.0,
+   "max": 1300.0,
+   "avg": 1300.0,
+   "category": "balik"
+  },
+  {
+   "raw": "TURNA (DENİZ)",
+   "product": "turna",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 300.0,
+   "max": 300.0,
+   "avg": 300.0,
+   "category": "balik"
+  },
+  {
+   "raw": "USKUMRU (DENİZ)",
+   "product": "uskumru",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 700.0,
+   "avg": 380.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ITHAL USKUMRU(DONUK)",
+   "product": "uskumru",
+   "variety": "Ithal donuk",
+   "unit": "kg",
+   "min": 375.0,
+   "max": 375.0,
+   "avg": 375.0,
+   "category": "balik"
+  },
+  {
+   "raw": "ZARGANA (DENİZ)",
+   "product": "zargana",
+   "variety": "Deniz",
+   "unit": "kg",
+   "min": 100.0,
+   "max": 300.0,
+   "avg": 200.0,
+   "category": "balik"
+  },
   {
    "raw": "ANANAS",
    "product": "ananas",
@@ -112,16 +872,6 @@
    "min": 50.0,
    "max": 80.0,
    "avg": 65.0,
-   "category": "meyve"
-  },
-  {
-   "raw": "CENNET ELMASI",
-   "product": "cennet",
-   "variety": "Elması",
-   "unit": "kg",
-   "min": 80.0,
-   "max": 150.0,
-   "avg": 115.0,
    "category": "meyve"
   },
   {
@@ -312,6 +1062,16 @@
    "min": 30.0,
    "max": 70.0,
    "avg": 50.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "CENNET ELMASI",
+   "product": "trabzon-hurmasi",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 150.0,
+   "avg": 115.0,
    "category": "meyve"
   },
   {

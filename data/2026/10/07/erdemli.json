@@ -1,0 +1,48 @@
+{
+ "city": "erdemli",
+ "date": "2026-10-07",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:27+00:00",
+ "items": [
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 14.0,
+   "max": 27.0,
+   "avg": 20.25,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 42.0,
+   "max": 42.0,
+   "avg": 42.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 36.0,
+   "avg": 35.39,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 22.0,
+   "max": 35.0,
+   "avg": 27.47,
+   "category": "sebze"
+  }
+ ]
+}

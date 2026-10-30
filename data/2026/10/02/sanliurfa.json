@@ -1,0 +1,388 @@
+{
+ "city": "sanliurfa",
+ "date": "2026-10-02",
+ "source": "https://halfiyatlari.sanliurfa.bel.tr/",
+ "fetched_at": "2026-10-30T11:11:44+00:00",
+ "items": [
+  {
+   "raw": "Armut (Deveci)",
+   "product": "armut",
+   "variety": "Deveci",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 50.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Armut (Santamaria)",
+   "product": "armut",
+   "variety": "Santamaria",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 55.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Çilek",
+   "product": "cilek",
+   "variety": "",
+   "unit": "kg",
+   "min": 90.0,
+   "max": 110.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Elma (diğer)",
+   "product": "elma",
+   "variety": "",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 45.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Elma (Golden)",
+   "product": "elma",
+   "variety": "Golden",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 40.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Erik",
+   "product": "erik",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 35.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "İncir",
+   "product": "incir",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 70.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Kivi",
+   "product": "kivi",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Limon Diğer",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 20.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Muz (Diğer)",
+   "product": "muz",
+   "variety": "",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Muz (Yerli Anamur)",
+   "product": "muz",
+   "variety": "Yerli anamur",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Nektari",
+   "product": "nektarin",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 40.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Portakal Diğer",
+   "product": "portakal",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 35.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Şeftali",
+   "product": "seftali",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 50.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Üzüm (Beyaz)",
+   "product": "uzum",
+   "variety": "Beyaz",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 35.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Üzüm (Siyah)",
+   "product": "uzum",
+   "variety": "Siyah",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 35.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Üzüm Çekirdeksiz",
+   "product": "uzum",
+   "variety": "Çekirdeksiz",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Biber Kapya (Sera)",
+   "product": "biber",
+   "variety": "Kapya sera",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 25.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Köy Biberi",
+   "product": "biber",
+   "variety": "Köy",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 25.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Dereotu",
+   "product": "dereotu",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 12.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Domates",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 25.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Domates (Salçalık)",
+   "product": "domates",
+   "variety": "Salçalık",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 15.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Fasulye",
+   "product": "fasulye",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 25.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Havuç Diğer",
+   "product": "havuc",
+   "variety": "",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Kabak",
+   "product": "kabak",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 20.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Lahana (Beyaz) (kg)",
+   "product": "lahana",
+   "variety": "Beyaz kg",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 15.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Lahana (Kırmızı) (kg)",
+   "product": "lahana",
+   "variety": "Kırmızı kg",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 15.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Marul Göbekli",
+   "product": "marul",
+   "variety": "Göbekli",
+   "unit": "adet",
+   "min": 15.0,
+   "max": 20.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Marul Kıvırcık",
+   "product": "marul",
+   "variety": "Kıvırcık",
+   "unit": "adet",
+   "min": 25.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Maydanoz (70-100 gr)",
+   "product": "maydanoz",
+   "variety": "70 100 gr",
+   "unit": "bağ",
+   "min": 4.0,
+   "max": 5.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Nane (70-100 gr)",
+   "product": "nane",
+   "variety": "70 100 gr",
+   "unit": "bağ",
+   "min": 3.0,
+   "max": 5.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Kırmızı Pancar",
+   "product": "pancar",
+   "variety": "Kırmızı",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Patlıcan",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 20.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Patlıcan(Kebaplık)",
+   "product": "patlican",
+   "variety": "Kebaplık",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Roka",
+   "product": "roka",
+   "variety": "",
+   "unit": "kg",
+   "min": 7.0,
+   "max": 10.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Salatalık diğer",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 4.0,
+   "max": 10.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Sarımsak (Kuru)",
+   "product": "sarimsak",
+   "variety": "Kuru",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 50.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Yeşil Soğan",
+   "product": "sogan",
+   "variety": "Yeşil",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 25.0,
+   "avg": null,
+   "category": "sebze"
+  }
+ ]
+}

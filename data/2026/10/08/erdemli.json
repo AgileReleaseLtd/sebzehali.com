@@ -1,0 +1,58 @@
+{
+ "city": "erdemli",
+ "date": "2026-10-08",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:27+00:00",
+ "items": [
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 13.0,
+   "max": 27.0,
+   "avg": 25.6,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ",
+   "product": "muz",
+   "variety": "",
+   "unit": "kg",
+   "min": 95.0,
+   "max": 138.0,
+   "avg": 103.27,
+   "category": "meyve"
+  },
+  {
+   "raw": "BİBER DOLMALIK",
+   "product": "biber",
+   "variety": "Dolmalık",
+   "unit": "kg",
+   "min": 55.0,
+   "max": 55.0,
+   "avg": 55.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 23.1,
+   "max": 39.0,
+   "avg": 36.35,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 19.1,
+   "max": 36.0,
+   "avg": 30.57,
+   "category": "sebze"
+  }
+ ]
+}

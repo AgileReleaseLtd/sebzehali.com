@@ -1,0 +1,18 @@
+{
+ "city": "erdemli",
+ "date": "2026-09-21",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:27+00:00",
+ "items": [
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 7.0,
+   "avg": 6.21,
+   "category": "sebze"
+  }
+ ]
+}

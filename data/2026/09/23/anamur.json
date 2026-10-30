@@ -1,0 +1,38 @@
+{
+ "city": "anamur",
+ "date": "2026-09-23",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:28+00:00",
+ "items": [
+  {
+   "raw": "AVOKADO",
+   "product": "avokado",
+   "variety": "",
+   "unit": "adet",
+   "min": 30.0,
+   "max": 56.0,
+   "avg": 53.05,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 56.5,
+   "max": 82.0,
+   "avg": 69.22,
+   "category": "meyve"
+  },
+  {
+   "raw": "PİTAHAYA",
+   "product": "pitahaya",
+   "variety": "",
+   "unit": "adet",
+   "min": 120.0,
+   "max": 120.0,
+   "avg": 120.0,
+   "category": "meyve"
+  }
+ ]
+}

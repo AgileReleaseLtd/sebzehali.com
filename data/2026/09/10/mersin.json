@@ -156,8 +156,8 @@
   },
   {
    "raw": "FRENK ÜZÜMÜ",
-   "product": "frenk",
-   "variety": "Üzümü",
+   "product": "frenk-uzumu",
+   "variety": "",
    "unit": "kg",
    "min": 1480.0,
    "max": 1560.0,

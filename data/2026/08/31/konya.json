@@ -685,6 +685,16 @@
    "category": "sebze"
   },
   {
+   "raw": "LAHANA (BRÜKSEL)",
+   "product": "bruksel-lahanasi",
+   "variety": "",
+   "unit": "paket",
+   "min": 70.0,
+   "max": 90.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
    "raw": "DERE OTU (MUHTELİF)",
    "product": "dereotu",
    "variety": "",
@@ -901,16 +911,6 @@
    "unit": "kg",
    "min": 15.0,
    "max": 40.0,
-   "avg": null,
-   "category": "sebze"
-  },
-  {
-   "raw": "LAHANA (BRÜKSEL)",
-   "product": "lahana",
-   "variety": "Brüksel",
-   "unit": "paket",
-   "min": 70.0,
-   "max": 90.0,
    "avg": null,
    "category": "sebze"
   },

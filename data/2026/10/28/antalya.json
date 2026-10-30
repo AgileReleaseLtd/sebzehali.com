@@ -2,7 +2,7 @@
  "city": "antalya",
  "date": "2026-10-28",
  "source": "https://www.antalya.bel.tr/tr/halden-gunluk-fiyatlar",
- "fetched_at": "2026-10-28T11:20:13+00:00",
+ "fetched_at": "2026-10-30T11:14:21+00:00",
  "items": [
   {
    "raw": "Ahududu",
@@ -56,8 +56,8 @@
   },
   {
    "raw": "Frenk Üzümü",
-   "product": "frenk",
-   "variety": "Üzümü",
+   "product": "frenk-uzumu",
+   "variety": "",
    "unit": "kg",
    "min": 1200.0,
    "max": 1900.0,
@@ -123,16 +123,6 @@
    "max": 245.0,
    "avg": null,
    "category": "ithal"
-  },
-  {
-   "raw": "Amme(Trabzon Hurması)",
-   "product": "amme",
-   "variety": "Trabzon hurması",
-   "unit": "kg",
-   "min": 45.0,
-   "max": 90.0,
-   "avg": null,
-   "category": "meyve"
   },
   {
    "raw": "Armut (Santamariya)",
@@ -235,6 +225,16 @@
    "category": "meyve"
   },
   {
+   "raw": "Mandalina",
+   "product": "mandalina",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 40.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
    "raw": "Muz (Yerli)",
    "product": "muz",
    "variety": "Yerli",
@@ -275,6 +275,16 @@
    "category": "meyve"
   },
   {
+   "raw": "Amme(Trabzon Hurması)",
+   "product": "trabzon-hurmasi",
+   "variety": "Trabzon hurması",
+   "unit": "kg",
+   "min": 45.0,
+   "max": 90.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
    "raw": "Üzüm(Beyaz)",
    "product": "uzum",
    "variety": "Beyaz",
@@ -293,16 +303,6 @@
    "max": 60.0,
    "avg": null,
    "category": "meyve"
-  },
-  {
-   "raw": "66                              Mandalina",
-   "product": "66",
-   "variety": "Mandalina",
-   "unit": "kg",
-   "min": 20.0,
-   "max": 40.0,
-   "avg": null,
-   "category": "sebze"
   },
   {
    "raw": "Biber (Cin)",

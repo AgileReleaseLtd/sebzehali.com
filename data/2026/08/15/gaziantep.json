@@ -1,0 +1,18 @@
+{
+ "city": "gaziantep",
+ "date": "2026-08-15",
+ "source": "https://www.gaziantep.bel.tr/tr/hal-rayic",
+ "fetched_at": "2026-10-30T11:05:02+00:00",
+ "items": [
+  {
+   "raw": "SARIMSAK KURU",
+   "product": "sarimsak",
+   "variety": "Kuru",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "sebze"
+  }
+ ]
+}

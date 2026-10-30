@@ -1,0 +1,28 @@
+{
+ "city": "erdemli",
+ "date": "2026-08-18",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:27+00:00",
+ "items": [
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 48.0,
+   "max": 50.0,
+   "avg": 49.38,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON (YATAK)",
+   "product": "limon",
+   "variety": "Yatak",
+   "unit": "kg",
+   "min": 56.0,
+   "max": 56.0,
+   "avg": 56.0,
+   "category": "meyve"
+  }
+ ]
+}

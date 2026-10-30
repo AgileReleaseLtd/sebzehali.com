@@ -265,16 +265,6 @@
    "category": "balik"
   },
   {
-   "raw": "Jumbo Karides",
-   "product": "jumbo",
-   "variety": "Karides",
-   "unit": "kg",
-   "min": 500.0,
-   "max": 600.0,
-   "avg": null,
-   "category": "balik"
-  },
-  {
    "raw": "Kadife",
    "product": "kadife",
    "variety": "",
@@ -331,6 +321,16 @@
    "unit": "kg",
    "min": 35.0,
    "max": 70.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Jumbo Karides",
+   "product": "karides",
+   "variety": "Jumbo",
+   "unit": "kg",
+   "min": 500.0,
+   "max": 600.0,
    "avg": null,
    "category": "balik"
   },
@@ -1065,16 +1065,6 @@
    "category": "meyve"
   },
   {
-   "raw": "Döngel(muşmula)",
-   "product": "dongel",
-   "variety": "Muşmula",
-   "unit": "kg",
-   "min": 50.0,
-   "max": 50.0,
-   "avg": null,
-   "category": "meyve"
-  },
-  {
    "raw": "Dut",
    "product": "dut",
    "variety": "",
@@ -1211,16 +1201,6 @@
    "unit": "kg",
    "min": 25.0,
    "max": 25.0,
-   "avg": null,
-   "category": "meyve"
-  },
-  {
-   "raw": "Hurma Trabzon",
-   "product": "hurma",
-   "variety": "Trabzon",
-   "unit": "kg",
-   "min": 20.0,
-   "max": 110.0,
    "avg": null,
    "category": "meyve"
   },
@@ -1375,6 +1355,16 @@
    "category": "meyve"
   },
   {
+   "raw": "Döngel(muşmula)",
+   "product": "musmula",
+   "variety": "Muşmula",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 50.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
    "raw": "Muz (Yerli)",
    "product": "muz",
    "variety": "Yerli",
@@ -1451,6 +1441,16 @@
    "unit": "kg",
    "min": 20.0,
    "max": 60.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Hurma Trabzon",
+   "product": "trabzon-hurmasi",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 110.0,
    "avg": null,
    "category": "meyve"
   },
@@ -1535,16 +1535,6 @@
    "category": "sebze"
   },
   {
-   "raw": "Araka",
-   "product": "araka",
-   "variety": "",
-   "unit": "kg",
-   "min": 6.0,
-   "max": 39.0,
-   "avg": null,
-   "category": "sebze"
-  },
-  {
    "raw": "Bakla",
    "product": "bakla",
    "variety": "",
@@ -1581,6 +1571,16 @@
    "unit": "kg",
    "min": 10.0,
    "max": 100.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Araka",
+   "product": "bezelye",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 39.0,
    "avg": null,
    "category": "sebze"
   },
@@ -1701,6 +1701,16 @@
    "unit": "kg",
    "min": 30.0,
    "max": 75.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "Lahana Bürüksel",
+   "product": "bruksel-lahanasi",
+   "variety": "",
+   "unit": "kg",
+   "min": 70.0,
+   "max": 80.0,
    "avg": null,
    "category": "sebze"
   },
@@ -1971,16 +1981,6 @@
    "unit": "kg",
    "min": 10.0,
    "max": 30.0,
-   "avg": null,
-   "category": "sebze"
-  },
-  {
-   "raw": "Lahana Bürüksel",
-   "product": "lahana",
-   "variety": "Bürüksel",
-   "unit": "kg",
-   "min": 70.0,
-   "max": 80.0,
    "avg": null,
    "category": "sebze"
   },

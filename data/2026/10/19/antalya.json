@@ -2,7 +2,7 @@
  "city": "antalya",
  "date": "2026-10-19",
  "source": "https://www.antalya.bel.tr/tr/halden-gunluk-fiyatlar",
- "fetched_at": "2026-10-19T17:28:38+00:00",
+ "fetched_at": "2026-10-30T11:14:03+00:00",
  "items": [
   {
    "raw": "Ahududu",
@@ -56,8 +56,8 @@
   },
   {
    "raw": "Frenk Üzümü",
-   "product": "frenk",
-   "variety": "Üzümü",
+   "product": "frenk-uzumu",
+   "variety": "",
    "unit": "kg",
    "min": 1200.0,
    "max": 2000.0,
@@ -125,22 +125,22 @@
    "category": "ithal"
   },
   {
-   "raw": "Amme(Trabzon Hurması)",
-   "product": "amme",
-   "variety": "Trabzon hurması",
-   "unit": "kg",
-   "min": 80.0,
-   "max": 130.0,
-   "avg": null,
-   "category": "meyve"
-  },
-  {
    "raw": "Armut (Santamariya)",
    "product": "armut",
    "variety": "Santamariya",
    "unit": "kg",
    "min": 30.0,
    "max": 70.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "Çilek",
+   "product": "cilek",
+   "variety": "",
+   "unit": "kg",
+   "min": 160.0,
+   "max": 260.0,
    "avg": null,
    "category": "meyve"
   },
@@ -225,6 +225,16 @@
    "category": "meyve"
   },
   {
+   "raw": "Mandalina",
+   "product": "mandalina",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 40.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
    "raw": "Muz (Yerli)",
    "product": "muz",
    "variety": "Yerli",
@@ -265,6 +275,16 @@
    "category": "meyve"
   },
   {
+   "raw": "Amme(Trabzon Hurması)",
+   "product": "trabzon-hurmasi",
+   "variety": "Trabzon hurması",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 130.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
    "raw": "Üzüm(Beyaz)",
    "product": "uzum",
    "variety": "Beyaz",
@@ -283,26 +303,6 @@
    "max": 50.0,
    "avg": null,
    "category": "meyve"
-  },
-  {
-   "raw": "59                                     Çilek",
-   "product": "59",
-   "variety": "Çilek",
-   "unit": "kg",
-   "min": 160.0,
-   "max": 260.0,
-   "avg": null,
-   "category": "sebze"
-  },
-  {
-   "raw": "66                               Mandalina",
-   "product": "66",
-   "variety": "Mandalina",
-   "unit": "kg",
-   "min": 20.0,
-   "max": 40.0,
-   "avg": null,
-   "category": "sebze"
   },
   {
    "raw": "Biber (Cin)",

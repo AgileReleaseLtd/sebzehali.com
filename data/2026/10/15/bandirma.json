@@ -1,0 +1,18 @@
+{
+ "city": "bandirma",
+ "date": "2026-10-15",
+ "source": "https://halvepazarfiyatlari.balikesir.bel.tr/SebzeMeyveHal",
+ "fetched_at": "2026-10-30T11:04:32+00:00",
+ "items": [
+  {
+   "raw": "Palamut",
+   "product": "palamut",
+   "variety": "",
+   "unit": "cift",
+   "min": 100.0,
+   "max": 110.0,
+   "avg": null,
+   "category": "balik"
+  }
+ ]
+}

@@ -2,7 +2,7 @@
  "city": "izmir",
  "date": "2026-10-30",
  "source": "https://acikveri.bizizmir.com/",
- "fetched_at": "2026-10-30T11:23:18+00:00",
+ "fetched_at": "2026-10-30T11:04:43+00:00",
  "items": [
   {
    "raw": "ANANAS",
@@ -112,16 +112,6 @@
    "min": 40.0,
    "max": 70.0,
    "avg": 55.0,
-   "category": "meyve"
-  },
-  {
-   "raw": "CENNET ELMASI",
-   "product": "cennet",
-   "variety": "Elması",
-   "unit": "kg",
-   "min": 40.0,
-   "max": 80.0,
-   "avg": 60.0,
    "category": "meyve"
   },
   {
@@ -312,6 +302,16 @@
    "min": 30.0,
    "max": 60.0,
    "avg": 45.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "CENNET ELMASI",
+   "product": "trabzon-hurmasi",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 80.0,
+   "avg": 60.0,
    "category": "meyve"
   },
   {

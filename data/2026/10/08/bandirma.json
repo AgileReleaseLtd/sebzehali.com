@@ -1,0 +1,38 @@
+{
+ "city": "bandirma",
+ "date": "2026-10-08",
+ "source": "https://halvepazarfiyatlari.balikesir.bel.tr/SebzeMeyveHal",
+ "fetched_at": "2026-10-30T11:04:32+00:00",
+ "items": [
+  {
+   "raw": "Hamsi",
+   "product": "hamsi",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1250.0,
+   "max": 1250.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Palamut",
+   "product": "palamut",
+   "variety": "",
+   "unit": "cift",
+   "min": 100.0,
+   "max": 120.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Sardalya",
+   "product": "sardalya",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1250.0,
+   "max": 1250.0,
+   "avg": null,
+   "category": "balik"
+  }
+ ]
+}

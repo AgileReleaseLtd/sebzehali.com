@@ -1,0 +1,58 @@
+{
+ "city": "bandirma",
+ "date": "2026-08-19",
+ "source": "https://halvepazarfiyatlari.balikesir.bel.tr/SebzeMeyveHal",
+ "fetched_at": "2026-10-30T11:04:32+00:00",
+ "items": [
+  {
+   "raw": "Bako",
+   "product": "bako",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1000.0,
+   "max": 1000.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "İstavrit",
+   "product": "istavrit",
+   "variety": "",
+   "unit": "kasa",
+   "min": 500.0,
+   "max": 500.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Karides",
+   "product": "karides",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1500.0,
+   "max": 1500.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Palamut",
+   "product": "palamut",
+   "variety": "",
+   "unit": "cift",
+   "min": 140.0,
+   "max": 160.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Sardalya",
+   "product": "sardalya",
+   "variety": "",
+   "unit": "kasa",
+   "min": 3500.0,
+   "max": 3500.0,
+   "avg": null,
+   "category": "balik"
+  }
+ ]
+}

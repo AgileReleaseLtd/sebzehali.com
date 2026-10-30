@@ -1,0 +1,338 @@
+{
+ "city": "samsun",
+ "date": "2026-09-20",
+ "source": "https://iidb.samsun.bel.tr/fiyattablosu",
+ "fetched_at": "2026-10-30T11:02:24+00:00",
+ "items": [
+  {
+   "raw": "Alabalık",
+   "product": "alabalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 120.0,
+   "max": 160.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Çipura",
+   "product": "cipura",
+   "variety": "",
+   "unit": "kg",
+   "min": 300.0,
+   "max": 350.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Hamsi",
+   "product": "hamsi",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 155.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "İstavrit",
+   "product": "istavrit",
+   "variety": "",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 200.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Kalkan",
+   "product": "kalkan",
+   "variety": "",
+   "unit": "kg",
+   "min": 500.0,
+   "max": 1000.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Kefal",
+   "product": "kefal",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 120.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Kolyoz",
+   "product": "kolyoz",
+   "variety": "",
+   "unit": "kg",
+   "min": 120.0,
+   "max": 180.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Levrek",
+   "product": "levrek",
+   "variety": "",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 450.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Lüfer",
+   "product": "lufer",
+   "variety": "",
+   "unit": "kg",
+   "min": 150.0,
+   "max": 350.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Mezgit",
+   "product": "mezgit",
+   "variety": "",
+   "unit": "kg",
+   "min": 70.0,
+   "max": 225.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Palamut",
+   "product": "palamut",
+   "variety": "",
+   "unit": "kg",
+   "min": 100.0,
+   "max": 200.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Sardalya",
+   "product": "sardalya",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 100.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Sazan",
+   "product": "sazan",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 110.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Somon",
+   "product": "somon",
+   "variety": "",
+   "unit": "kg",
+   "min": 125.0,
+   "max": 200.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Tekir",
+   "product": "tekir",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 400.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Tirsi",
+   "product": "tirsi",
+   "variety": "",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 55.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "ARMUT",
+   "product": "armut",
+   "variety": "",
+   "unit": "kg",
+   "min": 55.0,
+   "max": 55.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ELMA",
+   "product": "elma",
+   "variety": "",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ERİK",
+   "product": "erik",
+   "variety": "",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 50.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "KAVUN",
+   "product": "kavun",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 45.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "KİVİ",
+   "product": "kivi",
+   "variety": "",
+   "unit": "kg",
+   "min": 140.0,
+   "max": 140.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "NEKTARİN",
+   "product": "nektarin",
+   "variety": "",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 140.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ŞEFTALİ",
+   "product": "seftali",
+   "variety": "",
+   "unit": "kg",
+   "min": 45.0,
+   "max": 45.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM BEYAZ",
+   "product": "uzum",
+   "variety": "Beyaz",
+   "unit": "kg",
+   "min": 75.0,
+   "max": 75.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM ÇEKİRDEKSİZ",
+   "product": "uzum",
+   "variety": "Çekirdeksiz",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 50.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "BİBER DOLMALIK",
+   "product": "biber",
+   "variety": "Dolmalık",
+   "unit": "kg",
+   "min": 70.0,
+   "max": 70.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SİVRİ",
+   "product": "biber",
+   "variety": "Sivri",
+   "unit": "kg",
+   "min": 45.0,
+   "max": 85.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER ÇARLİSTON",
+   "product": "biber",
+   "variety": "Çarliston",
+   "unit": "kg",
+   "min": 80.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 70.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "KABAK",
+   "product": "kabak",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 45.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 35.0,
+   "avg": null,
+   "category": "sebze"
+  }
+ ]
+}

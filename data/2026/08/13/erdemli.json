@@ -1,0 +1,38 @@
+{
+ "city": "erdemli",
+ "date": "2026-08-13",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-10-30T11:04:27+00:00",
+ "items": [
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 52.0,
+   "avg": 50.95,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON (LEMAS)",
+   "product": "limon",
+   "variety": "Lemas",
+   "unit": "kg",
+   "min": 27.0,
+   "max": 54.0,
+   "avg": 42.76,
+   "category": "meyve"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 37.0,
+   "max": 37.0,
+   "avg": 37.0,
+   "category": "sebze"
+  }
+ ]
+}

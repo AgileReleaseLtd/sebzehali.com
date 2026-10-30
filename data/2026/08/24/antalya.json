@@ -2,7 +2,7 @@
  "city": "antalya",
  "date": "2026-08-24",
  "source": "https://www.antalya.bel.tr/tr/halden-gunluk-fiyatlar",
- "fetched_at": "2026-10-10T18:37:55+00:00",
+ "fetched_at": "2026-10-30T11:14:00+00:00",
  "items": [
   {
    "raw": "Kayısı",
@@ -186,8 +186,8 @@
   },
   {
    "raw": "Frenk Üzümü",
-   "product": "frenk",
-   "variety": "Üzümü",
+   "product": "frenk-uzumu",
+   "variety": "",
    "unit": "kg",
    "min": 100.0,
    "max": 190.0,
@@ -211,6 +211,16 @@
    "unit": "adet",
    "min": 60.0,
    "max": 90.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "İncir (Beyaz)",
+   "product": "incir",
+   "variety": "Beyaz",
+   "unit": "kg",
+   "min": 75.0,
+   "max": 120.0,
    "avg": null,
    "category": "meyve"
   },
@@ -303,16 +313,6 @@
    "max": 75.0,
    "avg": null,
    "category": "meyve"
-  },
-  {
-   "raw": "15,00                                                      İncir (Beyaz)",
-   "product": "1500",
-   "variety": "İncir beyaz",
-   "unit": "kg",
-   "min": 75.0,
-   "max": 120.0,
-   "avg": null,
-   "category": "sebze"
   },
   {
    "raw": "Biber (Cin)",
