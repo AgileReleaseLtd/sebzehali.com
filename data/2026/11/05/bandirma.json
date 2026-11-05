@@ -1,0 +1,88 @@
+{
+ "city": "bandirma",
+ "date": "2026-11-05",
+ "source": "https://halvepazarfiyatlari.balikesir.bel.tr/SebzeMeyveHal",
+ "fetched_at": "2026-11-05T13:12:12+00:00",
+ "items": [
+  {
+   "raw": "Bako",
+   "product": "bako",
+   "variety": "",
+   "unit": "kasa",
+   "min": 700.0,
+   "max": 800.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Dil",
+   "product": "dil",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1000.0,
+   "max": 1000.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Hamsi",
+   "product": "hamsi",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1500.0,
+   "max": 1500.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Karides",
+   "product": "karides",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1500.0,
+   "max": 2000.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Kolyoz",
+   "product": "kolyoz",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1000.0,
+   "max": 1000.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Mezgit",
+   "product": "mezgit",
+   "variety": "",
+   "unit": "kasa",
+   "min": 2500.0,
+   "max": 2500.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Palamut",
+   "product": "palamut",
+   "variety": "",
+   "unit": "cift",
+   "min": 160.0,
+   "max": 160.0,
+   "avg": null,
+   "category": "balik"
+  },
+  {
+   "raw": "Tekir",
+   "product": "tekir",
+   "variety": "",
+   "unit": "kasa",
+   "min": 1500.0,
+   "max": 1500.0,
+   "avg": null,
+   "category": "balik"
+  }
+ ]
+}
