@@ -1,0 +1,128 @@
+{
+ "city": "erdemli",
+ "date": "2026-11-09",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-11-09T13:54:40+00:00",
+ "items": [
+  {
+   "raw": "FASULYE TAZE (BONCUK)",
+   "product": "fasulye",
+   "variety": "Taze boncuk",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 31.0,
+   "max": 31.0,
+   "avg": 31.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 41.0,
+   "max": 55.0,
+   "avg": 44.57,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM BEYAZ (SİYAH)",
+   "product": "uzum",
+   "variety": "Beyaz siyah",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 15.0,
+   "avg": 15.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 50.0,
+   "avg": 25.35,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (KOKTEYL)",
+   "product": "domates",
+   "variety": "Kokteyl",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 50.0,
+   "avg": 50.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (PEMBE)",
+   "product": "domates",
+   "variety": "Pembe",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 35.0,
+   "avg": 35.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (SALKIM)",
+   "product": "domates",
+   "variety": "Salkım",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 40.0,
+   "avg": 40.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "FASULYE TAZE",
+   "product": "fasulye",
+   "variety": "Taze",
+   "unit": "kg",
+   "min": 12.0,
+   "max": 12.0,
+   "avg": 12.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "KARNABAHAR",
+   "product": "karnabahar",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 10.0,
+   "avg": 10.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 15.0,
+   "avg": 15.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 55.0,
+   "avg": 21.94,
+   "category": "sebze"
+  }
+ ]
+}

@@ -1,0 +1,258 @@
+{
+ "city": "samsun",
+ "date": "2026-11-08",
+ "source": "https://iidb.samsun.bel.tr/fiyattablosu",
+ "fetched_at": "2026-11-09T13:54:52+00:00",
+ "items": [
+  {
+   "raw": "ARMUT",
+   "product": "armut",
+   "variety": "",
+   "unit": "kg",
+   "min": 23.0,
+   "max": 60.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "AYVA",
+   "product": "ayva",
+   "variety": "",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 60.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ELMA",
+   "product": "elma",
+   "variety": "",
+   "unit": "kg",
+   "min": 75.0,
+   "max": 75.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ERİK",
+   "product": "erik",
+   "variety": "",
+   "unit": "kg",
+   "min": 65.0,
+   "max": 65.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "KİVİ",
+   "product": "kivi",
+   "variety": "",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 60.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 17.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANDALİNA",
+   "product": "mandalina",
+   "variety": "",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 25.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ",
+   "product": "muz",
+   "variety": "",
+   "unit": "kg",
+   "min": 45.0,
+   "max": 45.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM BEYAZ",
+   "product": "uzum",
+   "variety": "Beyaz",
+   "unit": "kg",
+   "min": 32.0,
+   "max": 65.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÜZÜM ÇEKİRDEKSİZ",
+   "product": "uzum",
+   "variety": "Çekirdeksiz",
+   "unit": "kg",
+   "min": 42.0,
+   "max": 42.0,
+   "avg": null,
+   "category": "meyve"
+  },
+  {
+   "raw": "BİBER DOLMALIK",
+   "product": "biber",
+   "variety": "Dolmalık",
+   "unit": "kg",
+   "min": 65.0,
+   "max": 65.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SALÇALIK (KAPYA)",
+   "product": "biber",
+   "variety": "Salçalık kapya",
+   "unit": "kg",
+   "min": 100.0,
+   "max": 100.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SİVRİ",
+   "product": "biber",
+   "variety": "Sivri",
+   "unit": "kg",
+   "min": 46.0,
+   "max": 120.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER ÇARLİSTON",
+   "product": "biber",
+   "variety": "Çarliston",
+   "unit": "kg",
+   "min": 32.0,
+   "max": 55.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "DEREOTU (YAŞ-TAZE)",
+   "product": "dereotu",
+   "variety": "Yaş taze",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 15.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 33.0,
+   "max": 120.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "FASULYE TAZE",
+   "product": "fasulye",
+   "variety": "Taze",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 110.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "FESLEĞEN(REYHAN)",
+   "product": "feslegen",
+   "variety": "Reyhan",
+   "unit": "kg",
+   "min": 17.0,
+   "max": 17.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "HİNDİBA RADİKA",
+   "product": "hindiba",
+   "variety": "Radika",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "ISPANAK",
+   "product": "ispanak",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "KABAK",
+   "product": "kabak",
+   "variety": "",
+   "unit": "kg",
+   "min": 55.0,
+   "max": 55.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "KUZUKULAĞI",
+   "product": "kuzukulagi",
+   "variety": "",
+   "unit": "kg",
+   "min": 12.0,
+   "max": 12.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "MAYDANOZ",
+   "product": "maydanoz",
+   "variety": "",
+   "unit": "kg",
+   "min": 11.0,
+   "max": 11.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 22.0,
+   "max": 80.0,
+   "avg": null,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 70.0,
+   "avg": null,
+   "category": "sebze"
+  }
+ ]
+}

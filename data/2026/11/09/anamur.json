@@ -1,0 +1,98 @@
+{
+ "city": "anamur",
+ "date": "2026-11-09",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-11-09T13:54:40+00:00",
+ "items": [
+  {
+   "raw": "AVOKADO",
+   "product": "avokado",
+   "variety": "",
+   "unit": "adet",
+   "min": 33.0,
+   "max": 45.0,
+   "avg": 33.27,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÇİLEK",
+   "product": "cilek",
+   "variety": "",
+   "unit": "kg",
+   "min": 310.0,
+   "max": 320.0,
+   "avg": 316.4,
+   "category": "meyve"
+  },
+  {
+   "raw": "DUT (KARA)",
+   "product": "dut",
+   "variety": "Kara",
+   "unit": "kg",
+   "min": 145.0,
+   "max": 180.0,
+   "avg": 163.79,
+   "category": "meyve"
+  },
+  {
+   "raw": "KİVİ",
+   "product": "kivi",
+   "variety": "",
+   "unit": "kg",
+   "min": 45.0,
+   "max": 45.0,
+   "avg": 45.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 37.0,
+   "max": 70.0,
+   "avg": 58.08,
+   "category": "meyve"
+  },
+  {
+   "raw": "NAR",
+   "product": "nar",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "PİTAHAYA",
+   "product": "pitahaya",
+   "variety": "",
+   "unit": "adet",
+   "min": 110.0,
+   "max": 160.0,
+   "avg": 153.29,
+   "category": "meyve"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 35.0,
+   "avg": 30.16,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 25.0,
+   "max": 25.0,
+   "avg": 25.0,
+   "category": "sebze"
+  }
+ ]
+}
