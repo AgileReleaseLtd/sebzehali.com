@@ -1,0 +1,238 @@
+{
+ "city": "tarsus",
+ "date": "2026-11-22",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-11-23T15:58:01+00:00",
+ "items": [
+  {
+   "raw": "AVOKADO",
+   "product": "avokado",
+   "variety": "",
+   "unit": "adet",
+   "min": 20.0,
+   "max": 20.0,
+   "avg": 20.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.0,
+   "max": 6.0,
+   "avg": 6.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON (MAYER)",
+   "product": "limon",
+   "variety": "Mayer",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 5.0,
+   "avg": 5.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANDALİNA",
+   "product": "mandalina",
+   "variety": "",
+   "unit": "kg",
+   "min": 5.0,
+   "max": 12.0,
+   "avg": 9.67,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANDALİNA KING",
+   "product": "mandalina",
+   "variety": "Kıng",
+   "unit": "kg",
+   "min": 8.0,
+   "max": 10.0,
+   "avg": 8.57,
+   "category": "meyve"
+  },
+  {
+   "raw": "NAR",
+   "product": "nar",
+   "variety": "",
+   "unit": "kg",
+   "min": 21.0,
+   "max": 26.0,
+   "avg": 24.74,
+   "category": "meyve"
+  },
+  {
+   "raw": "PORTAKAL",
+   "product": "portakal",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 20.0,
+   "avg": 20.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "TRABZON HURMASI(CENNET ELMASI)",
+   "product": "trabzon-hurmasi",
+   "variety": "Cennet elması",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 13.0,
+   "avg": 12.3,
+   "category": "meyve"
+  },
+  {
+   "raw": "BİBER SİVRİ",
+   "product": "biber",
+   "variety": "Sivri",
+   "unit": "kg",
+   "min": 18.0,
+   "max": 41.0,
+   "avg": 25.3,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER SİVRİ (KÖYBİBERİ)",
+   "product": "biber",
+   "variety": "Sivri köybiberi",
+   "unit": "kg",
+   "min": 31.0,
+   "max": 31.0,
+   "avg": 31.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "BİBER ÇARLİSTON",
+   "product": "biber",
+   "variety": "Çarliston",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 36.0,
+   "avg": 25.73,
+   "category": "sebze"
+  },
+  {
+   "raw": "BROKOLİ",
+   "product": "brokoli",
+   "variety": "",
+   "unit": "kg",
+   "min": 11.0,
+   "max": 41.0,
+   "avg": 29.76,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (AYAŞ)",
+   "product": "domates",
+   "variety": "Ayaş",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 10.0,
+   "avg": 10.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "FASULYE TAZE",
+   "product": "fasulye",
+   "variety": "Taze",
+   "unit": "kg",
+   "min": 40.0,
+   "max": 45.0,
+   "avg": 42.74,
+   "category": "sebze"
+  },
+  {
+   "raw": "ISPANAK",
+   "product": "ispanak",
+   "variety": "",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 20.0,
+   "avg": 20.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "KABAK",
+   "product": "kabak",
+   "variety": "",
+   "unit": "kg",
+   "min": 16.0,
+   "max": 36.0,
+   "avg": 33.7,
+   "category": "sebze"
+  },
+  {
+   "raw": "LABADA",
+   "product": "labada",
+   "variety": "",
+   "unit": "kg",
+   "min": 6.5,
+   "max": 6.5,
+   "avg": 6.5,
+   "category": "sebze"
+  },
+  {
+   "raw": "MARUL ICEBERG",
+   "product": "marul",
+   "variety": "Iceberg",
+   "unit": "adet",
+   "min": 100.0,
+   "max": 150.0,
+   "avg": 113.25,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 15.0,
+   "max": 21.0,
+   "avg": 17.13,
+   "category": "sebze"
+  },
+  {
+   "raw": "PIRASA",
+   "product": "pirasa",
+   "variety": "",
+   "unit": "kg",
+   "min": 17.0,
+   "max": 17.0,
+   "avg": 17.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 41.0,
+   "avg": 36.27,
+   "category": "sebze"
+  },
+  {
+   "raw": "SARIMSAK KURU",
+   "product": "sarimsak",
+   "variety": "Kuru",
+   "unit": "kg",
+   "min": 35.0,
+   "max": 35.0,
+   "avg": 35.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "SEMİZOTU",
+   "product": "semizotu",
+   "variety": "",
+   "unit": "kg",
+   "min": 28.0,
+   "max": 28.0,
+   "avg": 28.0,
+   "category": "sebze"
+  }
+ ]
+}
