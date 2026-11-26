@@ -1,0 +1,158 @@
+{
+ "city": "erdemli",
+ "date": "2026-11-26",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-11-26T15:12:53+00:00",
+ "items": [
+  {
+   "raw": "AVOKADO",
+   "product": "avokado",
+   "variety": "",
+   "unit": "adet",
+   "min": 32.0,
+   "max": 32.0,
+   "avg": 32.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "FASULYE TAZE (BONCUK)",
+   "product": "fasulye",
+   "variety": "Taze boncuk",
+   "unit": "kg",
+   "min": 20.0,
+   "max": 20.0,
+   "avg": 20.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "GREYFURT",
+   "product": "greyfurt",
+   "variety": "",
+   "unit": "kg",
+   "min": 28.0,
+   "max": 28.0,
+   "avg": 28.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "LİMON",
+   "product": "limon",
+   "variety": "",
+   "unit": "kg",
+   "min": 9.0,
+   "max": 28.0,
+   "avg": 23.44,
+   "category": "meyve"
+  },
+  {
+   "raw": "MANDALİNA",
+   "product": "mandalina",
+   "variety": "",
+   "unit": "kg",
+   "min": 3.0,
+   "max": 30.0,
+   "avg": 24.61,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 26.0,
+   "max": 54.5,
+   "avg": 46.61,
+   "category": "meyve"
+  },
+  {
+   "raw": "PORTAKAL",
+   "product": "portakal",
+   "variety": "",
+   "unit": "kg",
+   "min": 3.0,
+   "max": 3.0,
+   "avg": 3.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "DOMATES",
+   "product": "domates",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 50.0,
+   "avg": 31.84,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (PEMBE)",
+   "product": "domates",
+   "variety": "Pembe",
+   "unit": "kg",
+   "min": 60.0,
+   "max": 60.0,
+   "avg": 60.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES (SALKIM)",
+   "product": "domates",
+   "variety": "Salkım",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 30.0,
+   "avg": 30.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "DOMATES SALÇALIK",
+   "product": "domates",
+   "variety": "Salçalık",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 15.0,
+   "avg": 13.57,
+   "category": "sebze"
+  },
+  {
+   "raw": "KARNABAHAR",
+   "product": "karnabahar",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 20.0,
+   "avg": 15.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "PATATES",
+   "product": "patates",
+   "variety": "",
+   "unit": "kg",
+   "min": 3.0,
+   "max": 3.0,
+   "avg": 3.0,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 10.0,
+   "max": 90.0,
+   "avg": 36.94,
+   "category": "sebze"
+  },
+  {
+   "raw": "SOĞAN KURU",
+   "product": "sogan",
+   "variety": "Kuru",
+   "unit": "kg",
+   "min": 3.0,
+   "max": 3.0,
+   "avg": 3.0,
+   "category": "sebze"
+  }
+ ]
+}

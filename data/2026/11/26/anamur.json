@@ -1,0 +1,98 @@
+{
+ "city": "anamur",
+ "date": "2026-11-26",
+ "source": "https://www.mersin.bel.tr/hal-fiyatlari",
+ "fetched_at": "2026-11-26T15:12:53+00:00",
+ "items": [
+  {
+   "raw": "AVOKADO",
+   "product": "avokado",
+   "variety": "",
+   "unit": "adet",
+   "min": 28.5,
+   "max": 38.18,
+   "avg": 34.18,
+   "category": "meyve"
+  },
+  {
+   "raw": "ÇİLEK",
+   "product": "cilek",
+   "variety": "",
+   "unit": "kg",
+   "min": 37.0,
+   "max": 350.0,
+   "avg": 297.01,
+   "category": "meyve"
+  },
+  {
+   "raw": "DUT",
+   "product": "dut",
+   "variety": "",
+   "unit": "kg",
+   "min": 50.0,
+   "max": 50.0,
+   "avg": 50.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "DUT (KARA)",
+   "product": "dut",
+   "variety": "Kara",
+   "unit": "kg",
+   "min": 100.0,
+   "max": 105.0,
+   "avg": 100.3,
+   "category": "meyve"
+  },
+  {
+   "raw": "KAMKAT",
+   "product": "kamkat",
+   "variety": "",
+   "unit": "kg",
+   "min": 70.0,
+   "max": 110.0,
+   "avg": 96.58,
+   "category": "meyve"
+  },
+  {
+   "raw": "MUZ (MUZ YERLİ(ANAMUR))",
+   "product": "muz",
+   "variety": "Muz yerli anamur",
+   "unit": "kg",
+   "min": 30.0,
+   "max": 60.0,
+   "avg": 48.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "MERSİN(YABAN MERSİNİ)",
+   "product": "yaban-mersini",
+   "variety": "Yaban mersini",
+   "unit": "kg",
+   "min": 120.0,
+   "max": 120.0,
+   "avg": 120.0,
+   "category": "meyve"
+  },
+  {
+   "raw": "PATLICAN",
+   "product": "patlican",
+   "variety": "",
+   "unit": "kg",
+   "min": 22.0,
+   "max": 50.0,
+   "avg": 42.33,
+   "category": "sebze"
+  },
+  {
+   "raw": "SALATALIK",
+   "product": "salatalik",
+   "variety": "",
+   "unit": "kg",
+   "min": 37.0,
+   "max": 37.0,
+   "avg": 37.0,
+   "category": "sebze"
+  }
+ ]
+}
